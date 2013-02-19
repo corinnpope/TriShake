@@ -15,13 +15,10 @@
 {
     NSMutableArray *workouts;
     sqlite3 *db;
-    //2/14 add global NSStrings
-//    NSString *typeSQL;
-//    NSString *difficultySQL;
-//    NSString *durationSQL;
+
     
 }
-//2/14 add gloabl SQL NSStrings
+
 @property(nonatomic,retain) NSMutableArray *workouts;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (strong, nonatomic )NSMutableArray *rowOneItems;
