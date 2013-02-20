@@ -59,7 +59,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="KHc-bp-b9g">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="231" id="3Jh-JY-IwU"/>
+                                    <constraint firstAttribute="height" constant="178" id="VMl-ah-hTz"/>
                                     <constraint firstAttribute="width" constant="271" id="vvm-jD-rda"/>
                                 </constraints>
                                 <string key="text">Select a workout type, workout difficulty, and workout duration from the picker above. Then press "find a workout" to search for a new workout</string>
@@ -67,19 +67,70 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTf-s6-Whk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="p3X-tO-8hM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Tw" image="twitter-bird-white-on-blue.png">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetButton:" destination="2" eventType="touchUpInside" id="BUu-lH-rQz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yij-rM-3fY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="NA3-TR-zfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="FB" image="facebook.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButton:" destination="2" eventType="touchUpInside" id="B0g-Dz-5DD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ett-UU-JCs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="7xU-F9-P2F"/>
+                                    <constraint firstAttribute="width" constant="40" id="XqS-wZ-Ble"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="EM" image="mail_icon.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mailButton:" destination="2" eventType="touchUpInside" id="JzK-Aa-zd9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="18C-zV-qvn"/>
                             <constraint firstItem="1xz-fb-kpi" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1KF-L2-0eD"/>
+                            <constraint firstItem="yij-rM-3fY" firstAttribute="leading" secondItem="Ett-UU-JCs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2KJ-2X-Rpw"/>
                             <constraint firstItem="1xz-fb-kpi" firstAttribute="leading" secondItem="xjO-Z3-sTb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="5ug-3g-GS9"/>
+                            <constraint firstItem="Ett-UU-JCs" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="158" id="7u6-hi-1lx"/>
                             <constraint firstItem="xjO-Z3-sTb" firstAttribute="baseline" secondItem="qyq-zb-tMf" secondAttribute="baseline" type="default" id="8T5-5f-fzd"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3" secondAttribute="leading" constant="20" type="user" id="8Xb-fu-jLj"/>
                             <constraint firstItem="KHc-bp-b9g" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" type="user" id="9yA-8T-RbO"/>
                             <constraint firstItem="qyq-zb-tMf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BXy-s4-nwd"/>
                             <constraint firstItem="1xz-fb-kpi" firstAttribute="baseline" secondItem="xjO-Z3-sTb" secondAttribute="baseline" type="default" id="CrW-Ym-9MU"/>
+                            <constraint firstItem="YTf-s6-Whk" firstAttribute="bottom" secondItem="yij-rM-3fY" secondAttribute="bottom" type="default" id="Gb2-sy-eL6"/>
                             <constraint firstAttribute="trailing" secondItem="KHc-bp-b9g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ile-18-hIU"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="JyU-gU-Ok2"/>
+                            <constraint firstItem="YTf-s6-Whk" firstAttribute="top" secondItem="yij-rM-3fY" secondAttribute="top" type="default" id="SS8-jw-amu"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Uj4-GG-QMC"/>
                             <constraint firstItem="xjO-Z3-sTb" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XRo-7U-QD2"/>
                             <constraint firstItem="KHc-bp-b9g" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Xe9-ub-MtG"/>
@@ -89,10 +140,17 @@
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="228" type="user" id="ghH-5h-0th"/>
                             <constraint firstItem="qyq-zb-tMf" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="knA-dv-z32"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="12" type="user" id="lK0-hv-Ope"/>
+                            <constraint firstItem="Ett-UU-JCs" firstAttribute="bottom" secondItem="yij-rM-3fY" secondAttribute="bottom" type="default" id="w5F-yn-qx6"/>
+                            <constraint firstItem="YTf-s6-Whk" firstAttribute="leading" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wG4-Iv-zYu"/>
+                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="50" id="wbc-41-eAN"/>
+                            <constraint firstItem="yij-rM-3fY" firstAttribute="top" secondItem="Ett-UU-JCs" secondAttribute="top" type="default" id="xPv-4p-sAC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="facebookButtonOutlet" destination="yij-rM-3fY" id="dKf-KL-c9U"/>
+                        <outlet property="mailButtonOutlet" destination="Ett-UU-JCs" id="COr-K7-zQ1"/>
                         <outlet property="pickerView" destination="k5Q-Qj-DDp" id="27B-i6-Wcw"/>
+                        <outlet property="tweetButtonOutlet" destination="YTf-s6-Whk" id="SQa-ld-fx4"/>
                         <outlet property="workoutDescriptionLabel" destination="KHc-bp-b9g" id="lBr-Uu-Sl1"/>
                         <outlet property="workoutDifficultyLabel" destination="xjO-Z3-sTb" id="h1d-Nn-zDY"/>
                         <outlet property="workoutDurationLabel" destination="1xz-fb-kpi" id="IVZ-ju-rGa"/>
@@ -105,23 +163,10 @@
     </scenes>
     <resources>
         <image name="OrangeButton.png" width="280" height="44"/>
+        <image name="facebook.png" width="40" height="40"/>
+        <image name="mail_icon.png" width="40" height="40"/>
+        <image name="twitter-bird-white-on-blue.png" width="40" height="40"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="findWorkout:"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="workoutDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutDifficultyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutDurationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutTypeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

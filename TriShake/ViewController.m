@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "MyWorkoutList.h"
+#import <Twitter/Twitter.h>
+#define letOSHandleLogin FALSE
 
 #define kTypeComponent 0
 #define kDifficultyComponent 1
@@ -19,6 +21,7 @@
     NSMutableArray *rowOneItems;
     NSMutableArray *rowTwoItems;
     NSMutableArray *rowThreeItems;
+    
 }
 
 @end
@@ -61,6 +64,21 @@
     rowOneItems = [[NSMutableArray alloc] initWithObjects:@"Bike",@"Run",@"Swim",nil];
     rowTwoItems = [[NSMutableArray alloc] initWithObjects:@"Easy",@"Medium",@"Hard",nil];
     rowThreeItems = [[NSMutableArray alloc] initWithObjects:@"<30 mins", @"30-60 mins", @">60 mins", nil];
+    
+    //load button images from disk
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+        UIImage *twitterIcon = [UIImage imageWithContentsOfFile:@"twitter-bird-white-on-blue.png"];
+        UIImage *facebookIcon =[UIImage imageWithContentsOfFile:@"facebook.png"];
+        UIImage *mailIcon =[UIImage imageWithContentsOfFile:@"mail_icon.png"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tweetButtonOutlet setBackgroundImage:twitterIcon forState:UIControlStateNormal];
+            [self.facebookButtonOutlet setBackgroundImage:facebookIcon forState:UIControlStateNormal];
+            [self.mailButtonOutlet setBackgroundImage:mailIcon forState:UIControlStateNormal];
+        });
+        
+    });
 }
 
 - (void)viewDidUnload
@@ -138,6 +156,68 @@
         return [rowOneItems objectAtIndex:row];
 }
 
+# pragma Share/Social Buttons
+
+- (IBAction)mailButton:(id)sender {
+    MFMailComposeViewController *mailComposer;
+    mailComposer = [[MFMailComposeViewController alloc] init];
+    mailComposer.mailComposeDelegate = self;
+    [mailComposer setSubject:@"My Workout from TriShake"];
+    NSString *chosenWorkout = self.workoutDescriptionLabel.text;
+    [mailComposer setMessageBody:[NSString stringWithFormat: @"My workout for today: %@  #trishake", chosenWorkout] isHTML:NO];
+    [self presentViewController:mailComposer animated:YES completion:nil];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)tweetButton:(id)sender {
+//    code for adding a link
+//    [tweetSheet addURL:[NSURL URLWithString:@"http://www.trishake.com"]];
+
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *chosenWorkout = self.workoutDescriptionLabel.text;
+        [tweetSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #trishake", chosenWorkout]];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                      message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
+                                      delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+}
+
+- (IBAction)facebookButton:(id)sender {
+    
+    //Check if facebook is linked
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) 
+    {
+        SLComposeViewController *facebookSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        //set facebook message
+        NSString *chosenWorkout = self.workoutDescriptionLabel.text;
+        [facebookSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #trishake", chosenWorkout]];
+        //dismiss facebook sheet
+        [self presentViewController:facebookSheet animated:YES completion:nil];
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                            message:@"It looks like you can't connect to Facebook right now, make sure your device has an internet connection and you have at least one Facebook account setup under settings"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+
+# pragma Find Workout Button
 - (IBAction)findWorkout:(id)sender {
     //set labels to show what the user picked
     
@@ -165,6 +245,8 @@
         self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
     }
 }
+
+
 
 - (NSString *)convertDurationToSQLValue:(NSString *)input {
     // MLIU 2013-02-18: the picker says "## mins" but the database only has the "##" part

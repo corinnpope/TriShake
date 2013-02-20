@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 #import <iAd/iAd.h>
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
+#import <Accounts/Accounts.h>
 
 @class MyWorkoutList;
 
-@interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource,ADBannerViewDelegate>
+@interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource,ADBannerViewDelegate,MFMailComposeViewControllerDelegate>
 {
     ADBannerView *adView;
     BOOL bannerIsVisible;
@@ -34,10 +37,14 @@
 @property (nonatomic, assign) NSString *difficultySQL;
 @property (nonatomic, assign) NSString *durationSQL;
 @property (nonatomic, assign) BOOL bannerIsVisible;
+@property (strong, nonatomic) IBOutlet UIButton *tweetButtonOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *mailButtonOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *facebookButtonOutlet;
 
-
-
+- (IBAction)mailButton:(id)sender;
+- (IBAction)tweetButton:(id)sender;
 - (IBAction)findWorkout:(id)sender;
+- (IBAction)facebookButton:(id)sender;
 
 
 @end
