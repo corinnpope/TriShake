@@ -16,7 +16,6 @@
 		49300ADC16B705A100F45D24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300ADB16B705A100F45D24 /* AppDelegate.m */; };
 		49300ADE16B705A100F45D24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300ADD16B705A100F45D24 /* Default.png */; };
 		49300AE016B705A200F45D24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300ADF16B705A200F45D24 /* Default@2x.png */; };
-		49300AE216B705A200F45D24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300AE116B705A200F45D24 /* Default-568h@2x.png */; };
 		49300AE516B705A200F45D24 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49300AE316B705A200F45D24 /* MainStoryboard.storyboard */; };
 		49300AE816B705A200F45D24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300AE716B705A200F45D24 /* ViewController.m */; };
 		49300AFD16B724AD00F45D24 /* orangebutton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 49300AF816B724AD00F45D24 /* orangebutton.ai */; };
@@ -24,11 +23,15 @@
 		49300AFF16B724AD00F45D24 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300AFA16B724AD00F45D24 /* orangeButton@2x.png */; };
 		49300B0016B724AD00F45D24 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300AFB16B724AD00F45D24 /* orangeButtonHighlight.png */; };
 		49300B0116B724AD00F45D24 /* orangeButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300AFC16B724AD00F45D24 /* orangeButtonHighlight@2x.png */; };
-		49300B0F16B780B000F45D24 /* workoutList.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300B0E16B780B000F45D24 /* workoutList.m */; };
 		49300B1216B7826300F45D24 /* MyWorkoutList.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300B1116B7826300F45D24 /* MyWorkoutList.m */; };
+		49808F2316D4358F009C21AC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2216D4358F009C21AC /* Icon.png */; };
+		49808F2516D43594009C21AC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2416D43594009C21AC /* Icon@2x.png */; };
+		49808F2716D4359D009C21AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2616D4359D009C21AC /* Default.png */; };
+		49808F2916D435A6009C21AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2816D435A6009C21AC /* Default@2x.png */; };
+		49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2A16D435BB009C21AC /* Default-568h@2x.png */; };
+		49BD50C816D439D5003370D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BD50C716D439D5003370D9 /* Default.png */; };
+		49BD50CA16D439E7003370D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BD50C916D439E7003370D9 /* Default@2x.png */; };
 		49BE951D16B9A4170003A972 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */; };
-		49E2F7C616BCAE5A0074E639 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E2F7C516BCAE5A0074E639 /* Default.png */; };
-		49E2F7C916BCAE640074E639 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E2F7C816BCAE640074E639 /* default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,15 +58,16 @@
 		49300AFB16B724AD00F45D24 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
 		49300AFC16B724AD00F45D24 /* orangeButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		49300B0A16B77DF700F45D24 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		49300B0D16B780B000F45D24 /* workoutList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = workoutList.h; sourceTree = "<group>"; };
-		49300B0E16B780B000F45D24 /* workoutList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = workoutList.m; sourceTree = "<group>"; };
 		49300B1016B7826300F45D24 /* MyWorkoutList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWorkoutList.h; sourceTree = "<group>"; };
 		49300B1116B7826300F45D24 /* MyWorkoutList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWorkoutList.m; sourceTree = "<group>"; };
+		49808F2216D4358F009C21AC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
+		49808F2416D43594009C21AC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
+		49808F2616D4359D009C21AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
+		49808F2816D435A6009C21AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
+		49808F2A16D435BB009C21AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		49BD50C716D439D5003370D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		49BD50C916D439E7003370D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		49E2F7C516BCAE5A0074E639 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
-		49E2F7C816BCAE640074E639 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default@2x.png"; path = "../../default@2x.png"; sourceTree = "<group>"; };
-		49E2F7CA16BCAFFC0074E639 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		49E2F7CC16BCB0040074E639 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,8 @@
 		49300ABC16B705A100F45D24 = {
 			isa = PBXGroup;
 			children = (
-				49E2F7CC16BCB0040074E639 /* default@2x.png */,
-				49E2F7CA16BCAFFC0074E639 /* Default.png */,
+				49BD50C916D439E7003370D9 /* Default@2x.png */,
+				49BD50C716D439D5003370D9 /* Default.png */,
 				49300AD116B705A100F45D24 /* TriShake */,
 				49300ACA16B705A100F45D24 /* Frameworks */,
 				49300AC816B705A100F45D24 /* Products */,
@@ -117,8 +121,6 @@
 			children = (
 				49300AF716B724AD00F45D24 /* images */,
 				49300ADA16B705A100F45D24 /* AppDelegate.h */,
-				49300B0D16B780B000F45D24 /* workoutList.h */,
-				49300B0E16B780B000F45D24 /* workoutList.m */,
 				49300B1016B7826300F45D24 /* MyWorkoutList.h */,
 				4926C06116C43A57005FBF58 /* workoutList.sqlite */,
 				49300B1116B7826300F45D24 /* MyWorkoutList.m */,
@@ -148,8 +150,11 @@
 		49300AF716B724AD00F45D24 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				49E2F7C816BCAE640074E639 /* default@2x.png */,
-				49E2F7C516BCAE5A0074E639 /* Default.png */,
+				49808F2A16D435BB009C21AC /* Default-568h@2x.png */,
+				49808F2816D435A6009C21AC /* Default@2x.png */,
+				49808F2616D4359D009C21AC /* Default.png */,
+				49808F2416D43594009C21AC /* Icon@2x.png */,
+				49808F2216D4358F009C21AC /* Icon.png */,
 				49300AF816B724AD00F45D24 /* orangebutton.ai */,
 				49300AF916B724AD00F45D24 /* OrangeButton.png */,
 				49300AFA16B724AD00F45D24 /* orangeButton@2x.png */,
@@ -213,16 +218,20 @@
 				49300AD616B705A100F45D24 /* InfoPlist.strings in Resources */,
 				49300ADE16B705A100F45D24 /* Default.png in Resources */,
 				49300AE016B705A200F45D24 /* Default@2x.png in Resources */,
-				49300AE216B705A200F45D24 /* Default-568h@2x.png in Resources */,
 				49300AE516B705A200F45D24 /* MainStoryboard.storyboard in Resources */,
 				49300AFD16B724AD00F45D24 /* orangebutton.ai in Resources */,
 				49300AFE16B724AD00F45D24 /* OrangeButton.png in Resources */,
 				49300AFF16B724AD00F45D24 /* orangeButton@2x.png in Resources */,
 				49300B0016B724AD00F45D24 /* orangeButtonHighlight.png in Resources */,
 				49300B0116B724AD00F45D24 /* orangeButtonHighlight@2x.png in Resources */,
-				49E2F7C616BCAE5A0074E639 /* Default.png in Resources */,
-				49E2F7C916BCAE640074E639 /* default@2x.png in Resources */,
 				4926C06216C43A57005FBF58 /* workoutList.sqlite in Resources */,
+				49808F2316D4358F009C21AC /* Icon.png in Resources */,
+				49808F2516D43594009C21AC /* Icon@2x.png in Resources */,
+				49808F2716D4359D009C21AC /* Default.png in Resources */,
+				49808F2916D435A6009C21AC /* Default@2x.png in Resources */,
+				49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */,
+				49BD50C816D439D5003370D9 /* Default.png in Resources */,
+				49BD50CA16D439E7003370D9 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +245,6 @@
 				49300AD816B705A100F45D24 /* main.m in Sources */,
 				49300ADC16B705A100F45D24 /* AppDelegate.m in Sources */,
 				49300AE816B705A200F45D24 /* ViewController.m in Sources */,
-				49300B0F16B780B000F45D24 /* workoutList.m in Sources */,
 				49300B1216B7826300F45D24 /* MyWorkoutList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +328,7 @@
 				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
 				INFOPLIST_FILE = "TriShake/TriShake-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -331,6 +340,7 @@
 				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
 				INFOPLIST_FILE = "TriShake/TriShake-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

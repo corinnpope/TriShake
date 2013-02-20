@@ -1,18 +1,18 @@
-
-//copyright corinn pope
-
+//
+//  ViewController.m
+//  TriShake
+//
+//  Created by Corinn Pope on 1/28/13.
+//  Copyright (c) 2013 Corinn Pope. All rights reserved.
+//
 
 #import "ViewController.h"
-#import "workoutList.h"
 #import "MyWorkoutList.h"
 
 #define kTypeComponent 0
 #define kDifficultyComponent 1
 #define kDurationComponent 2
-//MLIU 2013-02-18: default message for 0 matching workouts found
 #define NO_WORKOUTS_FOUND_MESSAGE @"Sorry, no workouts were found for these options."
-
-//@class MyWorkoutList;
 
 
 @interface ViewController (){
@@ -36,18 +36,16 @@
 @synthesize typeSQL;
 @synthesize difficultySQL;
 @synthesize durationSQL;
+//@synthesize adBanner;
+//@synthesize bannerIsVisible;
 
 - (void)viewDidLoad
 {
-    
-
-    MyWorkoutList * myworkouts =[[MyWorkoutList alloc] init];
-    self.workouts = [myworkouts getMyWorkout];
-    
     //shrink picker view
-    pickerView.transform = CGAffineTransformMakeScale(.8, 0.8);
+    //pickerView.transform = CGAffineTransformMakeScale(.8, 0.8);
     
     [super viewDidLoad];
+    //self.adBanner.delegate=self;
     pickerView.delegate = self;
     pickerView.dataSource = self;
     pickerView.showsSelectionIndicator = YES;
@@ -58,7 +56,6 @@
     rowOneItems = [[NSMutableArray alloc] initWithObjects:@"Bike",@"Run",@"Swim",nil];
     rowTwoItems = [[NSMutableArray alloc] initWithObjects:@"Easy",@"Medium",@"Hard",nil];
     rowThreeItems = [[NSMutableArray alloc] initWithObjects:@"<30 mins", @"30-60 mins", @">60 mins", nil];
-    
 }
 
 - (void)viewDidUnload
@@ -67,8 +64,44 @@
     [self setWorkoutTypeLabel:nil];
     [self setWorkoutDifficultyLabel:nil];
     [self setWorkoutDurationLabel:nil];
+//    adBanner.delegate=nil;
     [super viewDidUnload];
 }
+//#pragma mark ADBannerViewDelegate
+//
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+//{
+//    if (!bannerIsVisible)
+//    {
+//        NSLog(@"bannerViewDidLoadAd");
+//        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+//        banner.frame = CGRectOffset(banner.frame, 0, -50);
+////        buttonFrame.frame = CGRectOffset(buttonFrame.frame, 0, -50);
+////        web.frame = CGRectMake(web.frame.origin.x,
+////                               web.frame.origin.y,
+////                               web.frame.size.width,
+////                               web.frame.size.height-50);
+//        [UIView commitAnimations];
+//        bannerIsVisible = YES;
+//    }
+//}
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+//{
+//    if (bannerIsVisible)
+//    {
+//        NSLog(@"bannerView:didFailToReceiveAdWithError:");
+//        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+//        // assumes the banner view is at the top of the screen.
+//        banner.frame = CGRectOffset(banner.frame, 0, 50);
+////        buttonFrame.frame = CGRectOffset(buttonFrame.frame, 0, 50);
+////        web.frame = CGRectMake(web.frame.origin.x,
+////                               web.frame.origin.y,
+////                               web.frame.size.width,
+////                               web.frame.size.height+50);
+//        [UIView commitAnimations];
+//        bannerIsVisible = NO;
+//    }
+//}
 
 
 
@@ -96,13 +129,12 @@
         return [rowOneItems objectAtIndex:row];
 }
 
-
 - (IBAction)findWorkout:(id)sender {
     //set labels to show what the user picked
     
     NSInteger rowOne = [pickerView selectedRowInComponent:kTypeComponent];
     self.typeSQL = [rowOneItems objectAtIndex:rowOne];
-    self.workoutTypeLabel.text = [rowOneItems objectAtIndex:rowOne];
+    self.workoutTypeLabel.text = typeSQL;
    
     NSInteger rowTwo = [pickerView selectedRowInComponent:kDifficultyComponent];
     self.difficultySQL = [rowTwoItems objectAtIndex:rowTwo];

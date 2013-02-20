@@ -8,17 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import <iAd/iAd.h>
 
 @class MyWorkoutList;
 
 @interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource>
 {
+    IBOutlet ADBannerView *adBanner;
     NSMutableArray *workouts;
     sqlite3 *db;
-
     
 }
-
+//2/14 add gloabl SQL NSStrings
 @property(nonatomic,retain) NSMutableArray *workouts;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (strong, nonatomic )NSMutableArray *rowOneItems;
@@ -31,9 +32,9 @@
 @property (nonatomic, assign) NSString *typeSQL;
 @property (nonatomic, assign) NSString *difficultySQL;
 @property (nonatomic, assign) NSString *durationSQL;
+//@property (nonatomic, assign) BOOL bannerIsVisible;
+//@property (strong, nonatomic) IBOutlet ADBannerView *adBanner;
 
-
-//@property (strong,nonatomic) MyWorkoutList *secondClass;
 
 
 - (IBAction)findWorkout:(id)sender;

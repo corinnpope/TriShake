@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -33,7 +33,7 @@
                                     <action selector="findWorkout:" destination="2" eventType="touchUpInside" id="qdZ-pb-fpV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyq-zb-tMf">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyq-zb-tMf">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" type="user" id="376-t6-MGc"/>
                                     <constraint firstAttribute="width" constant="60" id="v5W-gM-1o7"/>
@@ -42,14 +42,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-Z3-sTb">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-Z3-sTb">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="RcH-lm-coT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xz-fb-kpi">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xz-fb-kpi">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="102" id="rr0-gi-Rel"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="KHc-bp-b9g">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="206" id="QyU-dd-sMO"/>
+                                    <constraint firstAttribute="height" constant="231" id="3Jh-JY-IwU"/>
                                     <constraint firstAttribute="width" constant="271" id="vvm-jD-rda"/>
                                 </constraints>
                                 <string key="text">Select a workout type, workout difficulty, and workout duration from the picker above. Then press "find a workout" to search for a new workout</string>
@@ -71,22 +71,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="18C-zV-qvn"/>
-                            <constraint firstItem="xjO-Z3-sTb" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2IV-Cs-2ew"/>
+                            <constraint firstItem="1xz-fb-kpi" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1KF-L2-0eD"/>
                             <constraint firstItem="1xz-fb-kpi" firstAttribute="leading" secondItem="xjO-Z3-sTb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="5ug-3g-GS9"/>
                             <constraint firstItem="xjO-Z3-sTb" firstAttribute="baseline" secondItem="qyq-zb-tMf" secondAttribute="baseline" type="default" id="8T5-5f-fzd"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3" secondAttribute="leading" constant="20" type="user" id="8Xb-fu-jLj"/>
-                            <constraint firstItem="1xz-fb-kpi" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AWA-vF-v2G"/>
-                            <constraint firstItem="qyq-zb-tMf" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="B4H-0E-u7r"/>
+                            <constraint firstItem="KHc-bp-b9g" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" type="user" id="9yA-8T-RbO"/>
                             <constraint firstItem="qyq-zb-tMf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BXy-s4-nwd"/>
                             <constraint firstItem="1xz-fb-kpi" firstAttribute="baseline" secondItem="xjO-Z3-sTb" secondAttribute="baseline" type="default" id="CrW-Ym-9MU"/>
                             <constraint firstAttribute="trailing" secondItem="KHc-bp-b9g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ile-18-hIU"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="JyU-gU-Ok2"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Uj4-GG-QMC"/>
+                            <constraint firstItem="xjO-Z3-sTb" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XRo-7U-QD2"/>
+                            <constraint firstItem="KHc-bp-b9g" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Xe9-ub-MtG"/>
                             <constraint firstAttribute="trailing" secondItem="1xz-fb-kpi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aP0-z8-t9U"/>
                             <constraint firstAttribute="trailing" secondItem="4ra-U7-vTG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cab-Ib-vMh"/>
-                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="fSo-62-Hpj"/>
-                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="203" id="h62-A5-wJF"/>
-                            <constraint firstItem="KHc-bp-b9g" firstAttribute="top" secondItem="qyq-zb-tMf" secondAttribute="bottom" constant="25" type="user" id="siw-5d-g8P"/>
+                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="fSo-62-Hpj"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="228" type="user" id="ghH-5h-0th"/>
+                            <constraint firstItem="qyq-zb-tMf" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="knA-dv-z32"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="12" type="user" id="lK0-hv-Ope"/>
                         </constraints>
                     </view>
                     <connections>
@@ -112,6 +114,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="findWorkout:"/>
+                <relationship kind="outlet" name="adBanner" candidateClass="ADBannerView"/>
                 <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="workoutDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="workoutDifficultyLabel" candidateClass="UILabel"/>
