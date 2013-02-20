@@ -114,7 +114,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="findWorkout:"/>
-                <relationship kind="outlet" name="adBanner" candidateClass="ADBannerView"/>
                 <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="workoutDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="workoutDifficultyLabel" candidateClass="UILabel"/>

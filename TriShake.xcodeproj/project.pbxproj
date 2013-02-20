@@ -32,6 +32,7 @@
 		49BD50C816D439D5003370D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BD50C716D439D5003370D9 /* Default.png */; };
 		49BD50CA16D439E7003370D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BD50C916D439E7003370D9 /* Default@2x.png */; };
 		49BE951D16B9A4170003A972 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */; };
+		49FC35E916D52CF00014EF4C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FC35E816D52CF00014EF4C /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		49BD50C716D439D5003370D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		49BD50C916D439E7003370D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		49FC35E816D52CF00014EF4C /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FC35E916D52CF00014EF4C /* iAd.framework in Frameworks */,
 				49BE951D16B9A4170003A972 /* libsqlite3.0.dylib in Frameworks */,
 				49300ACC16B705A100F45D24 /* UIKit.framework in Frameworks */,
 				49300ACE16B705A100F45D24 /* Foundation.framework in Frameworks */,
@@ -88,6 +91,7 @@
 		49300ABC16B705A100F45D24 = {
 			isa = PBXGroup;
 			children = (
+				49FC35E816D52CF00014EF4C /* iAd.framework */,
 				49BD50C916D439E7003370D9 /* Default@2x.png */,
 				49BD50C716D439D5003370D9 /* Default.png */,
 				49300AD116B705A100F45D24 /* TriShake */,

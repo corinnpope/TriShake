@@ -36,16 +36,21 @@
 @synthesize typeSQL;
 @synthesize difficultySQL;
 @synthesize durationSQL;
-//@synthesize adBanner;
-//@synthesize bannerIsVisible;
+@synthesize bannerIsVisible;
 
 - (void)viewDidLoad
 {
-    //shrink picker view
-    //pickerView.transform = CGAffineTransformMakeScale(.8, 0.8);
+    //set up iAd
+    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    [adView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    CGRect adFrame = adView.frame;
+    adFrame.origin.y = self.view.frame.size.height-adView.frame.size.height;
+    adView.frame = adFrame;
+    [self.view addSubview:adView];
     
     [super viewDidLoad];
-    //self.adBanner.delegate=self;
+    
+    //set up Picker View
     pickerView.delegate = self;
     pickerView.dataSource = self;
     pickerView.showsSelectionIndicator = YES;
@@ -64,46 +69,50 @@
     [self setWorkoutTypeLabel:nil];
     [self setWorkoutDifficultyLabel:nil];
     [self setWorkoutDurationLabel:nil];
-//    adBanner.delegate=nil;
+    adView.delegate=nil;
     [super viewDidUnload];
 }
-//#pragma mark ADBannerViewDelegate
-//
-//- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-//{
-//    if (!bannerIsVisible)
-//    {
-//        NSLog(@"bannerViewDidLoadAd");
-//        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-//        banner.frame = CGRectOffset(banner.frame, 0, -50);
-////        buttonFrame.frame = CGRectOffset(buttonFrame.frame, 0, -50);
-////        web.frame = CGRectMake(web.frame.origin.x,
-////                               web.frame.origin.y,
-////                               web.frame.size.width,
-////                               web.frame.size.height-50);
-//        [UIView commitAnimations];
-//        bannerIsVisible = YES;
-//    }
-//}
-//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-//{
-//    if (bannerIsVisible)
-//    {
-//        NSLog(@"bannerView:didFailToReceiveAdWithError:");
-//        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-//        // assumes the banner view is at the top of the screen.
-//        banner.frame = CGRectOffset(banner.frame, 0, 50);
-////        buttonFrame.frame = CGRectOffset(buttonFrame.frame, 0, 50);
-////        web.frame = CGRectMake(web.frame.origin.x,
-////                               web.frame.origin.y,
-////                               web.frame.size.width,
-////                               web.frame.size.height+50);
-//        [UIView commitAnimations];
-//        bannerIsVisible = NO;
-//    }
-//}
+#pragma mark ADBannerViewDelegate
 
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        // banner is invisible now and moved out of the screen on 50 px
+        banner.frame = CGRectOffset(banner.frame, 0, 50);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
+}
 
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    if (self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        // banner is visible and we move it out of the screen, due to connection issue
+        banner.frame = CGRectOffset(banner.frame, 0, -50);
+        [UIView commitAnimations];
+        self.bannerIsVisible = NO;
+    }
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    NSLog(@"Banner view is beginning an ad action");
+    BOOL shouldExecuteAction = YES;
+    if (!willLeave && shouldExecuteAction)
+    {
+        // stop all interactive processes in the app
+    }
+    return shouldExecuteAction;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    // resume everything you've stopped
+}
 
 #pragma mark - Picker Methods -
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
