@@ -36,6 +36,9 @@
 		49FC35F916D556FE0014EF4C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FC35F816D556FE0014EF4C /* Accounts.framework */; };
 		49FC360116D561FC0014EF4C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FC360016D561FC0014EF4C /* Default@2x.png */; };
 		49FECD5416D712DE00603071 /* calculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FECD5316D712DE00603071 /* calculatorViewController.m */; };
+		49FECD5716D735C600603071 /* turtle_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FECD5516D735C600603071 /* turtle_icon.png */; };
+		49FECD5816D735C600603071 /* hare_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FECD5616D735C600603071 /* hare_icon.png */; };
+		49FECD5E16D742A700603071 /* newsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FECD5D16D742A700603071 /* newsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,10 @@
 		49FC360216D562050014EF4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		49FECD5216D712DE00603071 /* calculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calculatorViewController.h; sourceTree = "<group>"; };
 		49FECD5316D712DE00603071 /* calculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculatorViewController.m; sourceTree = "<group>"; };
+		49FECD5516D735C600603071 /* turtle_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_icon.png; path = "../../../../../Dropbox/personal/New TriShake/turtle_icon.png"; sourceTree = "<group>"; };
+		49FECD5616D735C600603071 /* hare_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hare_icon.png; path = "../../../../../Dropbox/personal/New TriShake/hare_icon.png"; sourceTree = "<group>"; };
+		49FECD5C16D742A700603071 /* newsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsViewController.h; sourceTree = "<group>"; };
+		49FECD5D16D742A700603071 /* newsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +169,8 @@
 				49300AE616B705A200F45D24 /* ViewController.h */,
 				49300AE716B705A200F45D24 /* ViewController.m */,
 				49300AD216B705A100F45D24 /* Supporting Files */,
+				49FECD5C16D742A700603071 /* newsViewController.h */,
+				49FECD5D16D742A700603071 /* newsViewController.m */,
 			);
 			path = TriShake;
 			sourceTree = "<group>";
@@ -183,6 +192,8 @@
 		49300AF716B724AD00F45D24 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				49FECD5516D735C600603071 /* turtle_icon.png */,
+				49FECD5616D735C600603071 /* hare_icon.png */,
 				49FC35EE16D53FEF0014EF4C /* twitter-bird-white-on-blue.png */,
 				49BD50C916D439E7003370D9 /* Default@2x.png */,
 				49BD50C716D439D5003370D9 /* Default.png */,
@@ -269,6 +280,8 @@
 				49FC35F316D551980014EF4C /* mail_icon.png in Resources */,
 				49FC35F716D5567C0014EF4C /* facebook.png in Resources */,
 				49FC360116D561FC0014EF4C /* Default@2x.png in Resources */,
+				49FECD5716D735C600603071 /* turtle_icon.png in Resources */,
+				49FECD5816D735C600603071 /* hare_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +297,7 @@
 				49300AE816B705A200F45D24 /* ViewController.m in Sources */,
 				49300B1216B7826300F45D24 /* MyWorkoutList.m in Sources */,
 				49FECD5416D712DE00603071 /* calculatorViewController.m in Sources */,
+				49FECD5E16D742A700603071 /* newsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

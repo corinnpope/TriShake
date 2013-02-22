@@ -1,18 +1,18 @@
 //
-//  calculatorViewController.m
+//  newsViewController.m
 //  TriShake
 //
-//  Created by Corinn Pope on 2/21/13.
+//  Created by Corinn Pope on 2/22/13.
 //  Copyright (c) 2013 Corinn Pope. All rights reserved.
 //
 
-#import "calculatorViewController.h"
+#import "newsViewController.h"
 
-@interface calculatorViewController ()
+@interface newsViewController ()
 
 @end
 
-@implementation calculatorViewController
+@implementation newsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,15 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)sprintSegment:(id)sender {
-}
-
-- (IBAction)olySegment:(id)sender {
-}
-
-- (IBAction)halfSegment:(id)sender {
-}
-
-- (IBAction)fullSegment:(id)sender {
-}
 @end
