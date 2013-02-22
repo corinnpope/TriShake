@@ -19,23 +19,39 @@
                                     <segment title="70.3"/>
                                     <segment title="140.6"/>
                                 </segments>
+                                <connections>
+                                    <action selector="raceChanged:" destination="yYJ-TT-3w6" eventType="valueChanged" id="Tbc-M7-Qtb"/>
+                                </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.5" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="UNo-nt-FYk"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.5" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="UNo-nt-FYk">
+                                <connections>
+                                    <action selector="swimPace:" destination="yYJ-TT-3w6" eventType="valueChanged" id="JHc-xh-K3W"/>
+                                </connections>
+                            </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="12" maxValue="26" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-Gw-JUN">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="U1f-FJ-mL9"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="bikePace:" destination="yYJ-TT-3w6" eventType="valueChanged" id="fSj-YH-K4h"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="6" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="yxd-4e-vsW"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="6" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="yxd-4e-vsW">
+                                <connections>
+                                    <action selector="runPace:" destination="yYJ-TT-3w6" eventType="valueChanged" id="JiN-1C-UCp"/>
+                                </connections>
+                            </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A4C-HW-4iT">
                                 <segments>
                                     <segment title="Slow"/>
                                     <segment title="Average"/>
                                     <segment title="Fast"/>
                                 </segments>
+                                <connections>
+                                    <action selector="transitionChanged:" destination="yYJ-TT-3w6" eventType="valueChanged" id="11W-w4-hvD"/>
+                                    <action selector="transitionPace:" destination="yYJ-TT-3w6" eventType="valueChanged" id="QWZ-oC-ZeA"/>
+                                </connections>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hare_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="O0v-x3-Mwx"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="turtle_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="xW1-fu-Uxl"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swim Pace (min/100m)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUR-i2-yDW">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -74,7 +90,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Estimated Finish Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93l-jC-bRA">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Estimated Finish Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93l-jC-bRA">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,44 +103,50 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="A4C-HW-4iT" secondAttribute="bottom" constant="102" id="22y-32-t4k"/>
                             <constraint firstItem="T7f-Ln-R9n" firstAttribute="top" secondItem="Jbh-Gw-JUN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="25w-kd-e6d"/>
-                            <constraint firstItem="93l-jC-bRA" firstAttribute="centerX" secondItem="A4C-HW-4iT" secondAttribute="centerX" type="default" id="4Z5-qG-wSm"/>
-                            <constraint firstItem="O0v-x3-Mwx" firstAttribute="top" secondItem="FpK-tZ-Yds" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="66l-Sb-V8f"/>
-                            <constraint firstAttribute="bottom" secondItem="A4C-HW-4iT" secondAttribute="bottom" constant="112" id="7E5-Vj-oCY"/>
+                            <constraint firstItem="FpK-tZ-Yds" firstAttribute="top" secondItem="7Dc-aI-07E" secondAttribute="top" constant="54" id="8ir-NC-ugm"/>
                             <constraint firstItem="Jbh-Gw-JUN" firstAttribute="top" secondItem="mZh-St-gAh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="93c-M8-Dhe"/>
-                            <constraint firstAttribute="trailing" secondItem="xW1-fu-Uxl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9Z1-2y-2Lp"/>
                             <constraint firstItem="A4C-HW-4iT" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9f7-Kb-7XZ"/>
-                            <constraint firstItem="O0v-x3-Mwx" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CJ3-P3-Ikr"/>
                             <constraint firstItem="tAi-hX-un8" firstAttribute="trailing" secondItem="LAV-j6-ldw" secondAttribute="trailing" type="default" id="Gqr-Kb-NKH"/>
-                            <constraint firstItem="LAV-j6-ldw" firstAttribute="trailing" secondItem="FpK-tZ-Yds" secondAttribute="trailing" type="default" id="HGQ-bk-F41"/>
-                            <constraint firstItem="SUR-i2-yDW" firstAttribute="top" secondItem="O0v-x3-Mwx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="J6F-Hu-26u"/>
                             <constraint firstItem="T7f-Ln-R9n" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JA6-yL-N0E"/>
                             <constraint firstItem="sei-DI-gch" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KAd-ve-CwE"/>
-                            <constraint firstItem="xQ3-D0-nyE" firstAttribute="top" secondItem="93l-jC-bRA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KdV-FB-aIl"/>
-                            <constraint firstItem="xW1-fu-Uxl" firstAttribute="top" secondItem="FpK-tZ-Yds" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Nx0-ej-k83"/>
+                            <constraint firstItem="xQ3-D0-nyE" firstAttribute="baseline" secondItem="93l-jC-bRA" secondAttribute="baseline" type="default" id="Mtd-cL-6Hm"/>
                             <constraint firstItem="Jbh-Gw-JUN" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QBE-Zt-N0G"/>
-                            <constraint firstItem="FpK-tZ-Yds" firstAttribute="top" secondItem="7Dc-aI-07E" secondAttribute="top" constant="44" id="RC4-Iw-d6V"/>
                             <constraint firstItem="tAi-hX-un8" firstAttribute="baseline" secondItem="T7f-Ln-R9n" secondAttribute="baseline" type="default" id="RlC-Gs-REe"/>
+                            <constraint firstItem="93l-jC-bRA" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ss3-Qd-2o9"/>
+                            <constraint firstItem="8JS-xr-vhL" firstAttribute="trailing" secondItem="FpK-tZ-Yds" secondAttribute="trailing" type="default" id="T89-ot-TaA"/>
                             <constraint firstItem="8JS-xr-vhL" firstAttribute="baseline" secondItem="SUR-i2-yDW" secondAttribute="baseline" type="default" id="UDg-YM-O4g"/>
                             <constraint firstItem="UNo-nt-FYk" firstAttribute="top" secondItem="SUR-i2-yDW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UQz-oe-GXS"/>
                             <constraint firstItem="8JS-xr-vhL" firstAttribute="trailing" secondItem="LAV-j6-ldw" secondAttribute="trailing" type="default" id="VuS-R8-vdY"/>
                             <constraint firstItem="yxd-4e-vsW" firstAttribute="trailing" secondItem="Jbh-Gw-JUN" secondAttribute="trailing" type="default" id="WJM-fg-uIc"/>
+                            <constraint firstAttribute="trailing" secondItem="xQ3-D0-nyE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Zdq-aJ-bI1"/>
                             <constraint firstItem="sei-DI-gch" firstAttribute="top" secondItem="yxd-4e-vsW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZwF-0g-SMP"/>
-                            <constraint firstItem="xQ3-D0-nyE" firstAttribute="centerX" secondItem="93l-jC-bRA" secondAttribute="centerX" type="default" id="aAv-vH-T1J"/>
-                            <constraint firstAttribute="bottom" secondItem="xQ3-D0-nyE" secondAttribute="bottom" constant="46" id="aeT-nl-wFJ"/>
                             <constraint firstAttribute="trailing" secondItem="UNo-nt-FYk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dmJ-iR-PIR"/>
                             <constraint firstItem="FpK-tZ-Yds" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eKR-Wb-j31"/>
                             <constraint firstItem="SUR-i2-yDW" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fvv-HO-oCX"/>
                             <constraint firstItem="yxd-4e-vsW" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fx7-BV-RBx"/>
                             <constraint firstItem="UNo-nt-FYk" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jqw-Dt-hWk"/>
                             <constraint firstItem="yxd-4e-vsW" firstAttribute="trailing" secondItem="A4C-HW-4iT" secondAttribute="trailing" type="default" id="mzO-vD-7kL"/>
+                            <constraint firstItem="SUR-i2-yDW" firstAttribute="top" secondItem="7Dc-aI-07E" secondAttribute="top" constant="143" id="n7N-JH-o2g"/>
                             <constraint firstItem="yxd-4e-vsW" firstAttribute="top" secondItem="T7f-Ln-R9n" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qDA-1S-qaE"/>
                             <constraint firstItem="mZh-St-gAh" firstAttribute="top" secondItem="UNo-nt-FYk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="udV-R2-5wH"/>
                             <constraint firstItem="LAV-j6-ldw" firstAttribute="baseline" secondItem="mZh-St-gAh" secondAttribute="baseline" type="default" id="vVS-yx-dgK"/>
                             <constraint firstItem="mZh-St-gAh" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yk2-Kx-J9O"/>
+                            <constraint firstAttribute="bottom" secondItem="93l-jC-bRA" secondAttribute="bottom" constant="65" id="zi1-rk-IVs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calculator" id="yLc-fO-3OY"/>
+                    <connections>
+                        <outlet property="bikePaceLabel" destination="LAV-j6-ldw" id="pfx-av-elP"/>
+                        <outlet property="bikeSlider" destination="Jbh-Gw-JUN" id="rdx-ZN-7ZO"/>
+                        <outlet property="projectedFinishTime" destination="xQ3-D0-nyE" id="3DD-Mt-hah"/>
+                        <outlet property="raceSegmentedControl" destination="FpK-tZ-Yds" id="fdT-Oy-Qcd"/>
+                        <outlet property="runPaceLabel" destination="tAi-hX-un8" id="NpM-de-sGI"/>
+                        <outlet property="runSlider" destination="yxd-4e-vsW" id="13t-1n-dxV"/>
+                        <outlet property="swimPaceLabel" destination="8JS-xr-vhL" id="VBz-tA-fYl"/>
+                        <outlet property="swimSlider" destination="UNo-nt-FYk" id="F4A-zm-QaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acN-oB-0D6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,45 +307,9 @@
     <resources>
         <image name="OrangeButton.png" width="280" height="44"/>
         <image name="facebook.png" width="40" height="40"/>
-        <image name="hare_icon.png" width="30" height="30"/>
         <image name="mail_icon.png" width="40" height="40"/>
-        <image name="turtle_icon.png" width="30" height="30"/>
         <image name="twitter-bird-white-on-blue.png" width="40" height="40"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="facebookButton:"/>
-                <relationship kind="action" name="findWorkout:"/>
-                <relationship kind="action" name="mailButton:"/>
-                <relationship kind="action" name="tweetButton:"/>
-                <relationship kind="outlet" name="facebookButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mailButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="tweetButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="workoutDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutDifficultyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutDurationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutTypeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="calculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/calculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="fullSegment:"/>
-                <relationship kind="action" name="halfSegment:"/>
-                <relationship kind="action" name="olySegment:"/>
-                <relationship kind="action" name="sprintSegment:"/>
-            </relationships>
-        </class>
-        <class className="newsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/newsViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
