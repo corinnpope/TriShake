@@ -43,17 +43,31 @@
 
 - (void)viewDidLoad
 {
-    //set up iAd
+    //set up iAd at bottom of frame
+//    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+//    adView.frame = CGRectOffset(adView.frame, 0, -50);
+//    [adView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+//    CGRect adFrame = adView.frame;
+//    //adFrame.origin.y = self.view.frame.size.height-adView.frame.size.height;
+//    adView.frame = adFrame;
+//    [self.view addSubview:adView];
+    
+    
+    //set up iAd at top of frame
     adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    adView.frame = CGRectOffset(adView.frame, 0, -50);
     [adView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    CGRect adFrame = adView.frame;
-    adFrame.origin.y = self.view.frame.size.height-adView.frame.size.height;
-    adView.frame = adFrame;
     [self.view addSubview:adView];
+    adView.delegate=self;
+    self.bannerIsVisible=NO;
     
     [super viewDidLoad];
     
     //set up Picker View
+    //pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    pickerView.frame = CGRectOffset(pickerView.frame, 0, -50);
+    pickerView.transform = CGAffineTransformMakeScale(.8, .8);
+    
     pickerView.delegate = self;
     pickerView.dataSource = self;
     pickerView.showsSelectionIndicator = YES;

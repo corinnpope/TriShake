@@ -14,8 +14,6 @@
 		49300AD616B705A100F45D24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49300AD416B705A100F45D24 /* InfoPlist.strings */; };
 		49300AD816B705A100F45D24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300AD716B705A100F45D24 /* main.m */; };
 		49300ADC16B705A100F45D24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300ADB16B705A100F45D24 /* AppDelegate.m */; };
-		49300ADE16B705A100F45D24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300ADD16B705A100F45D24 /* Default.png */; };
-		49300AE016B705A200F45D24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49300ADF16B705A200F45D24 /* Default@2x.png */; };
 		49300AE516B705A200F45D24 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49300AE316B705A200F45D24 /* MainStoryboard.storyboard */; };
 		49300AE816B705A200F45D24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49300AE716B705A200F45D24 /* ViewController.m */; };
 		49300AFD16B724AD00F45D24 /* orangebutton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 49300AF816B724AD00F45D24 /* orangebutton.ai */; };
@@ -27,10 +25,7 @@
 		49808F2316D4358F009C21AC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2216D4358F009C21AC /* Icon.png */; };
 		49808F2516D43594009C21AC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2416D43594009C21AC /* Icon@2x.png */; };
 		49808F2716D4359D009C21AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2616D4359D009C21AC /* Default.png */; };
-		49808F2916D435A6009C21AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2816D435A6009C21AC /* Default@2x.png */; };
 		49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2A16D435BB009C21AC /* Default-568h@2x.png */; };
-		49BD50C816D439D5003370D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BD50C716D439D5003370D9 /* Default.png */; };
-		49BD50CA16D439E7003370D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BD50C916D439E7003370D9 /* Default@2x.png */; };
 		49BE951D16B9A4170003A972 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */; };
 		49FC35E916D52CF00014EF4C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FC35E816D52CF00014EF4C /* iAd.framework */; };
 		49FC35EF16D53FEF0014EF4C /* twitter-bird-white-on-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FC35EE16D53FEF0014EF4C /* twitter-bird-white-on-blue.png */; };
@@ -39,6 +34,8 @@
 		49FC35F516D552170014EF4C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FC35F416D552170014EF4C /* MessageUI.framework */; };
 		49FC35F716D5567C0014EF4C /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FC35F616D5567C0014EF4C /* facebook.png */; };
 		49FC35F916D556FE0014EF4C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FC35F816D556FE0014EF4C /* Accounts.framework */; };
+		49FC360116D561FC0014EF4C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FC360016D561FC0014EF4C /* Default@2x.png */; };
+		49FECD5416D712DE00603071 /* calculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FECD5316D712DE00603071 /* calculatorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +80,13 @@
 		49FC35F416D552170014EF4C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		49FC35F616D5567C0014EF4C /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		49FC35F816D556FE0014EF4C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		49FC35FA16D561D90014EF4C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		49FC35FC16D561E50014EF4C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		49FC35FE16D561ED0014EF4C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		49FC360016D561FC0014EF4C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		49FC360216D562050014EF4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		49FECD5216D712DE00603071 /* calculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calculatorViewController.h; sourceTree = "<group>"; };
+		49FECD5316D712DE00603071 /* calculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculatorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,11 @@
 		49300ABC16B705A100F45D24 = {
 			isa = PBXGroup;
 			children = (
-				49FC35F816D556FE0014EF4C /* Accounts.framework */,
+				49FC360216D562050014EF4C /* Default-568h@2x.png */,
+				49FC360016D561FC0014EF4C /* Default@2x.png */,
+				49FC35FE16D561ED0014EF4C /* Default.png */,
+				49FC35FC16D561E50014EF4C /* Icon@2x.png */,
+				49FC35FA16D561D90014EF4C /* Icon.png */,
 				49300AD116B705A100F45D24 /* TriShake */,
 				49300ACA16B705A100F45D24 /* Frameworks */,
 				49300AC816B705A100F45D24 /* Products */,
@@ -125,6 +133,7 @@
 		49300ACA16B705A100F45D24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49FC35F816D556FE0014EF4C /* Accounts.framework */,
 				49FC35F416D552170014EF4C /* MessageUI.framework */,
 				49FC35F016D54DA60014EF4C /* Social.framework */,
 				49FC35EA16D53C270014EF4C /* Twitter.framework */,
@@ -148,6 +157,8 @@
 				49300B1116B7826300F45D24 /* MyWorkoutList.m */,
 				49300ADB16B705A100F45D24 /* AppDelegate.m */,
 				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
+				49FECD5216D712DE00603071 /* calculatorViewController.h */,
+				49FECD5316D712DE00603071 /* calculatorViewController.m */,
 				49300AE616B705A200F45D24 /* ViewController.h */,
 				49300AE716B705A200F45D24 /* ViewController.m */,
 				49300AD216B705A100F45D24 /* Supporting Files */,
@@ -243,8 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49300AD616B705A100F45D24 /* InfoPlist.strings in Resources */,
-				49300ADE16B705A100F45D24 /* Default.png in Resources */,
-				49300AE016B705A200F45D24 /* Default@2x.png in Resources */,
 				49300AE516B705A200F45D24 /* MainStoryboard.storyboard in Resources */,
 				49300AFD16B724AD00F45D24 /* orangebutton.ai in Resources */,
 				49300AFE16B724AD00F45D24 /* OrangeButton.png in Resources */,
@@ -255,13 +264,11 @@
 				49808F2316D4358F009C21AC /* Icon.png in Resources */,
 				49808F2516D43594009C21AC /* Icon@2x.png in Resources */,
 				49808F2716D4359D009C21AC /* Default.png in Resources */,
-				49808F2916D435A6009C21AC /* Default@2x.png in Resources */,
 				49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */,
-				49BD50C816D439D5003370D9 /* Default.png in Resources */,
-				49BD50CA16D439E7003370D9 /* Default@2x.png in Resources */,
 				49FC35EF16D53FEF0014EF4C /* twitter-bird-white-on-blue.png in Resources */,
 				49FC35F316D551980014EF4C /* mail_icon.png in Resources */,
 				49FC35F716D5567C0014EF4C /* facebook.png in Resources */,
+				49FC360116D561FC0014EF4C /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 				49300ADC16B705A100F45D24 /* AppDelegate.m in Sources */,
 				49300AE816B705A200F45D24 /* ViewController.m in Sources */,
 				49300B1216B7826300F45D24 /* MyWorkoutList.m in Sources */,
+				49FECD5416D712DE00603071 /* calculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
