@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface calculatorViewController : UIViewController {
-    UISegmentedControl *raceSegmentedControl;
+    UISlider *swimSlider;
+    UISlider *bikeSlider;
+    UISlider *runSlider;
+    UILabel *projectedFinishTime;
+    UILabel *swimPaceLabel;
+    UILabel *bikePaceLabel;
+    UILabel *runPaceLabel;
 }
 
 @property (strong, nonatomic) IBOutlet UISlider *swimSlider;
@@ -19,16 +25,17 @@
 @property (strong, nonatomic) IBOutlet UILabel *swimPaceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bikePaceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *runPaceLabel;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *raceSegmentedControl;
 
 @property (strong, nonatomic) IBOutlet UILabel *projectedFinishTime;
 
-- (IBAction)swimPace:(id)sender;
-- (IBAction)bikePace:(id)sender;
-- (IBAction)runPace:(id)sender;
-- (IBAction)transitionPace:(id)sender;
+- (IBAction)swimSliderChanged:(id)sender;
+- (IBAction)bikeSliderChanged:(id)sender;
+- (IBAction)runSliderChanged:(id)sender;
 
-- (IBAction)raceChanged:(id)sender;
-- (IBAction)transitionChanged:(id)sender;
+
+- (void) changeSwimSlider:(id)sender;
+- (void) changeBikeSlider:(id)sender;
+- (void) changeRunSlider:(id)sender;
+- (void) displayProjectedRaceTime;
 
 @end
