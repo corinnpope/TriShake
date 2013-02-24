@@ -31,11 +31,9 @@
 - (IBAction)swimSliderChanged:(id)sender;
 - (IBAction)bikeSliderChanged:(id)sender;
 - (IBAction)runSliderChanged:(id)sender;
+- (IBAction)changeTime:(id)sender;
 
-
-- (void) changeSwimSlider:(id)sender;
-- (void) changeBikeSlider:(id)sender;
-- (void) changeRunSlider:(id)sender;
 - (void) displayProjectedRaceTime;
+
 
 @end
