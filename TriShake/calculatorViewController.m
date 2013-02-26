@@ -75,9 +75,9 @@
     bikePaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",(self.bikeSlider.value)];
     
     //convert mph to m/s for bike
-    double bikeMS = self.bikeSlider.value * 2.237;
+    double bikeMS = self.bikeSlider.value * .44;
     //do distance for race here
-    double bikePaceDouble = ((bikeMS * 20000));
+    double bikePaceDouble = (20000 / bikeMS);
     
     bikePace = bikePaceDouble;
     
@@ -98,8 +98,6 @@
     NSLog(@"Run pace double is :%g", runPace);
 }
 
-
-
 - (IBAction)t1SliderChanged:(id)sender {
     t1PaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f", self.t1Slider.value];
     double t1PaceConversion = self.t1Slider.value * 60;
@@ -113,7 +111,6 @@
     t2Pace = t2PaceConversion;
     NSLog (@"t2 pace is: %f", t2Pace);
 }
-
 
 - (IBAction)changeTime:(id)sender {
     projectedRaceTime = (runPace + bikePace + swimPace + t1Pace + t2Pace)/60;
