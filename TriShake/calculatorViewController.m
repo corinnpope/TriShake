@@ -18,11 +18,13 @@
     double swimPace;
     double bikePace;
     double runPace;
+    double t1Pace;
+    double t2Pace;
     double projectedRaceTime;
 }
 
-@synthesize swimSlider, bikeSlider, runSlider;
-@synthesize swimPaceLabel, bikePaceLabel, runPaceLabel;
+@synthesize swimSlider, bikeSlider, runSlider, t1Slider, t2Slider;
+@synthesize swimPaceLabel, bikePaceLabel, runPaceLabel, t1PaceLabel, t2PaceLabel;
 @synthesize projectedFinishTime;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -48,25 +50,23 @@
 
 #pragma Math!
 
-- (void) displayProjectedRaceTime {
-    //NSNumber *projectedRaceTime = [NSNumber numberWithDouble:(swimPaceDouble + bikePaceDouble + runPaceDouble)];
-    
-    //NSString *projectedFinishTime = [NSString stringWithFormat:@"%g", projectedRaceTime];
-    //self.projectedFinishTime.text = projectedFinishTime;
-}
-
-
 - (IBAction)swimSliderChanged:(id)sender {
     //set text label to value of slider
     swimPaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",self.swimSlider.value];
   
+    //get seconds to meters
+    double swimMS = self.swimSlider.value * 60;
+    double swimPaceDouble = (swimMS / 100);
+    double swimSprint = swimPaceDouble * 750;
+    //
+    //do distance for races here
+    //
+  
+    swimPace = swimSprint;
     
-    double swimMS = self.swimSlider.value * 1.667;
-    double swimPaceDouble = (swimMS * 750)/3600;
-    NSString *swimPaceString = [NSString stringWithFormat:@"%f", swimPaceDouble];
-    swimPace = swimPaceDouble;
-    NSLog(@"Swim pace string is: %@", swimPaceString);
-    NSLog(@"Swim pace double is :%f", swimPaceDouble);
+//    NSString *swimPaceString = [NSString stringWithFormat:@"%f", swimPaceDouble];
+//    NSLog(@"Swim pace string is: %@", swimPaceString);
+    NSLog(@"Swim pace double is :%f", swimSprint);
     
 }
 
@@ -75,33 +75,50 @@
     bikePaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",(self.bikeSlider.value)];
     
     //convert mph to m/s for bike
-    double bikeMS = self.bikeSlider.value * .447;
-    double bikePaceDouble = (bikeMS * 20000) / 3600;
+    double bikeMS = self.bikeSlider.value * 2.237;
+    //do distance for race here
+    double bikePaceDouble = ((bikeMS * 20000));
+    
     bikePace = bikePaceDouble;
-    NSString *bikePaceString = [NSString stringWithFormat:@"%f", bikePaceDouble];
-    NSLog(@"%@", bikePaceString);
-    NSLog(@"Bike pace double is :%f", bikePaceDouble);
+    
+    NSLog(@"Bike pace double is :%f", bikePace);
 }
 
 - (IBAction)runSliderChanged:(id)sender {
-    //    //run pace to user is min per mile
+    //run pace to user is min per mile
     runPaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",self.runSlider.value];
     
     //convert min/mil to m/s
-    double runMS = self.runSlider.value * 26.82;
+    double runMS = self.runSlider.value * 0.037;
+    
     //convert m/s to hours using runDistance from selected segment in segmentcontroller
-    double runPaceDouble = (runMS * 5000)/3600;
+    double runPaceDouble = (runMS * 5000);
     runPace = runPaceDouble;
-    NSString *runPaceString = [NSString stringWithFormat:@"%f", runPaceDouble];
-    NSLog (@"%@", runPaceString);
-    NSLog(@"Run pace double is :%f", runPaceDouble);
+
+    NSLog(@"Run pace double is :%g", runPace);
 }
 
-- (IBAction)changeTime:(id)sender {
-    projectedRaceTime = runPace + bikePace + swimPace;
-    NSString *projectedFinishTime = [NSString stringWithFormat:@"%g", projectedRaceTime];
-    self.projectedFinishTime.text = projectedFinishTime;
 
+
+- (IBAction)t1SliderChanged:(id)sender {
+    t1PaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f", self.t1Slider.value];
+    double t1PaceConversion = self.t1Slider.value * 60;
+    t1Pace = t1PaceConversion;
+    NSLog (@"t1 pace is: %f", t1Pace);
+}
+
+- (IBAction)t2SliderChanged:(id)sender {
+    t2PaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f", self.t2Slider.value];
+    double t2PaceConversion = self.t2Slider.value * 60;
+    t2Pace = t2PaceConversion;
+    NSLog (@"t2 pace is: %f", t2Pace);
+}
+
+
+- (IBAction)changeTime:(id)sender {
+    projectedRaceTime = (runPace + bikePace + swimPace + t1Pace + t2Pace)/60;
+    NSString *projectedFinishTime = [NSString stringWithFormat:@"%1.2f", projectedRaceTime];
+    self.projectedFinishTime.text = projectedFinishTime;
 }
 
 @end
