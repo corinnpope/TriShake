@@ -16,6 +16,9 @@
     UISlider *t2Slider;
     
     UILabel *projectedFinishTime;
+    UILabel *olyFinishTime;
+    UILabel *halfFinishTime;
+    UILabel *fullFinishTime;
     
     UILabel *swimPaceLabel;
     UILabel *bikePaceLabel;
@@ -39,6 +42,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *t2PaceLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *projectedFinishTime;
+@property (strong, nonatomic) IBOutlet UILabel *olyFinishTime;
+@property (strong, nonatomic) IBOutlet UILabel *halfFinishTime;
+@property (strong, nonatomic) IBOutlet UILabel *fullFinishTime;
 
 - (IBAction)swimSliderChanged:(id)sender;
 - (IBAction)bikeSliderChanged:(id)sender;

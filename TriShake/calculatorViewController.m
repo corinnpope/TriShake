@@ -13,17 +13,29 @@
 @end
 
 @implementation calculatorViewController {
-    double swimPace;
-    double bikePace;
-    double runPace;
+    double sprintSwimPace;
+    double olySwimPace;
+    double halfSwimPace;
+    double fullSwimPace;
+    double sprintBikePace;
+    double olyBikePace;
+    double halfBikePace;
+    double fullBikePace;
+    double sprintRunPace;
+    double olyRunPace;
+    double halfRunPace;
+    double fullRunPace;
     double t1Pace;
     double t2Pace;
-    double projectedRaceTime;
+    double projectedSprintTime;
+    double projectedOlyTime;
+    double projectedHalfTime;
+    double projectedFullTime;
 }
 
 @synthesize swimSlider, bikeSlider, runSlider, t1Slider, t2Slider;
 @synthesize swimPaceLabel, bikePaceLabel, runPaceLabel, t1PaceLabel, t2PaceLabel;
-@synthesize projectedFinishTime;
+@synthesize projectedFinishTime, olyFinishTime, halfFinishTime, fullFinishTime;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,11 +67,17 @@
     
     //do distance for race here
     double swimSprint = swimPaceDouble * 750;
+    double swimOly = swimPaceDouble * 1500;
+    double swimHalf = swimPaceDouble * 1900;
+    double swimFull = swimPaceDouble * 3800;
   
-    swimPace = swimSprint;
+    sprintSwimPace = swimSprint;
+    olySwimPace = swimOly;
+    halfSwimPace = swimHalf;
+    fullSwimPace = swimFull;
 
     //change label to hh:mm:ss format
-    NSTimeInterval intervalValue = swimMS;
+    NSTimeInterval intervalValue = self.swimSlider.value * 60;
     NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
     [hmsFormatter setDateFormat:@"HH:mm:ss"];
     [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
@@ -79,14 +97,20 @@
     double bikeMS = self.bikeSlider.value * .44;
     //do distance for race here
     double bikePaceDouble = (20000 / bikeMS);
+    double bikePaceOly = (40000/bikeMS);
+    double bikePaceHalf = (90000/bikeMS);
+    double bikePaceFull = (180000/bikeMS);
     
-    bikePace = bikePaceDouble;
+    sprintBikePace = bikePaceDouble;
+    olyBikePace = bikePaceOly;
+    halfBikePace = bikePaceHalf;
+    fullBikePace = bikePaceFull;
     
     bikePaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",(self.bikeSlider.value)];
     
     [bikeSlider addTarget:self action:@selector(bikeSliderChanged:)forControlEvents:UIControlEventValueChanged];
     
-    NSLog(@"Bike pace double is :%f", bikePace);
+    NSLog(@"Bike pace double is :%f", sprintBikePace);
 }
 
 - (IBAction)runSliderChanged:(id)sender {
@@ -95,7 +119,14 @@
     
     //do distance here
     double runPaceDouble = (runMS * 5000);
-    runPace = runPaceDouble;
+    double runPaceOly = (runMS * 10000);
+    double runPaceHalf = (runMS * 21100);
+    double runPaceFull = (runMS * 42200);
+    
+    sprintRunPace = runPaceDouble;
+    olyRunPace = runPaceOly;
+    halfRunPace = runPaceHalf;
+    fullRunPace = runPaceFull;
 
     //change label to hh:mm:ss format
     NSTimeInterval intervalValue = self.runSlider.value * 60;
@@ -107,7 +138,7 @@
     
     [runSlider addTarget:self action:@selector(runSliderChanged:)forControlEvents:UIControlEventValueChanged];
     
-    NSLog(@"Run pace double is :%g", runPace);
+    NSLog(@"Run pace double is :%g", sprintRunPace);
 }
 
 - (IBAction)t1SliderChanged:(id)sender {
@@ -144,16 +175,26 @@
 }
 
 - (IBAction)changeTime:(id)sender {
-    projectedRaceTime = (runPace + bikePace + swimPace + t1Pace + t2Pace);
+    projectedSprintTime = (sprintRunPace + sprintBikePace + sprintRunPace + t1Pace + t2Pace);
+    projectedOlyTime = (olyRunPace + olyBikePace + olySwimPace + t1Pace + t2Pace);
+    projectedHalfTime = (halfRunPace + halfBikePace + halfSwimPace + t1Pace + t2Pace);
+    projectedFullTime = (fullRunPace + fullBikePace + fullSwimPace + t1Pace + t2Pace);
     
-    NSTimeInterval intervalValue = projectedRaceTime;
+    
+    
+    NSTimeInterval sprintValue = projectedSprintTime;
+    NSTimeInterval olyValue = projectedOlyTime;
+    NSTimeInterval halfValue = projectedHalfTime;
+    NSTimeInterval fullValue = projectedFullTime;
     NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
     [hmsFormatter setDateFormat:@"HH:mm:ss"];
     [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
+    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:sprintValue]]);
     
-    self.projectedFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
-    
+    self.projectedFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:sprintValue]];
+    self.olyFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:olyValue]];
+    self.halfFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:halfValue]];
+    self.fullFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:fullValue]];
     
 }
 
