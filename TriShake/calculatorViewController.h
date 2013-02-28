@@ -14,7 +14,9 @@
     UISlider *runSlider;
     UISlider *t1Slider;
     UISlider *t2Slider;
+    
     UILabel *projectedFinishTime;
+    
     UILabel *swimPaceLabel;
     UILabel *bikePaceLabel;
     UILabel *runPaceLabel;

@@ -8,9 +8,7 @@
 
 #import "calculatorViewController.h"
 
-@interface calculatorViewController () {
-
-}
+@interface calculatorViewController () 
 
 @end
 
@@ -51,28 +49,31 @@
 #pragma Math!
 
 - (IBAction)swimSliderChanged:(id)sender {
-    //set text label to value of slider
-    swimPaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",self.swimSlider.value];
-  
-    //get seconds to meters
+    //convert from min/100m to sec/m
     double swimMS = self.swimSlider.value * 60;
     double swimPaceDouble = (swimMS / 100);
+    
+    //do distance for race here
     double swimSprint = swimPaceDouble * 750;
-    //
-    //do distance for races here
-    //
   
     swimPace = swimSprint;
+
+    //change label to hh:mm:ss format
+    NSTimeInterval intervalValue = swimMS;
+    NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
+    [hmsFormatter setDateFormat:@"HH:mm:ss"];
+    [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
+    swimPaceLabel.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
     
-//    NSString *swimPaceString = [NSString stringWithFormat:@"%f", swimPaceDouble];
-//    NSLog(@"Swim pace string is: %@", swimPaceString);
-    NSLog(@"Swim pace double is :%f", swimSprint);
+    [swimSlider addTarget:self action:@selector(swimSliderChanged:)forControlEvents:UIControlEventValueChanged];
+    
+    NSLog(@"Swim pace double is :%g", swimPaceDouble);
     
 }
 
 - (IBAction)bikeSliderChanged:(id)sender {
-    //bike pace to user is mph
-    bikePaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",(self.bikeSlider.value)];
+ 
     
     //convert mph to m/s for bike
     double bikeMS = self.bikeSlider.value * .44;
@@ -81,41 +82,79 @@
     
     bikePace = bikePaceDouble;
     
+    bikePaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",(self.bikeSlider.value)];
+    
+    [bikeSlider addTarget:self action:@selector(bikeSliderChanged:)forControlEvents:UIControlEventValueChanged];
+    
     NSLog(@"Bike pace double is :%f", bikePace);
 }
 
 - (IBAction)runSliderChanged:(id)sender {
-    //run pace to user is min per mile
-    runPaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f",self.runSlider.value];
-    
-    //convert min/mil to m/s
+    //convert min/mil to s/m
     double runMS = self.runSlider.value * 0.037;
     
-    //convert m/s to hours using runDistance from selected segment in segmentcontroller
+    //do distance here
     double runPaceDouble = (runMS * 5000);
     runPace = runPaceDouble;
 
+    //change label to hh:mm:ss format
+    NSTimeInterval intervalValue = self.runSlider.value * 60;
+    NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
+    [hmsFormatter setDateFormat:@"HH:mm:ss"];
+    [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
+    runPaceLabel.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
+    
+    [runSlider addTarget:self action:@selector(runSliderChanged:)forControlEvents:UIControlEventValueChanged];
+    
     NSLog(@"Run pace double is :%g", runPace);
 }
 
 - (IBAction)t1SliderChanged:(id)sender {
-    t1PaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f", self.t1Slider.value];
+    //convert minutes per transition to seconds per transition
     double t1PaceConversion = self.t1Slider.value * 60;
     t1Pace = t1PaceConversion;
+    
+    //change label to hh:mm:ss format
+    NSTimeInterval intervalValue = t1Pace;
+    NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
+    [hmsFormatter setDateFormat:@"HH:mm:ss"];
+    [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
+    t1PaceLabel.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
+    
     NSLog (@"t1 pace is: %f", t1Pace);
 }
 
 - (IBAction)t2SliderChanged:(id)sender {
-    t2PaceLabel.text = [[NSString alloc] initWithFormat:@"%1.2f", self.t2Slider.value];
+    //convert minutes per transition to seconds per transition
     double t2PaceConversion = self.t2Slider.value * 60;
     t2Pace = t2PaceConversion;
+    
+        //change label to hh:mm:ss format
+    NSTimeInterval intervalValue = t2Pace;
+    NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
+    [hmsFormatter setDateFormat:@"HH:mm:ss"];
+    [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
+    
+    t2PaceLabel.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
+    
     NSLog (@"t2 pace is: %f", t2Pace);
 }
 
 - (IBAction)changeTime:(id)sender {
-    projectedRaceTime = (runPace + bikePace + swimPace + t1Pace + t2Pace)/60;
-    NSString *projectedFinishTime = [NSString stringWithFormat:@"%1.2f", projectedRaceTime];
-    self.projectedFinishTime.text = projectedFinishTime;
+    projectedRaceTime = (runPace + bikePace + swimPace + t1Pace + t2Pace);
+    
+    NSTimeInterval intervalValue = projectedRaceTime;
+    NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
+    [hmsFormatter setDateFormat:@"HH:mm:ss"];
+    [hmsFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
+    
+    self.projectedFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
+    
+    
 }
 
 @end
