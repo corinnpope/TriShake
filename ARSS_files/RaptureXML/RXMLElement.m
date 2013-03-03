@@ -5,19 +5,19 @@
 // ================================================================================================
 //  Created by John Blanco on 9/23/11.
 //  Version 1.4
-//  
+//
 //  Copyright (c) 2011 John Blanco
-//  
+//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 //  copies of the Software, and to permit persons to whom the Software is
 //  furnished to do so, subject to the following conditions:
-//  
+//
 //  The above copyright notice and this permission notice shall be included in
 //  all copies or substantial portions of the Software.
-//  
+//
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -33,13 +33,13 @@
 // macros for supporting ARC/NON-ARC without need for a branch
 
 #if __has_feature(objc_arc)
-    #define SAFE_ARC_RELEASE(x)
-    #define SAFE_ARC_AUTORELEASE(x) (x)
-    #define SAFE_ARC_SUPER_DEALLOC()
+#define SAFE_ARC_RELEASE(x)
+#define SAFE_ARC_AUTORELEASE(x) (x)
+#define SAFE_ARC_SUPER_DEALLOC()
 #else
-    #define SAFE_ARC_RELEASE(x) ([(x) release])
-    #define SAFE_ARC_AUTORELEASE(x) ([(x) autorelease])
-    #define SAFE_ARC_SUPER_DEALLOC() ([super dealloc])
+#define SAFE_ARC_RELEASE(x) ([(x) release])
+#define SAFE_ARC_AUTORELEASE(x) ([(x) autorelease])
+#define SAFE_ARC_SUPER_DEALLOC() ([super dealloc])
 #endif
 
 @implementation RXMLElement
@@ -47,7 +47,7 @@
 - (id)initFromXMLString:(NSString *)xmlString encoding:(NSStringEncoding)encoding {
     if ((self = [super init])) {
         NSData *data = [xmlString dataUsingEncoding:encoding];
-
+        
         doc_ = xmlReadMemory([data bytes], [data length], "", nil, XML_PARSE_RECOVER);
         
         if ([self isValid]) {
@@ -59,14 +59,14 @@
         }
     }
     
-    return self;    
+    return self;
 }
 
 - (id)initFromXMLFile:(NSString *)filename {
     if ((self = [super init])) {
         NSString *fullPath = [[[NSBundle bundleForClass:self.class] bundlePath] stringByAppendingPathComponent:filename];
         NSData *data = [NSData dataWithContentsOfFile:fullPath];
-
+        
         doc_ = xmlReadMemory([data bytes], [data length], "", nil, XML_PARSE_RECOVER);
         
         if ([self isValid]) {
@@ -78,7 +78,7 @@
         }
     }
     
-    return self;    
+    return self;
 }
 
 - (id)initFromXMLFile:(NSString *)filename fileExtension:(NSString *)extension {
@@ -97,7 +97,7 @@
         }
     }
     
-    return self;    
+    return self;
 }
 
 - (id)initFromURL:(NSURL *)url {
@@ -115,7 +115,7 @@
         }
     }
     
-    return self;    
+    return self;
 }
 
 - (id)initFromXMLData:(NSData *)data {
@@ -131,7 +131,7 @@
         }
     }
     
-    return self;    
+    return self;
 }
 
 - (id)initFromXMLNode:(xmlNodePtr)node {
@@ -140,15 +140,15 @@
         node_ = node;
     }
     
-    return self;        
+    return self;
 }
 
 + (id)elementFromXMLString:(NSString *)attributeXML_ encoding:(NSStringEncoding)encoding {
-    return SAFE_ARC_AUTORELEASE([[RXMLElement alloc] initFromXMLString:attributeXML_ encoding:encoding]);    
+    return SAFE_ARC_AUTORELEASE([[RXMLElement alloc] initFromXMLString:attributeXML_ encoding:encoding]);
 }
 
 + (id)elementFromXMLFile:(NSString *)filename {
-    return SAFE_ARC_AUTORELEASE([[RXMLElement alloc] initFromXMLFile:filename]);    
+    return SAFE_ARC_AUTORELEASE([[RXMLElement alloc] initFromXMLFile:filename]);
 }
 
 + (id)elementFromXMLFilename:(NSString *)filename fileExtension:(NSString *)extension {
@@ -186,7 +186,7 @@
     xmlChar *key = xmlNodeGetContent(node_);
     NSString *text = (key ? [NSString stringWithUTF8String:(const char *)key] : @"");
     xmlFree(key);
-
+    
     return text;
 }
 
@@ -200,7 +200,7 @@
 
 - (NSString *)attribute:(NSString *)attName {
     NSString *ret = nil;
-    const unsigned char *attCStr = xmlGetProp(node_, (const xmlChar *)[attName cStringUsingEncoding:NSUTF8StringEncoding]);        
+    const unsigned char *attCStr = xmlGetProp(node_, (const xmlChar *)[attName cStringUsingEncoding:NSUTF8StringEncoding]);
     
     if (attCStr) {
         ret = [NSString stringWithUTF8String:(const char *)attCStr];
@@ -212,7 +212,7 @@
 
 - (NSString *)attribute:(NSString *)attName inNamespace:(NSString *)ns {
     const unsigned char *attCStr = xmlGetNsProp(node_, (const xmlChar *)[attName cStringUsingEncoding:NSUTF8StringEncoding], (const xmlChar *)[ns cStringUsingEncoding:NSUTF8StringEncoding]);
-
+    
     if (attCStr) {
         return [NSString stringWithUTF8String:(const char *)attCStr];
     }
@@ -249,7 +249,7 @@
     // navigate down
     for (NSString *itag in components) {
         const xmlChar *tagC = (const xmlChar *)[itag cStringUsingEncoding:NSUTF8StringEncoding];
-
+        
         if ([itag isEqualToString:@"*"]) {
             cur = cur->children;
             
@@ -275,7 +275,7 @@
     if (cur) {
         return [RXMLElement elementFromXMLNode:cur];
     }
-  
+    
     return nil;
 }
 
@@ -321,7 +321,7 @@
     const xmlChar *tagC = (const xmlChar *)[tag cStringUsingEncoding:NSUTF8StringEncoding];
     NSMutableArray *children = [NSMutableArray array];
     xmlNodePtr cur = node_->children;
-
+    
     while (cur != nil) {
         if (cur->type == XML_ELEMENT_NODE && !xmlStrcmp(cur->name, tagC)) {
             [children addObject:[RXMLElement elementFromXMLNode:cur]];
@@ -355,7 +355,7 @@
     if (!xpath) {
         return [NSArray array];
     }
-
+    
     xmlXPathContextPtr context = xmlXPathNewContext(doc_);
     
     if (context == NULL) {
@@ -383,7 +383,7 @@
 	}
     
     xmlXPathFreeObject(object);
-    xmlXPathFreeContext(context); 
+    xmlXPathFreeContext(context);
     
     return resultNodes;
 }
@@ -398,14 +398,14 @@
     
     NSArray *components = [query componentsSeparatedByString:@"."];
     xmlNodePtr cur = node_;
-
+    
     // navigate down
     for (NSInteger i=0; i < components.count; ++i) {
         NSString *iTagName = [components objectAtIndex:i];
         
         if ([iTagName isEqualToString:@"*"]) {
             cur = cur->children;
-
+            
             // different behavior depending on if this is the end of the query or midstream
             if (i < (components.count - 1)) {
                 // midstream
@@ -418,11 +418,11 @@
                     
                     cur = cur->next;
                 } while (cur != nil);
-                    
+                
             }
         } else {
             const xmlChar *tagNameC = (const xmlChar *)[iTagName cStringUsingEncoding:NSUTF8StringEncoding];
-
+            
             cur = cur->children;
             while (cur != nil) {
                 if (cur->type == XML_ELEMENT_NODE && !xmlStrcmp(cur->name, tagNameC)) {
@@ -432,12 +432,12 @@
                 cur = cur->next;
             }
         }
-
+        
         if (!cur) {
             break;
         }
     }
-
+    
     if (cur) {
         // enumerate
         NSString *childTagName = [components lastObject];
@@ -452,11 +452,11 @@
                 cur = cur->next;
             } else {
                 const xmlChar *tagNameC = (const xmlChar *)[childTagName cStringUsingEncoding:NSUTF8StringEncoding];
-
+                
                 while ((cur = cur->next)) {
                     if (cur->type == XML_ELEMENT_NODE && !xmlStrcmp(cur->name, tagNameC)) {
                         break;
-                    }                    
+                    }
                 }
             }
         } while (cur);

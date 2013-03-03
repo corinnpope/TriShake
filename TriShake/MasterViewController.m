@@ -31,7 +31,7 @@
     
     //configuration
     self.title = @"Triathlon News";
-    feedURL = [NSURL URLWithString:@"http://feeds.feedburner.com/TouchCodeMagazine"];
+    feedURL = [NSURL URLWithString:@"http://triathlon.competitor.com/feed"];
     
     //add refresh control to the table view
     refreshControl = [[UIRefreshControl alloc] init];

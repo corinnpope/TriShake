@@ -64,9 +64,6 @@
 		49300AD916B705A100F45D24 /* TriShake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TriShake-Prefix.pch"; sourceTree = "<group>"; };
 		49300ADA16B705A100F45D24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49300ADB16B705A100F45D24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49300ADD16B705A100F45D24 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		49300ADF16B705A200F45D24 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		49300AE116B705A200F45D24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		49300AE416B705A200F45D24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		49300AE616B705A200F45D24 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		49300AE716B705A200F45D24 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -117,7 +114,7 @@
 		49FC35FC16D561E50014EF4C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		49FC35FE16D561ED0014EF4C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		49FC360016D561FC0014EF4C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		49FC360216D562050014EF4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		49FC360216D562050014EF4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		49FECD5216D712DE00603071 /* calculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calculatorViewController.h; sourceTree = "<group>"; };
 		49FECD5316D712DE00603071 /* calculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculatorViewController.m; sourceTree = "<group>"; };
 		49FECD5516D735C600603071 /* turtle_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_icon.png; path = "../../../../../Dropbox/personal/New TriShake/turtle_icon.png"; sourceTree = "<group>"; };
@@ -151,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				49AE5A0216DFD47F008693A0 /* ARSS_files */,
-				49FC360216D562050014EF4C /* Default-568h@2x.png */,
 				49FC360016D561FC0014EF4C /* Default@2x.png */,
 				49FC35FE16D561ED0014EF4C /* Default.png */,
 				49FC35FC16D561E50014EF4C /* Icon@2x.png */,
@@ -196,10 +192,10 @@
 			children = (
 				49300AF716B724AD00F45D24 /* images */,
 				49300ADA16B705A100F45D24 /* AppDelegate.h */,
+				49300ADB16B705A100F45D24 /* AppDelegate.m */,
 				49300B1016B7826300F45D24 /* MyWorkoutList.h */,
 				4926C06116C43A57005FBF58 /* workoutList.sqlite */,
 				49300B1116B7826300F45D24 /* MyWorkoutList.m */,
-				49300ADB16B705A100F45D24 /* AppDelegate.m */,
 				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
 				49FECD5216D712DE00603071 /* calculatorViewController.h */,
 				49FECD5316D712DE00603071 /* calculatorViewController.m */,
@@ -215,13 +211,11 @@
 		49300AD216B705A100F45D24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49FC360216D562050014EF4C /* Default-568h@2x.png */,
 				49300AD316B705A100F45D24 /* TriShake-Info.plist */,
 				49300AD416B705A100F45D24 /* InfoPlist.strings */,
 				49300AD716B705A100F45D24 /* main.m */,
 				49300AD916B705A100F45D24 /* TriShake-Prefix.pch */,
-				49300ADD16B705A100F45D24 /* Default.png */,
-				49300ADF16B705A200F45D24 /* Default@2x.png */,
-				49300AE116B705A200F45D24 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
