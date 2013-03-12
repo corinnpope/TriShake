@@ -73,6 +73,9 @@
     pickerView.showsSelectionIndicator = YES;
     pickerView.opaque = NO;
 
+    
+    
+    
     //set up arrays
     
     rowOneItems = [[NSMutableArray alloc] initWithObjects:@"Bike",@"Run",@"Swim",nil];
@@ -93,6 +96,8 @@
         });
         
     });
+    
+    
 }
 
 - (void)viewDidUnload

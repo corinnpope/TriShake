@@ -27,6 +27,11 @@
 - (void)viewDidLoad
 {
   
+    //add method to check for internet connection when opening the RSS Feed
+    UIAlertView *noInternet = [[UIAlertView alloc]
+initWithTitle:@"Not Connected to the Internet" message:@"Unable to read RSS Feed" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [noInternet show];
+    
     [super viewDidLoad];
     
     //configuration

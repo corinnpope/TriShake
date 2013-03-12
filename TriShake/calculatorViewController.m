@@ -49,6 +49,8 @@
 - (void)viewDidLoad
 {
 	// Do any additional setup after loading the view.
+    
+    //set default values for calculator so sliders have something to work with when button is pressed
 }
 
 - (void)didReceiveMemoryWarning

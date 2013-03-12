@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4926C06216C43A57005FBF58 /* workoutList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4926C06116C43A57005FBF58 /* workoutList.sqlite */; };
 		49300ACC16B705A100F45D24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACB16B705A100F45D24 /* UIKit.framework */; };
 		49300ACE16B705A100F45D24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACD16B705A100F45D24 /* Foundation.framework */; };
 		49300AD016B705A100F45D24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACF16B705A100F45D24 /* CoreGraphics.framework */; };
@@ -32,6 +31,8 @@
 		494E0B4E16E46A090032126A /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4616E46A090032126A /* newspaper.png */; };
 		494E0B4F16E46A090032126A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4716E46A090032126A /* star.png */; };
 		494E0B5016E46A090032126A /* magnifying_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4816E46A090032126A /* magnifying_glass.png */; };
+		494E0B5316E525CF0032126A /* checklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494E0B5216E525CE0032126A /* checklistTableViewController.m */; };
+		4965A00E16E6EB610078EA5F /* workoutList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4965A00D16E6EB610078EA5F /* workoutList.sqlite */; };
 		49808F2316D4358F009C21AC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2216D4358F009C21AC /* Icon.png */; };
 		49808F2516D43594009C21AC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2416D43594009C21AC /* Icon@2x.png */; };
 		49808F2716D4359D009C21AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2616D4359D009C21AC /* Default.png */; };
@@ -63,7 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4926C06116C43A57005FBF58 /* workoutList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = workoutList.sqlite; sourceTree = "<group>"; };
 		49300AC716B705A100F45D24 /* TriShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49300ACB16B705A100F45D24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49300ACD16B705A100F45D24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +97,9 @@
 		494E0B4616E46A090032126A /* newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newspaper.png; sourceTree = "<group>"; };
 		494E0B4716E46A090032126A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		494E0B4816E46A090032126A /* magnifying_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifying_glass.png; sourceTree = "<group>"; };
+		494E0B5116E525CE0032126A /* checklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checklistTableViewController.h; sourceTree = "<group>"; };
+		494E0B5216E525CE0032126A /* checklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checklistTableViewController.m; sourceTree = "<group>"; };
+		4965A00D16E6EB610078EA5F /* workoutList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = workoutList.sqlite; path = ../workoutList.sqlite; sourceTree = "<group>"; };
 		49808F2216D4358F009C21AC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		49808F2416D43594009C21AC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
 		49808F2616D4359D009C21AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
@@ -210,9 +213,9 @@
 			children = (
 				49300AF716B724AD00F45D24 /* images */,
 				49300ADA16B705A100F45D24 /* AppDelegate.h */,
+				4965A00D16E6EB610078EA5F /* workoutList.sqlite */,
 				49300ADB16B705A100F45D24 /* AppDelegate.m */,
 				494E0B3F16E4675F0032126A /* workout finder controllers */,
-				4926C06116C43A57005FBF58 /* workoutList.sqlite */,
 				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
 				494E0B3E16E4671B0032126A /* Resources Controllers */,
 				494E0B4016E4677A0032126A /* Calculator View Controllers */,
@@ -275,6 +278,8 @@
 		494E0B3E16E4671B0032126A /* Resources Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				494E0B5116E525CE0032126A /* checklistTableViewController.h */,
+				494E0B5216E525CE0032126A /* checklistTableViewController.m */,
 				494E0B3B16E466F20032126A /* checklistViewController.h */,
 				494E0B3C16E466F20032126A /* checklistViewController.m */,
 				494E0B3816E465F20032126A /* ResourcesNavigationController.h */,
@@ -412,7 +417,6 @@
 				49300AFF16B724AD00F45D24 /* orangeButton@2x.png in Resources */,
 				49300B0016B724AD00F45D24 /* orangeButtonHighlight.png in Resources */,
 				49300B0116B724AD00F45D24 /* orangeButtonHighlight@2x.png in Resources */,
-				4926C06216C43A57005FBF58 /* workoutList.sqlite in Resources */,
 				49808F2316D4358F009C21AC /* Icon.png in Resources */,
 				49808F2516D43594009C21AC /* Icon@2x.png in Resources */,
 				49808F2716D4359D009C21AC /* Default.png in Resources */,
@@ -432,6 +436,7 @@
 				494E0B4E16E46A090032126A /* newspaper.png in Resources */,
 				494E0B4F16E46A090032126A /* star.png in Resources */,
 				494E0B5016E46A090032126A /* magnifying_glass.png in Resources */,
+				4965A00E16E6EB610078EA5F /* workoutList.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +461,7 @@
 				49AE5A2516DFE962008693A0 /* RSSItem.m in Sources */,
 				494E0B3A16E465F20032126A /* ResourcesNavigationController.m in Sources */,
 				494E0B3D16E466F20032126A /* checklistViewController.m in Sources */,
+				494E0B5316E525CF0032126A /* checklistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
