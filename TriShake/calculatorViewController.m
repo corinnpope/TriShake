@@ -49,8 +49,14 @@
 - (void)viewDidLoad
 {
 	// Do any additional setup after loading the view.
-    
+
     //set default values for calculator so sliders have something to work with when button is pressed
+//    [swimSlider setValue:2.0];
+//    [bikeSlider setValue: 20];
+//    [runSlider setValue: 8.0];
+//    [t1Slider setValue: 5.0];
+//    [t2Slider setValue: 5.0];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,7 +99,6 @@
 }
 
 - (IBAction)bikeSliderChanged:(id)sender {
- 
     
     //convert mph to m/s for bike
     double bikeMS = self.bikeSlider.value * .44;
@@ -130,6 +135,9 @@
     halfRunPace = runPaceHalf;
     fullRunPace = runPaceFull;
 
+    //moved from after set label
+    [runSlider addTarget:self action:@selector(runSliderChanged:)forControlEvents:UIControlEventValueChanged];
+    
     //change label to hh:mm:ss format
     NSTimeInterval intervalValue = self.runSlider.value * 60;
     NSDateFormatter *hmsFormatter = [[NSDateFormatter alloc] init];
@@ -138,7 +146,7 @@
     NSLog(@"formatted date: %@", [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]]);
     runPaceLabel.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:intervalValue]];
     
-    [runSlider addTarget:self action:@selector(runSliderChanged:)forControlEvents:UIControlEventValueChanged];
+
     
     NSLog(@"Run pace double is :%g", sprintRunPace);
 }
@@ -177,7 +185,7 @@
 }
 
 - (IBAction)changeTime:(id)sender {
-    projectedSprintTime = (sprintRunPace + sprintBikePace + sprintRunPace + t1Pace + t2Pace);
+    projectedSprintTime = (sprintRunPace + sprintBikePace + sprintSwimPace + t1Pace + t2Pace);
     projectedOlyTime = (olyRunPace + olyBikePace + olySwimPace + t1Pace + t2Pace);
     projectedHalfTime = (halfRunPace + halfBikePace + halfSwimPace + t1Pace + t2Pace);
     projectedFullTime = (fullRunPace + fullBikePace + fullSwimPace + t1Pace + t2Pace);

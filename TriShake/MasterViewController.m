@@ -12,6 +12,7 @@
 
 #import "RSSLoader.h"
 #import "RSSItem.h"
+#import "Reachability.h"
 
 @interface MasterViewController ()
 {
@@ -27,14 +28,26 @@
 - (void)viewDidLoad
 {
   
-    //add method to check for internet connection when opening the RSS Feed
-    UIAlertView *noInternet = [[UIAlertView alloc]
-initWithTitle:@"Not Connected to the Internet" message:@"Unable to read RSS Feed" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    [noInternet show];
+    //add method to check for internet connection when opening the RSS Feed    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    
+    if(internetStatus == NotReachable) {
+        UIAlertView *errorView;
+        
+        errorView = [[UIAlertView alloc]
+                     initWithTitle: NSLocalizedString(@"Network error", @"Network error")
+                     message: NSLocalizedString(@"No internet connection found.", @"Unable to Read RSS Feed")
+                     delegate: self
+                     cancelButtonTitle: NSLocalizedString(@"Close", @"Unable to Read RSS Feed") otherButtonTitles: nil];
+        
+        [errorView show];
+    }
+    
     
     [super viewDidLoad];
     
-    //configuration
+    //configuration of triathlon newsfeed
     self.title = @"Triathlon News";
     feedURL = [NSURL URLWithString:@"http://triathlon.competitor.com/feed"];
     

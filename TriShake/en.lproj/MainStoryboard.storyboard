@@ -20,7 +20,7 @@
                                     <action selector="swimSliderChanged:" destination="yYJ-TT-3w6" eventType="valueChanged" id="cSs-Px-8sQ"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="12" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-Gw-JUN">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-Gw-JUN">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" type="user" id="Vnv-6Q-YeY"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                     <action selector="bikeSliderChanged:" destination="yYJ-TT-3w6" eventType="valueChanged" id="1B4-Kv-2yn"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="5" maxValue="13" translatesAutoresizingMaskIntoConstraints="NO" id="yxd-4e-vsW">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="13" translatesAutoresizingMaskIntoConstraints="NO" id="yxd-4e-vsW">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" type="user" id="AmH-OV-i4O"/>
                                 </constraints>
@@ -118,7 +118,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="02:24:36" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ3-D0-nyE">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="01:27:36" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ3-D0-nyE">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                                     <action selector="changeTime:" destination="yYJ-TT-3w6" eventType="touchUpInside" id="v9f-wm-omB"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-r6-u0k">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-r6-u0k">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" type="user" id="jW0-A1-eRa"/>
                                 </constraints>
@@ -149,7 +149,7 @@
                                     <action selector="t1SliderChanged:" destination="yYJ-TT-3w6" eventType="valueChanged" id="JTM-TQ-t2Y"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="guu-ZH-86Y">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="guu-ZH-86Y">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" type="user" id="YmS-mO-dFF"/>
                                 </constraints>
@@ -191,12 +191,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="03:12:38" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meb-dp-MQ9">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="02:45:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meb-dp-MQ9">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="06:13:26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-Ia-HQ7">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="05:22:45" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-Ia-HQ7">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="72" id="MH0-AC-qDh"/>
                                 </constraints>
@@ -204,7 +204,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12:26:52" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-9B-e5i">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10:35:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-9B-e5i">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="dik-NG-d6R"/>
                                 </constraints>
@@ -383,7 +383,6 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YTf-s6-Whk" secondAttribute="bottom" constant="11" type="user" id="5fo-7H-qlB"/>
                             <constraint firstItem="yij-rM-3fY" firstAttribute="height" secondItem="YTf-s6-Whk" secondAttribute="height" type="user" id="6sA-fd-bEg"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="15" type="user" id="F8l-wY-3HQ"/>
-                            <constraint firstItem="YTf-s6-Whk" firstAttribute="top" secondItem="KHc-bp-b9g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GAV-LE-0XO"/>
                             <constraint firstItem="Ett-UU-JCs" firstAttribute="top" secondItem="KHc-bp-b9g" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="GdC-In-1Dt"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YTf-s6-Whk" secondAttribute="trailing" constant="20" type="user" id="I2w-Ov-DIP"/>
                             <constraint firstAttribute="trailing" secondItem="YTf-s6-Whk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KHv-Af-CEY"/>
@@ -394,7 +393,6 @@
                             <constraint firstItem="yij-rM-3fY" firstAttribute="centerY" secondItem="Ett-UU-JCs" secondAttribute="centerY" type="default" id="hwm-CX-M4J"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jaY-Er-Bxg"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="1" type="user" id="oac-Di-kis"/>
-                            <constraint firstItem="yij-rM-3fY" firstAttribute="baseline" secondItem="Ett-UU-JCs" secondAttribute="baseline" type="default" id="oyQ-WA-yPC"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pX8-dm-TVA"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="45" type="user" id="qSw-50-qEl"/>
                             <constraint firstAttribute="bottom" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="187" type="user" id="rc6-RN-ypo"/>
@@ -446,15 +444,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="eX0-nd-rac" rowHeight="54" style="IBUITableViewCellStyleDefault" id="ejO-9i-YfC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" editingAccessoryType="checkmark" textLabel="eX0-nd-rac" rowHeight="54" style="IBUITableViewCellStyleDefault" id="ejO-9i-YfC">
                                 <rect key="frame" x="0.0" y="22" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="53"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX0-nd-rac">
-                                            <rect key="frame" x="10" y="0.0" width="267" height="53"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

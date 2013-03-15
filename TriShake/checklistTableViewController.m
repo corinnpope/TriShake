@@ -134,8 +134,20 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath{
 //    checkedIndexPath = indexPath;
-//}
+    
+    tableView.delegate = self;
+    self.checkedIndexPath = indexPath;
+    
+    
+    if (checkedIndexPath == indexPath) {
+       
+                [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+    }
+    else {
+ [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4911EFFF16F381BE00B671DF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4911EFFE16F381BE00B671DF /* SystemConfiguration.framework */; };
+		4911F00216F381D300B671DF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911F00116F381D300B671DF /* Reachability.m */; };
 		49300ACC16B705A100F45D24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACB16B705A100F45D24 /* UIKit.framework */; };
 		49300ACE16B705A100F45D24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACD16B705A100F45D24 /* Foundation.framework */; };
 		49300AD016B705A100F45D24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACF16B705A100F45D24 /* CoreGraphics.framework */; };
@@ -64,6 +66,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4911EFFE16F381BE00B671DF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4911F00016F381D300B671DF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4911F00116F381D300B671DF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		49300AC716B705A100F45D24 /* TriShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49300ACB16B705A100F45D24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49300ACD16B705A100F45D24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4911EFFF16F381BE00B671DF /* SystemConfiguration.framework in Frameworks */,
 				49D4E6C116DFBB0D0015383A /* CoreData.framework in Frameworks */,
 				49D4E6BF16DFBAF90015383A /* CFNetwork.framework in Frameworks */,
 				49D4E6BD16DFBAE70015383A /* libxml2.dylib in Frameworks */,
@@ -190,6 +196,7 @@
 		49300ACA16B705A100F45D24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4911EFFE16F381BE00B671DF /* SystemConfiguration.framework */,
 				49D4E6C016DFBB0D0015383A /* CoreData.framework */,
 				49D4E6BE16DFBAF90015383A /* CFNetwork.framework */,
 				49D4E6BC16DFBAE70015383A /* libxml2.dylib */,
@@ -353,6 +360,8 @@
 			children = (
 				49AE5A2016DFE905008693A0 /* MasterViewController.h */,
 				49AE5A2116DFE905008693A0 /* MasterViewController.m */,
+				4911F00016F381D300B671DF /* Reachability.h */,
+				4911F00116F381D300B671DF /* Reachability.m */,
 				49AE5A0D16DFD603008693A0 /* detailViewController.h */,
 				49AE5A0E16DFD603008693A0 /* detailViewController.m */,
 			);
@@ -462,6 +471,7 @@
 				494E0B3A16E465F20032126A /* ResourcesNavigationController.m in Sources */,
 				494E0B3D16E466F20032126A /* checklistViewController.m in Sources */,
 				494E0B5316E525CF0032126A /* checklistTableViewController.m in Sources */,
+				4911F00216F381D300B671DF /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
