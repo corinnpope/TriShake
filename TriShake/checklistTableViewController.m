@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Corinn Pope. All rights reserved.
 //
 
+static NSString * const kCellTextKey = @"CellTextKey";
+static NSString * const kCellStateKey = @"CellStateKey";
+
 #import "checklistTableViewController.h"
 
 @interface checklistTableViewController ()
@@ -17,6 +20,8 @@
 
 
 @synthesize numberOfSections;
+@synthesize activityIndicator;
+@synthesize tableData;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,6 +38,8 @@
     
     //Initialize the array.
     
+
+    NSMutableArray *checkedCells = [[NSMutableArray alloc] init];
     
     sectionArray = [[NSMutableArray alloc] init];
     
@@ -67,10 +74,13 @@
     [sectionArray addObject:transitionDict];
     [sectionArray addObject:postRaceDict];
     
+    //tableData= [checklistArray mutableCopy];
     
     //Set the title
     self.navigationItem.title = @"Race Checklist";
     //self.tableView.allowsMultipleSelection = YES;
+
+    
     
 	// Do any additional setup after loading the view.
 }
@@ -115,39 +125,67 @@
 
 #pragma mark - Table view delegate
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+  
     
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    //fix checking in all sections problem
+    if ([checkedCells containsObject:indexPath])
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
+    if ((indexPath.row == selectedIndexPath.row) && (indexPath.section == selectedIndexPath.section)) {
+        [cell setSelected:YES animated:NO];
+    }
     
+    // Display text for each cell using data from section array
     NSDictionary *dictionary = [sectionArray objectAtIndex:indexPath.section];
     NSArray *array = [dictionary objectForKey:@"Items"];
     NSString *cellValue = [array objectAtIndex:indexPath.row];
     cell.textLabel.text = cellValue;
     
-//    BOOL isChecked = !((NSNumber *)dictionary[indexPath]).boolValue;
-//    dictionary[indexPath]= @(isChecked);
-//    cell.accessoryType = isChecked ?
-//    UITableViewCellAccessoryCheckmark :
-//    UITableViewCellAccessoryNone;
-    
 
     return cell;
 }
 
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath{
-//    checkedIndexPath = indexPath;
     
-    tableView.delegate = self;
-    self.checkedIndexPath = indexPath;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+
+    
+
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
+    if ((indexPath.row == selectedIndexPath.row) && (indexPath.section == selectedIndexPath.section)) {
+        [cell setSelected:YES animated:NO];
+        [checkedCells containsObject:selectedIndexPath];
+        [checkedCells addObject:selectedIndexPath];
+    }
+    
+    if ([checkedCells containsObject:indexPath])
+    {
+        [checkedCells removeObject:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else
+    {
+        [checkedCells addObject:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     
     
-    if (checkedIndexPath == indexPath) {
-       
-                [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-    }
-    else {
- [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    }
+}
+
 
 @end

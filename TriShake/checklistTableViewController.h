@@ -8,19 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface checklistTableViewController : UITableViewController {
+@interface checklistTableViewController : UITableViewController{
     NSMutableArray *sectionArray;
-    NSIndexPath *checkedIndexPath;
+    NSMutableArray *checkedCells;
+    NSIndexPath *selectedIndexPath;
+    int selectedRow;
+    int selectedSection;
 }
 
 
 @property (nonatomic, readonly) NSInteger numberOfSections;
 @property (nonatomic, retain) NSMutableArray *tableData;
-@property (nonatomic, retain) NSIndexPath *checkedIndexPath;
+@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
+
 
 - (NSString *) itemNameAtIndexPath: (NSIndexPath *) path;
 - (NSInteger) countInSection: (NSInteger) section;
 - (NSString *) nameForSection: (NSInteger) section;
+
 
 
 @end
