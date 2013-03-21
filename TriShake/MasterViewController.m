@@ -76,6 +76,8 @@
     [self refreshFeed];
 }
 
+
+//add error message if user tries to refresh without an internet connection
 -(void)refreshFeed
 {
     RSSLoader* rss = [[RSSLoader alloc] init];

@@ -15,7 +15,7 @@
 
 @class MyWorkoutList;
 
-@interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource,ADBannerViewDelegate,MFMailComposeViewControllerDelegate>
+@interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource,ADBannerViewDelegate,MFMailComposeViewControllerDelegate, UITextViewDelegate>
 {
     ADBannerView *adView;
     BOOL bannerIsVisible;
@@ -32,7 +32,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *workoutTypeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *workoutDifficultyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *workoutDurationLabel;
-@property (strong, nonatomic) IBOutlet UILabel *workoutDescriptionLabel;
+//@property (strong, nonatomic) IBOutlet UILabel *workoutDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UITextView *workoutDescriptionLabel;
+
+
 @property (nonatomic, assign) NSString *typeSQL;
 @property (nonatomic, assign) NSString *difficultySQL;
 @property (nonatomic, assign) NSString *durationSQL;
