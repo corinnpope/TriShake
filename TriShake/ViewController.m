@@ -69,7 +69,7 @@
     //offset pickerview for iAds
     pickerView.frame = CGRectOffset(pickerView.frame, 0, -50);
 
-    //    pickerView.transform = CGAffineTransformMakeScale(.8, .8);
+        pickerView.transform = CGAffineTransformMakeScale(.8, .8);
     
     pickerView.delegate = self;
     pickerView.dataSource = self;

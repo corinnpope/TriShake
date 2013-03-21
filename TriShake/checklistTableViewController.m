@@ -22,6 +22,7 @@ static NSString * const kCellStateKey = @"CellStateKey";
 @synthesize numberOfSections;
 @synthesize activityIndicator;
 @synthesize tableData;
+@synthesize selectedIndexPath;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,12 +35,13 @@ static NSString * const kCellStateKey = @"CellStateKey";
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
     
     //Initialize the array.
     
 
-    NSMutableArray *checkedCells = [[NSMutableArray alloc] init];
+    //NSMutableArray *checkedCells = [[NSMutableArray alloc] init];
     
     sectionArray = [[NSMutableArray alloc] init];
     
@@ -130,21 +132,28 @@ static NSString * const kCellStateKey = @"CellStateKey";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-  
+    //cell.accessoryType == (indexPath.section == self.selectedIndexPath.section && indexPath.row == self.selectedIndexPath.row) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     //fix checking in all sections problem
-    if ([checkedCells containsObject:indexPath])
-    {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    else
-    {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
+    //if ([checkedCells containsObject:selectedIndexPath])
+//    if([self.selectedIndexPath isEqual:indexPath]){
+//    
+//    if([checkedCells containsObject:indexPath])    {
+//        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//    }
+//    else
+//    {
+//        cell.accessoryType = UITableViewCellAccessoryNone;
+//    }
 
-    if ((indexPath.row == selectedIndexPath.row) && (indexPath.section == selectedIndexPath.section)) {
-        [cell setSelected:YES animated:NO];
+    
+    if ([indexPath isEqual:self.selectedIndexPath]){
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
+    else {
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    
     
     // Display text for each cell using data from section array
     NSDictionary *dictionary = [sectionArray objectAtIndex:indexPath.section];
@@ -152,7 +161,6 @@ static NSString * const kCellStateKey = @"CellStateKey";
     NSString *cellValue = [array objectAtIndex:indexPath.row];
     cell.textLabel.text = cellValue;
     
-
     return cell;
 }
 
@@ -160,32 +168,62 @@ static NSString * const kCellStateKey = @"CellStateKey";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath{
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-
+     self.tableView.allowsMultipleSelection = YES;
+    //self.selectedIndexPath = indexPath;
     
-
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
-    if ((indexPath.row == selectedIndexPath.row) && (indexPath.section == selectedIndexPath.section)) {
-        [cell setSelected:YES animated:NO];
-        [checkedCells containsObject:selectedIndexPath];
-        [checkedCells addObject:selectedIndexPath];
-    }
-    
-    if ([checkedCells containsObject:indexPath])
-    {
-        [checkedCells removeObject:indexPath];
+    //self.selectedIndexPath = indexPath;
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    else
-    {
-        [checkedCells addObject:indexPath];
+        self.selectedIndexPath = nil;
+    } else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
+        self.selectedIndexPath = indexPath;
+}
+//    if ((indexPath.row == self.selectedIndexPath.row) && (indexPath.section == self.selectedIndexPath.section)) {
+//        [cell setSelected:YES animated:NO];
+//    }
     
+//    if ([cell accessoryType] == UITableViewCellAccessoryNone){
+//        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+//        [checkedCells addObject:[NSNumber numberWithInt:indexPath]];
+//        self.selectedIndexPath = nil;
+//    }
+//
+//    else {
+//        [cell setAccessoryType:UITableViewCellAccessoryNone];
+//        [checkedCells removeObject:[NSNumber numberWithInt:indexPath]];
+//        self.selectedIndexPath = indexPath;
+//    }
+
+    //self.selectedIndexPath = indexPath;
+    
+//    if(self.selectedIndexPath)
+//    {
+//        UITableViewCell* uncheckCell = [tableView cellForRowAtIndexPath:self.selectedIndexPath];
+//        uncheckCell.accessoryType = UITableViewCellAccessoryNone;
+//    }
+//    
+//    if([self.selectedIndexPath isEqual:indexPath])
+//    {
+//       //add selected cell to array
+//        [checkedCells addObject:[NSNumber numberWithInt:indexPath]];
+//        self.selectedIndexPath = nil;
+//    }
+//    else
+//    {
+//        //remove cell from array
+//        UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+//        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//        [checkedCells removeObject:[NSNumber numberWithInt:indexPath]];
+//        self.selectedIndexPath = indexPath;
+//    }
+
+
+
+    [tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
     
 }
-
 
 @end

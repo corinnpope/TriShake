@@ -7,6 +7,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "ViewController.h"
 
 #import "TableHeaderView.h"
 
@@ -28,22 +29,24 @@
 - (void)viewDidLoad
 {
   
-    //add method to check for internet connection when opening the RSS Feed    
+    //add method to check for internet connection when opening the RSS Feed
     Reachability *reachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus internetStatus = [reachability currentReachabilityStatus];
     
-    if(internetStatus == NotReachable) {
+    if(internetStatus == NotReachable){
         UIAlertView *errorView;
         
-        errorView = [[UIAlertView alloc]
-                     initWithTitle: NSLocalizedString(@"Network error", @"Network error")
-                     message: NSLocalizedString(@"No internet connection found.", @"Unable to Read RSS Feed")
-                     delegate: self
-                     cancelButtonTitle: NSLocalizedString(@"Close", @"Unable to Read RSS Feed") otherButtonTitles: nil];
+           errorView = [[UIAlertView alloc]
+                        initWithTitle: NSLocalizedString(@"Network error", @"Network error")
+                        message: NSLocalizedString(@"No internet connection found, this application requires an internet connection to gather the data required.", @"Network error")
+                        delegate: self
+                        cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
         
         [errorView show];
+        //[errorView performSelectorOnMainThread:@selector(showDebug) withObject:nil waitUntilDone:YES];
     }
     
+       
     
     [super viewDidLoad];
     
@@ -71,15 +74,54 @@
     [self refreshFeed];
 }
 
+//- (BOOL)connected {
+//    
+//    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+//    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+//    //return internetStatus;
+//    //return !(networkStatus ==NotReachable);
+//}
+
+- (void) alertViewCancel:(UIAlertView *)alertView {
+
+        UIViewController *controller = [[UIViewController alloc]init];
+        [self presentViewController:controller animated:YES completion:nil];
+}
+
 -(void) refreshInvoked:(id)sender forState:(UIControlState)state
 {
     [self refreshFeed];
 }
 
 
+//set up close button to go back to workout picker
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    if (buttonIndex == 0) {
+//        UIViewController *controller = [[UIViewController alloc]init];
+//        [self presentViewController:controller animated:YES completion:nil];
+//    }
+//}
+
 //add error message if user tries to refresh without an internet connection
 -(void)refreshFeed
 {
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    
+    if(internetStatus == NotReachable) {
+        UIAlertView *errorView;
+        
+        errorView = [[UIAlertView alloc]
+                     initWithTitle: NSLocalizedString(@"Network error", @"Network error")
+                     message: NSLocalizedString(@"No internet connection found, this application requires an internet connection to gather the data required.", @"Network error")
+                     delegate: self
+                     cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
+        
+        [errorView show];
+    
+    }
+    else {
     RSSLoader* rss = [[RSSLoader alloc] init];
     [rss fetchRssWithURL:feedURL
                 complete:^(NSString *title, NSArray *results) {
@@ -98,7 +140,7 @@
                     });
                 }];
 
-}
+    }}
 
 #pragma mark - Table View
 

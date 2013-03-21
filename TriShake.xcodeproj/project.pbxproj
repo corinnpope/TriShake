@@ -47,6 +47,7 @@
 		49AE5A1516DFDCE1008693A0 /* RSSLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A1416DFDCE1008693A0 /* RSSLoader.m */; };
 		49AE5A2216DFE905008693A0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A2116DFE905008693A0 /* MasterViewController.m */; };
 		49AE5A2516DFE962008693A0 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A2416DFE962008693A0 /* RSSItem.m */; };
+		49B6F09216FB8B8600846C1C /* RaceFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F09116FB8B8600846C1C /* RaceFinderViewController.m */; };
 		49BE951D16B9A4170003A972 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */; };
 		49D4E5A816DFB5C20015383A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D4E5A716DFB5C20015383A /* libz.dylib */; };
 		49D4E6BD16DFBAE70015383A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D4E6BC16DFBAE70015383A /* libxml2.dylib */; };
@@ -125,6 +126,8 @@
 		49AE5A2116DFE905008693A0 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		49AE5A2316DFE962008693A0 /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
 		49AE5A2416DFE962008693A0 /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
+		49B6F09016FB8B8600846C1C /* RaceFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceFinderViewController.h; sourceTree = "<group>"; };
+		49B6F09116FB8B8600846C1C /* RaceFinderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceFinderViewController.m; sourceTree = "<group>"; };
 		49BD50C716D439D5003370D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
 		49BD50C916D439E7003370D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
 		49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -222,8 +225,9 @@
 				49300ADA16B705A100F45D24 /* AppDelegate.h */,
 				4965A00D16E6EB610078EA5F /* workoutList.sqlite */,
 				49300ADB16B705A100F45D24 /* AppDelegate.m */,
-				494E0B3F16E4675F0032126A /* workout finder controllers */,
 				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
+				494E0B3F16E4675F0032126A /* workout finder controllers */,
+				49B6F09316FB8ED400846C1C /* Race Finder View Controllers */,
 				494E0B3E16E4671B0032126A /* Resources Controllers */,
 				494E0B4016E4677A0032126A /* Calculator View Controllers */,
 				49AE5A1E16DFE80F008693A0 /* RSS View Controllers */,
@@ -368,6 +372,15 @@
 			name = "RSS View Controllers";
 			sourceTree = "<group>";
 		};
+		49B6F09316FB8ED400846C1C /* Race Finder View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49B6F09016FB8B8600846C1C /* RaceFinderViewController.h */,
+				49B6F09116FB8B8600846C1C /* RaceFinderViewController.m */,
+			);
+			name = "Race Finder View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +485,7 @@
 				494E0B3D16E466F20032126A /* checklistViewController.m in Sources */,
 				494E0B5316E525CF0032126A /* checklistTableViewController.m in Sources */,
 				4911F00216F381D300B671DF /* Reachability.m in Sources */,
+				49B6F09216FB8B8600846C1C /* RaceFinderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

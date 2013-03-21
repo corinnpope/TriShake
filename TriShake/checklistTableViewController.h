@@ -20,6 +20,7 @@
 @property (nonatomic, readonly) NSInteger numberOfSections;
 @property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, retain) NSIndexPath *selectedIndexPath;
 
 
 - (NSString *) itemNameAtIndexPath: (NSIndexPath *) path;

@@ -6,7 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Reachability;
 
 @interface MasterViewController : UITableViewController <UIAlertViewDelegate>
+
+- (BOOL)connected;
+
 
 @end

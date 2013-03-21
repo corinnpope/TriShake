@@ -51,12 +51,18 @@
 	// Do any additional setup after loading the view.
 
     //set default values for calculator so sliders have something to work with when button is pressed
-//    [swimSlider setValue:2.0];
-//    [bikeSlider setValue: 20];
-//    [runSlider setValue: 8.0];
-//    [t1Slider setValue: 5.0];
-//    [t2Slider setValue: 5.0];
 
+    swimSlider.value=2.0;
+    bikeSlider.value=20;
+    runSlider.value = 8;
+    t1Slider.value = 3.0;
+    t2Slider.value = 3.0;
+
+    [swimSlider sendActionsForControlEvents:UIControlEventValueChanged];
+    [bikeSlider sendActionsForControlEvents:UIControlEventValueChanged];
+     [runSlider sendActionsForControlEvents:UIControlEventValueChanged];
+     [t1Slider sendActionsForControlEvents:UIControlEventValueChanged];
+     [t2Slider sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning
