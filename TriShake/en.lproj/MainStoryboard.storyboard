@@ -397,7 +397,7 @@
                             <constraint firstItem="YTf-s6-Whk" firstAttribute="leading" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wG4-Iv-zYu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workouts" image="magnifying_glass.png" id="owL-pv-xjD"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="63-runner.png" id="owL-pv-xjD"/>
                     <navigationItem key="navigationItem" id="XLI-q8-Chp"/>
                     <connections>
                         <outlet property="facebookButtonOutlet" destination="yij-rM-3fY" id="dKf-KL-c9U"/>
@@ -600,7 +600,7 @@
                             <constraint firstItem="H7Z-BD-raO" firstAttribute="top" secondItem="uPD-PI-099" secondAttribute="top" type="default" id="euU-bo-zHJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Race Search" id="XAN-Ub-ZVd"/>
+                    <tabBarItem key="tabBarItem" title="Race Search" image="magnifying_glass.png" id="XAN-Ub-ZVd"/>
                     <connections>
                         <outlet property="webView" destination="H7Z-BD-raO" id="AUO-EU-zid"/>
                     </connections>
@@ -627,6 +627,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="63-runner.png" width="30" height="30"/>
         <image name="OrangeButton.png" width="280" height="44"/>
         <image name="calculator.png" width="26" height="26"/>
         <image name="facebook.png" width="40" height="40"/>
