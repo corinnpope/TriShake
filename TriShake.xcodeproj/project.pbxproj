@@ -35,9 +35,14 @@
 		494E0B5016E46A090032126A /* magnifying_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4816E46A090032126A /* magnifying_glass.png */; };
 		494E0B5316E525CF0032126A /* checklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494E0B5216E525CE0032126A /* checklistTableViewController.m */; };
 		4965A00E16E6EB610078EA5F /* workoutList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4965A00D16E6EB610078EA5F /* workoutList.sqlite */; };
+		4973ED3A17012B7400036919 /* magnifying_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED3917012B7400036919 /* magnifying_glass@2x.png */; };
+		4973ED3E17012D6300036919 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED3B17012D6300036919 /* Default-568h@2x.png */; };
+		4973ED3F17012D6300036919 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED3C17012D6300036919 /* Default@2x.png */; };
+		4973ED4017012D6300036919 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED3D17012D6300036919 /* Default.png */; };
+		4973ED4117012D9000036919 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FC360216D562050014EF4C /* Default-568h@2x.png */; };
+		4973ED43170130F800036919 /* 63-runner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED42170130F800036919 /* 63-runner@2x.png */; };
 		49808F2316D4358F009C21AC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2216D4358F009C21AC /* Icon.png */; };
 		49808F2516D43594009C21AC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2416D43594009C21AC /* Icon@2x.png */; };
-		49808F2716D4359D009C21AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2616D4359D009C21AC /* Default.png */; };
 		49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2A16D435BB009C21AC /* Default-568h@2x.png */; };
 		49AE5A0A16DFD47F008693A0 /* arss_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 49AE5A0316DFD47F008693A0 /* arss_header.png */; };
 		49AE5A0B16DFD47F008693A0 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A0616DFD47F008693A0 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -48,6 +53,7 @@
 		49AE5A2216DFE905008693A0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A2116DFE905008693A0 /* MasterViewController.m */; };
 		49AE5A2516DFE962008693A0 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A2416DFE962008693A0 /* RSSItem.m */; };
 		49B6F09216FB8B8600846C1C /* RaceFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F09116FB8B8600846C1C /* RaceFinderViewController.m */; };
+		49B6F09516FBA8DC00846C1C /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F09416FBA8DC00846C1C /* 63-runner.png */; };
 		49BE951D16B9A4170003A972 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */; };
 		49D4E5A816DFB5C20015383A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D4E5A716DFB5C20015383A /* libz.dylib */; };
 		49D4E6BD16DFBAE70015383A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D4E6BC16DFBAE70015383A /* libxml2.dylib */; };
@@ -70,7 +76,7 @@
 		4911EFFE16F381BE00B671DF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4911F00016F381D300B671DF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4911F00116F381D300B671DF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		49300AC716B705A100F45D24 /* TriShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49300AC716B705A100F45D24 /* TriAlly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriAlly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49300ACB16B705A100F45D24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49300ACD16B705A100F45D24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49300ACF16B705A100F45D24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,10 +112,13 @@
 		494E0B5116E525CE0032126A /* checklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checklistTableViewController.h; sourceTree = "<group>"; };
 		494E0B5216E525CE0032126A /* checklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checklistTableViewController.m; sourceTree = "<group>"; };
 		4965A00D16E6EB610078EA5F /* workoutList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = workoutList.sqlite; path = ../workoutList.sqlite; sourceTree = "<group>"; };
+		4973ED3917012B7400036919 /* magnifying_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying_glass@2x.png"; sourceTree = "<group>"; };
+		4973ED3B17012D6300036919 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4973ED3C17012D6300036919 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4973ED3D17012D6300036919 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4973ED42170130F800036919 /* 63-runner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner@2x.png"; sourceTree = "<group>"; };
 		49808F2216D4358F009C21AC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		49808F2416D43594009C21AC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
-		49808F2616D4359D009C21AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
-		49808F2816D435A6009C21AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
 		49808F2A16D435BB009C21AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		49AE5A0316DFD47F008693A0 /* arss_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arss_header.png; path = ../../ARSS_files/arss_header.png; sourceTree = "<group>"; };
 		49AE5A0516DFD47F008693A0 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
@@ -128,8 +137,7 @@
 		49AE5A2416DFE962008693A0 /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
 		49B6F09016FB8B8600846C1C /* RaceFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceFinderViewController.h; sourceTree = "<group>"; };
 		49B6F09116FB8B8600846C1C /* RaceFinderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceFinderViewController.m; sourceTree = "<group>"; };
-		49BD50C716D439D5003370D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
-		49BD50C916D439E7003370D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
+		49B6F09416FBA8DC00846C1C /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
 		49BE951C16B9A4170003A972 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		49D4E5A716DFB5C20015383A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		49D4E6BC16DFBAE70015383A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -191,7 +199,7 @@
 		49300AC816B705A100F45D24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49300AC716B705A100F45D24 /* TriShake.app */,
+				49300AC716B705A100F45D24 /* TriAlly.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,7 +233,6 @@
 				49300ADA16B705A100F45D24 /* AppDelegate.h */,
 				4965A00D16E6EB610078EA5F /* workoutList.sqlite */,
 				49300ADB16B705A100F45D24 /* AppDelegate.m */,
-				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
 				494E0B3F16E4675F0032126A /* workout finder controllers */,
 				49B6F09316FB8ED400846C1C /* Race Finder View Controllers */,
 				494E0B3E16E4671B0032126A /* Resources Controllers */,
@@ -256,6 +263,13 @@
 		49300AF716B724AD00F45D24 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4973ED3B17012D6300036919 /* Default-568h@2x.png */,
+				4973ED3C17012D6300036919 /* Default@2x.png */,
+				4973ED42170130F800036919 /* 63-runner@2x.png */,
+				4973ED3D17012D6300036919 /* Default.png */,
+				4973ED3917012B7400036919 /* magnifying_glass@2x.png */,
+				49B6F09416FBA8DC00846C1C /* 63-runner.png */,
+				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
 				494E0B4116E46A080032126A /* magnifying_glass@2x.mailtoloc */,
 				494E0B4216E46A080032126A /* calculator@2x.png */,
 				494E0B4316E46A080032126A /* newspaper@2x.png */,
@@ -268,13 +282,9 @@
 				49FECD5516D735C600603071 /* turtle_icon.png */,
 				49FECD5616D735C600603071 /* hare_icon.png */,
 				49FC35EE16D53FEF0014EF4C /* twitter-bird-white-on-blue.png */,
-				49BD50C916D439E7003370D9 /* Default@2x.png */,
-				49BD50C716D439D5003370D9 /* Default.png */,
 				49FC35F616D5567C0014EF4C /* facebook.png */,
 				49FC35F216D551980014EF4C /* mail_icon.png */,
 				49808F2A16D435BB009C21AC /* Default-568h@2x.png */,
-				49808F2816D435A6009C21AC /* Default@2x.png */,
-				49808F2616D4359D009C21AC /* Default.png */,
 				49808F2416D43594009C21AC /* Icon@2x.png */,
 				49808F2216D4358F009C21AC /* Icon.png */,
 				49300AF816B724AD00F45D24 /* orangebutton.ai */,
@@ -398,7 +408,7 @@
 			);
 			name = TriShake;
 			productName = TriShake;
-			productReference = 49300AC716B705A100F45D24 /* TriShake.app */;
+			productReference = 49300AC716B705A100F45D24 /* TriAlly.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -441,7 +451,6 @@
 				49300B0116B724AD00F45D24 /* orangeButtonHighlight@2x.png in Resources */,
 				49808F2316D4358F009C21AC /* Icon.png in Resources */,
 				49808F2516D43594009C21AC /* Icon@2x.png in Resources */,
-				49808F2716D4359D009C21AC /* Default.png in Resources */,
 				49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */,
 				49FC35EF16D53FEF0014EF4C /* twitter-bird-white-on-blue.png in Resources */,
 				49FC35F316D551980014EF4C /* mail_icon.png in Resources */,
@@ -459,6 +468,13 @@
 				494E0B4F16E46A090032126A /* star.png in Resources */,
 				494E0B5016E46A090032126A /* magnifying_glass.png in Resources */,
 				4965A00E16E6EB610078EA5F /* workoutList.sqlite in Resources */,
+				49B6F09516FBA8DC00846C1C /* 63-runner.png in Resources */,
+				4973ED3A17012B7400036919 /* magnifying_glass@2x.png in Resources */,
+				4973ED3E17012D6300036919 /* Default-568h@2x.png in Resources */,
+				4973ED3F17012D6300036919 /* Default@2x.png in Resources */,
+				4973ED4017012D6300036919 /* Default.png in Resources */,
+				4973ED4117012D9000036919 /* Default-568h@2x.png in Resources */,
+				4973ED43170130F800036919 /* 63-runner@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +522,7 @@
 				49300AE416B705A200F45D24 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -568,7 +585,7 @@
 				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "TriShake/TriShake-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TriAlly;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -581,7 +598,7 @@
 				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "TriShake/TriShake-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TriAlly;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

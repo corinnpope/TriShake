@@ -180,6 +180,15 @@
 }
 
 # pragma Share/Social Buttons
+//share with a "share" screen
+//NSString* someText = self.textView.text;
+//NSArray* dataToShare = @[someText];  // ...or whatever pieces of data you want to share.
+//
+//UIActivityViewController* activityViewController =
+//[[UIActivityViewController alloc] initWithActivityItems:dataToShare
+//                                  applicationActivities:nil];
+//[self presentViewController:activityViewController animated:YES completion:^{}];
+
 
 - (IBAction)mailButton:(id)sender {
     MFMailComposeViewController *mailComposer;
@@ -244,29 +253,41 @@
 - (IBAction)findWorkout:(id)sender {
     //set labels to show what the user picked
     
-    NSInteger rowOne = [pickerView selectedRowInComponent:kTypeComponent];
-    self.typeSQL = [rowOneItems objectAtIndex:rowOne];
-    self.workoutTypeLabel.text = typeSQL;
-   
-    NSInteger rowTwo = [pickerView selectedRowInComponent:kDifficultyComponent];
-    self.difficultySQL = [rowTwoItems objectAtIndex:rowTwo];
-    self.workoutDifficultyLabel.text = [rowTwoItems objectAtIndex:rowTwo];
-    
-    NSInteger rowThree = [pickerView selectedRowInComponent:kDurationComponent];
-    self.durationSQL = [rowThreeItems objectAtIndex:rowThree];
-    self.workoutDurationLabel.text = [rowThreeItems objectAtIndex:rowThree];
+//    NSInteger rowOne = [pickerView selectedRowInComponent:kTypeComponent];
+//    self.typeSQL = [rowOneItems objectAtIndex:rowOne];
+//    self.workoutTypeLabel.text = typeSQL;
+//   
+//    NSInteger rowTwo = [pickerView selectedRowInComponent:kDifficultyComponent];
+//    self.difficultySQL = [rowTwoItems objectAtIndex:rowTwo];
+//    self.workoutDifficultyLabel.text = [rowTwoItems objectAtIndex:rowTwo];
+//    
+//    NSInteger rowThree = [pickerView selectedRowInComponent:kDurationComponent];
+//    self.durationSQL = [rowThreeItems objectAtIndex:rowThree];
+//    self.workoutDurationLabel.text = [rowThreeItems objectAtIndex:rowThree];
 
+    
     // MLIU 2013-02-18: prepare a new list of workouts
     MyWorkoutList *workoutData = [[MyWorkoutList alloc] init];
     NSArray *workout = [workoutData getWorkoutListwithType:self.typeSQL withDifficulty:self.difficultySQL withLength:[self convertDurationToSQLValue:self.durationSQL]];
 
     // MLIU 2013-02-18: handle 0 matching results
     if ([workout count] > 0) {
-        // show the first matching workout - swap in code for multiple matches here
+
         self.workoutDescriptionLabel.text = [workout objectAtIndex:0];
-    } else {
+    }
+    else {
         self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
     }
+    
+    
+//    if ([workout count] > 0) {
+//        // show the first matching workout - swap in code for multiple matches here
+//        self.workoutDescriptionLabel.text = [workout objectAtIndex:0];
+//    }
+//    else {
+//        self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
+//    }
+
 }
 
 
