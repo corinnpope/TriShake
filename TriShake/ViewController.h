@@ -21,6 +21,7 @@
     BOOL bannerIsVisible;
     NSMutableArray *workouts;
     sqlite3 *db;
+    int i;
     
 }
 

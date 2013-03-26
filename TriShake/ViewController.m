@@ -253,17 +253,17 @@
 - (IBAction)findWorkout:(id)sender {
     //set labels to show what the user picked
     
-//    NSInteger rowOne = [pickerView selectedRowInComponent:kTypeComponent];
-//    self.typeSQL = [rowOneItems objectAtIndex:rowOne];
-//    self.workoutTypeLabel.text = typeSQL;
-//   
-//    NSInteger rowTwo = [pickerView selectedRowInComponent:kDifficultyComponent];
-//    self.difficultySQL = [rowTwoItems objectAtIndex:rowTwo];
-//    self.workoutDifficultyLabel.text = [rowTwoItems objectAtIndex:rowTwo];
-//    
-//    NSInteger rowThree = [pickerView selectedRowInComponent:kDurationComponent];
-//    self.durationSQL = [rowThreeItems objectAtIndex:rowThree];
-//    self.workoutDurationLabel.text = [rowThreeItems objectAtIndex:rowThree];
+    NSInteger rowOne = [pickerView selectedRowInComponent:kTypeComponent];
+    self.typeSQL = [rowOneItems objectAtIndex:rowOne];
+    self.workoutTypeLabel.text = typeSQL;
+   
+    NSInteger rowTwo = [pickerView selectedRowInComponent:kDifficultyComponent];
+    self.difficultySQL = [rowTwoItems objectAtIndex:rowTwo];
+    self.workoutDifficultyLabel.text = [rowTwoItems objectAtIndex:rowTwo];
+    
+    NSInteger rowThree = [pickerView selectedRowInComponent:kDurationComponent];
+    self.durationSQL = [rowThreeItems objectAtIndex:rowThree];
+    self.workoutDurationLabel.text = [rowThreeItems objectAtIndex:rowThree];
 
     
     // MLIU 2013-02-18: prepare a new list of workouts
@@ -271,24 +271,26 @@
     NSArray *workout = [workoutData getWorkoutListwithType:self.typeSQL withDifficulty:self.difficultySQL withLength:[self convertDurationToSQLValue:self.durationSQL]];
 
     // MLIU 2013-02-18: handle 0 matching results
-    if ([workout count] > 0) {
-
-        self.workoutDescriptionLabel.text = [workout objectAtIndex:0];
-    }
-    else {
-        self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
-    }
-    
-    
 //    if ([workout count] > 0) {
-//        // show the first matching workout - swap in code for multiple matches here
+//
 //        self.workoutDescriptionLabel.text = [workout objectAtIndex:0];
 //    }
 //    else {
 //        self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
 //    }
 
+//set up button to act as a next button when pressed again
+    
+    if ((i+1) > workout.count) {
+        i = 0;
+    }
+    self.workoutDescriptionLabel.text = [workout objectAtIndex:i];
+    i++;
+//    else 
+//    self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
+//     }
 }
+
 
 
 
