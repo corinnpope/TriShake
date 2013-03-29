@@ -21,7 +21,7 @@
     UIImage* img = [UIImage imageNamed:@"arss_header.png"];
     if ((self = [super initWithImage:img])) {
         // Initialization code
-        label = [[UILabel alloc] initWithFrame:CGRectMake(20,10,200,50)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(20,10,200,30)];
         label.textColor = [UIColor whiteColor];
         label.shadowColor = [UIColor grayColor];
         label.shadowOffset = CGSizeMake(1, 1);

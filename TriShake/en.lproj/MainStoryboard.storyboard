@@ -17,7 +17,6 @@
                                     <constraint firstAttribute="width" constant="57" id="pYc-GC-rlD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="IM:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-Jw-Jhk">
@@ -25,7 +24,6 @@
                                     <constraint firstAttribute="width" constant="46" id="GB3-Bk-eyJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" verticalHuggingPriority="735" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="Sprint:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rm-Qs-kg0">
@@ -34,7 +32,6 @@
                                     <constraint firstAttribute="height" constant="27" id="vvo-FP-tJC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="Oly:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3E-9k-zKr">
@@ -43,22 +40,21 @@
                                     <constraint firstAttribute="height" constant="23" type="user" id="M1R-mC-25b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="02:45:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meb-dp-MQ9">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.19204509881114304" green="0.2977578012632956" blue="0.74278192934782616" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="01:27:36" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ3-D0-nyE">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.19204509881114304" green="0.2977578012632956" blue="0.74278192934782616" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="05:22:45" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-Ia-HQ7">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.19204509881114304" green="0.2977578012632956" blue="0.74278192934782616" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="10:35:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-9B-e5i">
@@ -66,7 +62,7 @@
                                     <constraint firstAttribute="width" constant="71" id="dik-NG-d6R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.19204509881114304" green="0.2977578012632956" blue="0.74278192934782616" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="241" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.5" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="UNo-nt-FYk">
@@ -179,7 +175,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tAi-hX-un8" firstAttribute="baseline" secondItem="T7f-Ln-R9n" secondAttribute="baseline" type="default" id="0kw-it-gJv"/>
                             <constraint firstItem="Kr7-of-zrX" firstAttribute="trailing" secondItem="7Dc-aI-07E" secondAttribute="trailing" type="default" id="5FU-Mz-Cqp"/>
@@ -267,13 +263,13 @@
         <scene sceneID="5">
             <objects>
                 <viewController title="Workouts" id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="3">
+                    <view key="view" alpha="0.40000000000000013" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-Qj-DDp">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" type="user" id="1Uh-Dz-xbu"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="216" type="user" id="1Uh-Dz-xbu"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-U7-vTG">
@@ -342,20 +338,20 @@
                                     <action selector="mailButton:" destination="2" eventType="touchUpInside" id="JzK-Aa-zd9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hlv-Ce-auk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select a workout type, difficulty, and duration from the picker above. Then press &quot;find a workout&quot; to search for a new workout." translatesAutoresizingMaskIntoConstraints="NO" id="Hlv-Ce-auk">
+                                <color key="backgroundColor" white="0.80912928427419351" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" type="user" id="fWT-iY-H7H"/>
                                 </constraints>
-                                <string key="text">Select a workout type, workout difficulty, and workout duration from the picker above. Then press "find a workout" to search for a new workout.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" type="user" id="3yh-r9-APd"/>
+                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="centerX" secondItem="4ra-U7-vTG" secondAttribute="centerX" type="default" id="4Ny-SW-W76"/>
                             <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="4bl-OZ-MAY"/>
-                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="6I0-yU-Eaf"/>
                             <constraint firstItem="YTf-s6-Whk" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="9Wl-Rb-1rz"/>
                             <constraint firstItem="yij-rM-3fY" firstAttribute="leading" secondItem="Ett-UU-JCs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Lnz-Qn-f2A"/>
                             <constraint firstAttribute="trailing" secondItem="Hlv-Ce-auk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MWj-Wf-txo"/>
@@ -365,10 +361,10 @@
                             <constraint firstAttribute="trailing" secondItem="4ra-U7-vTG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g1M-aT-ZWc"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jaY-Er-Bxg"/>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="mC7-mg-0g0"/>
-                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="1" type="user" id="oac-Di-kis"/>
                             <constraint firstItem="Ett-UU-JCs" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="oj3-4e-fSE"/>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pPh-Tf-bzj"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pX8-dm-TVA"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rzh-JH-9HP"/>
                             <constraint firstAttribute="bottom" secondItem="YTf-s6-Whk" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="tJR-7T-lp5"/>
                             <constraint firstAttribute="trailing" secondItem="YTf-s6-Whk" secondAttribute="trailing" constant="40" id="vd5-mf-WZt"/>
                             <constraint firstItem="YTf-s6-Whk" firstAttribute="leading" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wG4-Iv-zYu"/>
@@ -586,11 +582,11 @@
             </objects>
             <point key="canvasLocation" x="-1391" y="951"/>
         </scene>
-        <!--Resources Navigation Controller - Resources-->
+        <!--Resources Navigation Controller - Checklist-->
         <scene sceneID="xKe-me-zqb">
             <objects>
                 <navigationController definesPresentationContext="YES" id="h8C-cp-O7e" customClass="ResourcesNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Resources" image="star.png" id="oqV-RX-yJD"/>
+                    <tabBarItem key="tabBarItem" title="Checklist" image="star.png" id="oqV-RX-yJD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6MM-pb-xvU">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
