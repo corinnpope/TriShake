@@ -175,7 +175,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tAi-hX-un8" firstAttribute="baseline" secondItem="T7f-Ln-R9n" secondAttribute="baseline" type="default" id="0kw-it-gJv"/>
                             <constraint firstItem="Kr7-of-zrX" firstAttribute="trailing" secondItem="7Dc-aI-07E" secondAttribute="trailing" type="default" id="5FU-Mz-Cqp"/>
@@ -263,17 +263,19 @@
         <scene sceneID="5">
             <objects>
                 <viewController title="Workouts" id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" alpha="0.40000000000000013" contentMode="scaleToFill" id="3">
+                    <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-Qj-DDp">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="216" type="user" id="1Uh-Dz-xbu"/>
+                                    <constraint firstAttribute="height" constant="216" id="e18-mN-qLb"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-U7-vTG">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="Cty-pq-VNN"/>
                                     <constraint firstAttribute="height" constant="32" type="user" id="hKX-uN-W8u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
@@ -339,9 +341,9 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select a workout type, difficulty, and duration from the picker above. Then press &quot;find a workout&quot; to search for a new workout." translatesAutoresizingMaskIntoConstraints="NO" id="Hlv-Ce-auk">
-                                <color key="backgroundColor" white="0.80912928427419351" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" type="user" id="fWT-iY-H7H"/>
+                                    <constraint firstAttribute="height" constant="175" id="UjD-qb-IgY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -349,25 +351,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" type="user" id="3yh-r9-APd"/>
-                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="centerX" secondItem="4ra-U7-vTG" secondAttribute="centerX" type="default" id="4Ny-SW-W76"/>
-                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="4bl-OZ-MAY"/>
-                            <constraint firstItem="YTf-s6-Whk" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="9Wl-Rb-1rz"/>
+                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="02J-W9-lcm"/>
+                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="EZ5-bf-8cA"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FEz-Mo-qiD"/>
+                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="centerX" secondItem="k5Q-Qj-DDp" secondAttribute="centerX" type="default" id="Iqh-PA-Kwc"/>
                             <constraint firstItem="yij-rM-3fY" firstAttribute="leading" secondItem="Ett-UU-JCs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Lnz-Qn-f2A"/>
                             <constraint firstAttribute="trailing" secondItem="Hlv-Ce-auk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MWj-Wf-txo"/>
-                            <constraint firstItem="yij-rM-3fY" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="V6O-zP-0id"/>
-                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="45" type="user" id="ZSO-f5-hE6"/>
-                            <constraint firstAttribute="bottom" secondItem="yij-rM-3fY" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="eX5-Ua-8j1"/>
-                            <constraint firstAttribute="trailing" secondItem="4ra-U7-vTG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g1M-aT-ZWc"/>
+                            <constraint firstAttribute="bottom" secondItem="yij-rM-3fY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hjQ-H4-GGT"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jaY-Er-Bxg"/>
-                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="4ra-U7-vTG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="mC7-mg-0g0"/>
-                            <constraint firstItem="Ett-UU-JCs" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="oj3-4e-fSE"/>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pPh-Tf-bzj"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pX8-dm-TVA"/>
-                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rzh-JH-9HP"/>
-                            <constraint firstAttribute="bottom" secondItem="YTf-s6-Whk" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="tJR-7T-lp5"/>
+                            <constraint firstAttribute="bottom" secondItem="YTf-s6-Whk" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="s0S-gq-6S4"/>
                             <constraint firstAttribute="trailing" secondItem="YTf-s6-Whk" secondAttribute="trailing" constant="40" id="vd5-mf-WZt"/>
                             <constraint firstItem="YTf-s6-Whk" firstAttribute="leading" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wG4-Iv-zYu"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="centerY" secondItem="Ett-UU-JCs" secondAttribute="centerY" type="default" id="xVt-2h-1FR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workouts" image="63-runner.png" id="owL-pv-xjD"/>
