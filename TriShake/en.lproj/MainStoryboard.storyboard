@@ -269,14 +269,14 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-Qj-DDp">
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="216" type="user" id="1Uh-Dz-xbu"/>
-                                    <constraint firstAttribute="height" constant="216" id="e18-mN-qLb"/>
+                                    <constraint firstAttribute="height" constant="216" type="user" id="47p-JT-ine"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="216" type="user" id="bve-L1-QXe"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-U7-vTG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="162" id="Cty-pq-VNN"/>
-                                    <constraint firstAttribute="height" constant="32" type="user" id="hKX-uN-W8u"/>
+                                    <constraint firstAttribute="width" constant="176" id="HW0-SQ-D0Q"/>
+                                    <constraint firstAttribute="height" constant="32" type="user" id="a7m-SC-EML"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <state key="normal" title="Find a Workout" backgroundImage="OrangeButton.png">
@@ -326,7 +326,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="0Hy-fP-ysE"/>
                                     <constraint firstAttribute="height" constant="22" type="user" id="3q5-e6-B8U"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" type="user" id="ETF-Cu-tbJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="mail_icon.png">
@@ -340,31 +339,32 @@
                                     <action selector="mailButton:" destination="2" eventType="touchUpInside" id="JzK-Aa-zd9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select a workout type, difficulty, and duration from the picker above. Then press &quot;find a workout&quot; to search for a new workout." translatesAutoresizingMaskIntoConstraints="NO" id="Hlv-Ce-auk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="260" verticalCompressionResistancePriority="78" editable="NO" text="Select a workout type, difficulty, and duration from the picker above. Then press &quot;find a workout&quot; to search for a new workout." translatesAutoresizingMaskIntoConstraints="NO" id="Hlv-Ce-auk">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="UjD-qb-IgY"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="173" type="user" id="YCt-KW-RVb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="02J-W9-lcm"/>
-                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="EZ5-bf-8cA"/>
-                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FEz-Mo-qiD"/>
-                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="centerX" secondItem="k5Q-Qj-DDp" secondAttribute="centerX" type="default" id="Iqh-PA-Kwc"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="centerY" secondItem="Ett-UU-JCs" secondAttribute="centerY" type="user" id="Ebq-bA-x5F"/>
                             <constraint firstItem="yij-rM-3fY" firstAttribute="leading" secondItem="Ett-UU-JCs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Lnz-Qn-f2A"/>
                             <constraint firstAttribute="trailing" secondItem="Hlv-Ce-auk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MWj-Wf-txo"/>
+                            <constraint firstItem="Ett-UU-JCs" firstAttribute="leading" secondItem="4ra-U7-vTG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="O4y-uN-tHG"/>
+                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="YSw-ud-rUl"/>
+                            <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="e2f-xC-Y4e"/>
+                            <constraint firstItem="k5Q-Qj-DDp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" type="user" id="hGV-JO-JCG"/>
+                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="hUa-s1-HZ4"/>
                             <constraint firstAttribute="bottom" secondItem="yij-rM-3fY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hjQ-H4-GGT"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jaY-Er-Bxg"/>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pPh-Tf-bzj"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pX8-dm-TVA"/>
+                            <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="pcD-Nj-MRb"/>
                             <constraint firstAttribute="bottom" secondItem="YTf-s6-Whk" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="s0S-gq-6S4"/>
-                            <constraint firstAttribute="trailing" secondItem="YTf-s6-Whk" secondAttribute="trailing" constant="40" id="vd5-mf-WZt"/>
                             <constraint firstItem="YTf-s6-Whk" firstAttribute="leading" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wG4-Iv-zYu"/>
-                            <constraint firstItem="4ra-U7-vTG" firstAttribute="centerY" secondItem="Ett-UU-JCs" secondAttribute="centerY" type="default" id="xVt-2h-1FR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workouts" image="63-runner.png" id="owL-pv-xjD"/>
@@ -412,15 +412,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" editingAccessoryType="detailDisclosureButton" textLabel="eX0-nd-rac" rowHeight="54" style="IBUITableViewCellStyleDefault" id="ejO-9i-YfC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="eX0-nd-rac" rowHeight="54" style="IBUITableViewCellStyleDefault" id="ejO-9i-YfC">
                                 <rect key="frame" x="0.0" y="22" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="53"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX0-nd-rac">
-                                            <rect key="frame" x="10" y="0.0" width="267" height="53"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

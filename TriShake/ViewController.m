@@ -61,23 +61,21 @@
     adView.delegate=self;
     self.bannerIsVisible=NO;
     
+    //customize view background
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bike_bground.png"]];
+    
     [super viewDidLoad];
     
-    //set up Picker View
-    //pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
-
+    
     //offset pickerview for iAds
     pickerView.frame = CGRectOffset(pickerView.frame, 0, -50);
-
-        pickerView.transform = CGAffineTransformMakeScale(.8, .8);
-    
+    pickerView.transform = CGAffineTransformMakeScale(.8, .8);
     pickerView.delegate = self;
     pickerView.dataSource = self;
     pickerView.showsSelectionIndicator = YES;
     pickerView.opaque = NO;
     workoutDescriptionLabel.delegate = self;
-
-
+    
     
     
     //set up arrays
@@ -178,6 +176,7 @@
     else
         return [rowOneItems objectAtIndex:row];
 }
+
 
 # pragma Share/Social Buttons
 //share with a "share" screen

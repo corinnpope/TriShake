@@ -18,7 +18,7 @@
 
 - (id)initWithText:(NSString*)text
 {
-    UIImage* img = [UIImage imageNamed:@"arss_header.png"];
+    UIImage* img = [UIImage imageNamed:@"rss_icon.png"];
     if ((self = [super initWithImage:img])) {
         // Initialization code
         label = [[UILabel alloc] initWithFrame:CGRectMake(20,10,200,30)];
