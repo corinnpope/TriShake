@@ -62,7 +62,7 @@
     self.bannerIsVisible=NO;
     
     //customize view background
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bike_bground.png"]];
+    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"argyle.png"]];
     
     [super viewDidLoad];
     
@@ -75,8 +75,6 @@
     pickerView.showsSelectionIndicator = YES;
     pickerView.opaque = NO;
     workoutDescriptionLabel.delegate = self;
-    
-    
     
     //set up arrays
     

@@ -58,11 +58,32 @@
     t1Slider.value = 3.0;
     t2Slider.value = 3.0;
 
+    
     [swimSlider sendActionsForControlEvents:UIControlEventValueChanged];
     [bikeSlider sendActionsForControlEvents:UIControlEventValueChanged];
      [runSlider sendActionsForControlEvents:UIControlEventValueChanged];
      [t1Slider sendActionsForControlEvents:UIControlEventValueChanged];
      [t2Slider sendActionsForControlEvents:UIControlEventValueChanged];
+    
+    //set up custom sliders
+    
+    [swimSlider setThumbImage:[UIImage imageNamed:@"swim_slider_thumb_new.png"] forState:UIControlStateNormal];
+    [bikeSlider setThumbImage:[UIImage imageNamed:@"bike_slider_thumb.png"] forState:UIControlStateNormal];
+    [runSlider setThumbImage:[UIImage imageNamed:@"run_slider_thumb.png"] forState:UIControlStateNormal];
+    [t1Slider setThumbImage:[UIImage imageNamed:@"t1_slider_thumb.png"] forState:UIControlStateNormal];
+    [t2Slider setThumbImage:[UIImage imageNamed:@"t2_slider_thumb.png"] forState:UIControlStateNormal];
+    
+    
+    UIImage *swimLeftTrackImage = [[UIImage imageNamed: @"swim_slider_purple.png"] stretchableImageWithLeftCapWidth: 9 topCapHeight: 0];
+    [swimSlider setMinimumTrackImage: swimLeftTrackImage  forState: UIControlStateNormal];
+    UIImage *bikeLeftTrackImage = [[UIImage imageNamed: @"bike_slider_green.png"] stretchableImageWithLeftCapWidth: 9 topCapHeight: 0];
+    [bikeSlider setMinimumTrackImage: bikeLeftTrackImage  forState: UIControlStateNormal];
+    UIImage *runLeftTrackImage = [[UIImage imageNamed: @"run_slider_red.png"] stretchableImageWithLeftCapWidth: 9 topCapHeight: 0];
+    [runSlider setMinimumTrackImage: runLeftTrackImage  forState: UIControlStateNormal];
+    UIImage *transitionLeftTrackImage = [[UIImage imageNamed: @"transition_slider_blue.png"] stretchableImageWithLeftCapWidth: 9 topCapHeight: 0];
+    [t1Slider setMinimumTrackImage: transitionLeftTrackImage  forState: UIControlStateNormal];
+    [t2Slider setMinimumTrackImage: transitionLeftTrackImage  forState: UIControlStateNormal];
+
 }
 
 - (void)didReceiveMemoryWarning
