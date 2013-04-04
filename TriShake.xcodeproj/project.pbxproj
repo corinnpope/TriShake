@@ -34,8 +34,6 @@
 		493945FA170B7A4200B8B390 /* swim_slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 493945F9170B7A4200B8B390 /* swim_slider_thumb.png */; };
 		493945FC170B7AB700B8B390 /* swim_slider_thumb_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 493945FB170B7AB600B8B390 /* swim_slider_thumb_new.png */; };
 		4942EA9E170A8EE7001A8243 /* bike_bground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4942EA9D170A8EE7001A8243 /* bike_bground.png */; };
-		494E0B3A16E465F20032126A /* ResourcesNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494E0B3916E465F20032126A /* ResourcesNavigationController.m */; };
-		494E0B3D16E466F20032126A /* checklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494E0B3C16E466F20032126A /* checklistViewController.m */; };
 		494E0B4916E46A090032126A /* magnifying_glass@2x.mailtoloc in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4116E46A080032126A /* magnifying_glass@2x.mailtoloc */; };
 		494E0B4A16E46A090032126A /* calculator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4216E46A080032126A /* calculator@2x.png */; };
 		494E0B4B16E46A090032126A /* newspaper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4316E46A080032126A /* newspaper@2x.png */; };
@@ -122,10 +120,6 @@
 		493945F9170B7A4200B8B390 /* swim_slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swim_slider_thumb.png; path = ../../swim_slider_thumb.png; sourceTree = "<group>"; };
 		493945FB170B7AB600B8B390 /* swim_slider_thumb_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swim_slider_thumb_new.png; sourceTree = "<group>"; };
 		4942EA9D170A8EE7001A8243 /* bike_bground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bike_bground.png; path = ../../bike_bground.png; sourceTree = "<group>"; };
-		494E0B3816E465F20032126A /* ResourcesNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesNavigationController.h; sourceTree = "<group>"; };
-		494E0B3916E465F20032126A /* ResourcesNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesNavigationController.m; sourceTree = "<group>"; };
-		494E0B3B16E466F20032126A /* checklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checklistViewController.h; sourceTree = "<group>"; };
-		494E0B3C16E466F20032126A /* checklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checklistViewController.m; sourceTree = "<group>"; };
 		494E0B4116E46A080032126A /* magnifying_glass@2x.mailtoloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "magnifying_glass@2x.mailtoloc"; sourceTree = "<group>"; };
 		494E0B4216E46A080032126A /* calculator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator@2x.png"; sourceTree = "<group>"; };
 		494E0B4316E46A080032126A /* newspaper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newspaper@2x.png"; sourceTree = "<group>"; };
@@ -341,10 +335,6 @@
 			children = (
 				494E0B5116E525CE0032126A /* checklistTableViewController.h */,
 				494E0B5216E525CE0032126A /* checklistTableViewController.m */,
-				494E0B3B16E466F20032126A /* checklistViewController.h */,
-				494E0B3C16E466F20032126A /* checklistViewController.m */,
-				494E0B3816E465F20032126A /* ResourcesNavigationController.h */,
-				494E0B3916E465F20032126A /* ResourcesNavigationController.m */,
 			);
 			name = "Resources Controllers";
 			sourceTree = "<group>";
@@ -551,8 +541,6 @@
 				49AE5A1516DFDCE1008693A0 /* RSSLoader.m in Sources */,
 				49AE5A2216DFE905008693A0 /* MasterViewController.m in Sources */,
 				49AE5A2516DFE962008693A0 /* RSSItem.m in Sources */,
-				494E0B3A16E465F20032126A /* ResourcesNavigationController.m in Sources */,
-				494E0B3D16E466F20032126A /* checklistViewController.m in Sources */,
 				494E0B5316E525CF0032126A /* checklistTableViewController.m in Sources */,
 				4911F00216F381D300B671DF /* Reachability.m in Sources */,
 				49B6F09216FB8B8600846C1C /* RaceFinderViewController.m in Sources */,
