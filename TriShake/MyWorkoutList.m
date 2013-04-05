@@ -12,10 +12,6 @@
 #import "ViewController.h"
 
 
-#define kTypeComponent 0
-#define kDifficultyComponent 1
-#define kDurationComponent 2
-
 
 @implementation MyWorkoutList
 
@@ -26,9 +22,8 @@
     @try {
         NSFileManager *fileMgr = [NSFileManager defaultManager];
         NSString *dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"workoutList.sqlite"];
-        //        NSLog(@"Db path is %@",dbPath);
+
         BOOL success = [fileMgr fileExistsAtPath:dbPath];
-        
         if (!success){
             NSLog(@"Cannot locate database file '%@'.", dbPath);
         }

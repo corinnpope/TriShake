@@ -18,10 +18,6 @@
 
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
 
-//- (UIPickerView *)pickerView;
-//
-//- (NSMutableArray *) getMyWorkout;
-//- (void) findWorkoutSQL;
 
 // MLIU 2013-02-18: added this function to only get specific workouts.  I left the original one alone in case you still wanted to pull in the entire list of workouts somewhere else (e.g. building the UIPicker options from the database)
 - (NSArray *)getWorkoutListwithType:(NSString *)workoutType withDifficulty:(NSString *)difficulty withLength:(NSString *)length;

@@ -12,20 +12,11 @@
     NSMutableArray *sectionArray;
     NSMutableArray *checkedCells;
     NSIndexPath *selectedIndexPath;
-    int selectedRow;
-    int selectedSection;
 }
 
-
-@property (nonatomic, readonly) NSInteger numberOfSections;
-@property (nonatomic, retain) NSMutableArray *tableData;
-@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, retain) NSMutableArray *checkedCells;
 @property (nonatomic, retain) NSIndexPath *selectedIndexPath;
-
-
-- (NSString *) itemNameAtIndexPath: (NSIndexPath *) path;
-- (NSInteger) countInSection: (NSInteger) section;
-- (NSString *) nameForSection: (NSInteger) section;
+@property(nonatomic, retain) NSIndexPath *checkedData;
 
 
 

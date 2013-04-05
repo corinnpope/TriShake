@@ -28,6 +28,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" verticalHuggingPriority="735" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="Sprint:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rm-Qs-kg0">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="CgV-nc-zJQ"/>
                                     <constraint firstAttribute="width" constant="67" id="ocN-aS-4o6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -47,9 +48,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="01:27:36" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ3-D0-nyE">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="pUC-16-ypN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.19204509881114304" green="0.2977578012632956" blue="0.74278192934782616" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -165,7 +163,7 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="796" verticalHuggingPriority="853" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGs-a2-TWd">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="305" id="e7U-s4-ViZ"/>
-                                    <constraint firstAttribute="height" constant="45" id="iKL-Nv-yJj"/>
+                                    <constraint firstAttribute="height" constant="30" id="hXz-8g-C2T"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
                                 <state key="normal" title="Estimate Finish Times" backgroundImage="OrangeButton.png">
@@ -196,7 +194,6 @@
                             <constraint firstItem="LAV-j6-ldw" firstAttribute="baseline" secondItem="mZh-St-gAh" secondAttribute="baseline" type="default" id="G27-ZL-oSS"/>
                             <constraint firstItem="8Rm-Qs-kg0" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="L22-SB-qsi"/>
                             <constraint firstItem="LAV-j6-ldw" firstAttribute="trailing" secondItem="sSx-jX-dEq" secondAttribute="trailing" type="default" id="L2C-LJ-gb1"/>
-                            <constraint firstItem="xQ3-D0-nyE" firstAttribute="top" secondItem="7Dc-aI-07E" secondAttribute="top" constant="23" id="MMQ-jf-ggf"/>
                             <constraint firstItem="UNo-nt-FYk" firstAttribute="leading" secondItem="7Dc-aI-07E" secondAttribute="leading" constant="21" id="QoV-mx-xii"/>
                             <constraint firstItem="tAi-hX-un8" firstAttribute="trailing" secondItem="Jbh-Gw-JUN" secondAttribute="trailing" type="default" id="SoB-Oh-IT9"/>
                             <constraint firstItem="Kr7-of-zrX" firstAttribute="top" secondItem="7Dc-aI-07E" secondAttribute="top" constant="65" id="TxY-R6-DSk"/>
@@ -633,9 +630,6 @@
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
-        <class className="ResourcesNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResourcesNavigationController.h"/>
-        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
@@ -680,9 +674,6 @@
         </class>
         <class className="checklistTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/checklistTableViewController.h"/>
-        </class>
-        <class className="checklistViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/checklistViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
