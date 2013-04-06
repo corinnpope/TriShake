@@ -14,7 +14,7 @@
 
 @implementation RaceFinderViewController
 
-@synthesize webView;
+@synthesize webView, activityIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,20 +25,39 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void) viewDidLoad {
+    
+    //set up activity indicator for when page is loading
+    activityIndicator = [[UIActivityIndicatorView alloc] init];
+	activityIndicator.hidesWhenStopped = YES;
+	[self.activityIndicator startAnimating];
+
+    [super viewDidLoad];
+    [self loadView];
+}
+
+- (void)viewWillAppear:(BOOL)animated   {
+    
+    //set up web page load
     NSString *urlAddress = @"http://m.usatriathlon.org/events/sanctioned-event-calendar.aspx";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObject];
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+- (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	// starting the load, show the activity indicator in the status bar
+    activityIndicator.hidden = FALSE;
+    [activityIndicator startAnimating];
 }
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	// finished loading, hide the activity indicator in the status bar
+    activityIndicator.hidden = TRUE;
+	[activityIndicator stopAnimating];
+}
+
 
 @end

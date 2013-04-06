@@ -10,7 +10,10 @@
 
 @interface RaceFinderViewController : UIViewController {
     IBOutlet UIWebView *webView;
+    UIActivityIndicatorView *activityIndicator;
 }
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 
 @end
