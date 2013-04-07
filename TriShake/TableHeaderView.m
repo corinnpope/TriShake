@@ -22,7 +22,7 @@
     if ((self = [super initWithImage:img])) {
         // Initialization code
         label = [[UILabel alloc] initWithFrame:CGRectMake(20,10,200,30)];
-        label.textColor = [UIColor whiteColor];
+        label.textColor = [UIColor blackColor];
         label.shadowColor = [UIColor grayColor];
         label.shadowOffset = CGSizeMake(1, 1);
         label.backgroundColor = [UIColor clearColor];

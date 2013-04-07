@@ -31,7 +31,7 @@
     activityIndicator = [[UIActivityIndicatorView alloc] init];
 	activityIndicator.hidesWhenStopped = YES;
 	[self.activityIndicator startAnimating];
-
+    
     [super viewDidLoad];
     [self loadView];
 }
