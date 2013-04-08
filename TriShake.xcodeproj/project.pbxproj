@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		490526A417132F1900D20D97 /* checklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490526A317132F1900D20D97 /* checklistTableViewController.m */; };
 		4911EFFF16F381BE00B671DF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4911EFFE16F381BE00B671DF /* SystemConfiguration.framework */; };
 		4911F00216F381D300B671DF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911F00116F381D300B671DF /* Reachability.m */; };
 		49300ACC16B705A100F45D24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49300ACB16B705A100F45D24 /* UIKit.framework */; };
@@ -47,6 +46,7 @@
 		4973ED3A17012B7400036919 /* magnifying_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED3917012B7400036919 /* magnifying_glass@2x.png */; };
 		4973ED43170130F800036919 /* 63-runner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973ED42170130F800036919 /* 63-runner@2x.png */; };
 		49808F2B16D435BB009C21AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2A16D435BB009C21AC /* Default-568h@2x.png */; };
+		49914A6F171375DD0005B67D /* checklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49914A6D171375DD0005B67D /* checklistTableViewController.m */; };
 		499F0763170922E90078432D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49808F2416D43594009C21AC /* Icon@2x.png */; };
 		49A48C00171102D300B3CE24 /* workoutList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49A48BFF171102D300B3CE24 /* workoutList.sqlite */; };
 		49A48C021711038200B3CE24 /* mail_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A48C011711038200B3CE24 /* mail_icon.png */; };
@@ -98,7 +98,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		490526A317132F1900D20D97 /* checklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checklistTableViewController.m; sourceTree = "<group>"; };
 		4911EFFE16F381BE00B671DF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4911F00016F381D300B671DF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4911F00116F381D300B671DF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -142,13 +141,14 @@
 		494E0B4616E46A090032126A /* newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newspaper.png; sourceTree = "<group>"; };
 		494E0B4716E46A090032126A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		494E0B4816E46A090032126A /* magnifying_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifying_glass.png; sourceTree = "<group>"; };
-		494E0B5116E525CE0032126A /* checklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checklistTableViewController.h; sourceTree = "<group>"; };
 		4965A00D16E6EB610078EA5F /* workoutList2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = workoutList2.sqlite; path = ../workoutList2.sqlite; sourceTree = "<group>"; };
 		4973ED3917012B7400036919 /* magnifying_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying_glass@2x.png"; sourceTree = "<group>"; };
 		4973ED42170130F800036919 /* 63-runner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner@2x.png"; sourceTree = "<group>"; };
 		49808F2216D4358F009C21AC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		49808F2416D43594009C21AC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
 		49808F2A16D435BB009C21AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		49914A6D171375DD0005B67D /* checklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checklistTableViewController.m; sourceTree = "<group>"; };
+		49914A6E171375DD0005B67D /* checklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checklistTableViewController.h; sourceTree = "<group>"; };
 		49A48BFF171102D300B3CE24 /* workoutList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = workoutList.sqlite; sourceTree = "<group>"; };
 		49A48C011711038200B3CE24 /* mail_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mail_icon.png; path = ../mail_icon.png; sourceTree = "<group>"; };
 		49A48C03171106AA00B3CE24 /* twitter-bird-white-on-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-bird-white-on-blue@2x.png"; sourceTree = "<group>"; };
@@ -372,8 +372,8 @@
 		494E0B3E16E4671B0032126A /* Resources Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				490526A317132F1900D20D97 /* checklistTableViewController.m */,
-				494E0B5116E525CE0032126A /* checklistTableViewController.h */,
+				49914A6D171375DD0005B67D /* checklistTableViewController.m */,
+				49914A6E171375DD0005B67D /* checklistTableViewController.h */,
 			);
 			name = "Resources Controllers";
 			sourceTree = "<group>";
@@ -593,7 +593,7 @@
 				49AE5A2516DFE962008693A0 /* RSSItem.m in Sources */,
 				4911F00216F381D300B671DF /* Reachability.m in Sources */,
 				49B6F09216FB8B8600846C1C /* RaceFinderViewController.m in Sources */,
-				490526A417132F1900D20D97 /* checklistTableViewController.m in Sources */,
+				49914A6F171375DD0005B67D /* checklistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,10 +39,10 @@
     
     sectionArray = [[NSMutableArray alloc] init];
     
-    NSArray *essentialsArray = [NSArray arrayWithObjects:@"Identification", @"Registration Confirmation", @"Goggles",@"Tri-Suit", @"Wetsuit", @"Bike", @"Helmet", @"Bike Shoes", @"Flat Kit", @"Running Shoes",  @"Watch", @"Water Bottle", @"Body Glide", nil];
+    NSArray *essentialsArray = [NSArray arrayWithObjects:@"Identification", @"USAT Card/Cash", @"Goggles", @"Bike", @"Helmet", @"Bike Shoes", @"Running Shoes", @"Flat Kit", @"Tri-Suit", @"Watch", @"Wetsuit", @"Water Bottle", @"Body Glide", nil];
     NSDictionary *essentialsDict = [NSDictionary dictionaryWithObject:essentialsArray forKey:@"Items"];
     
-    NSArray *preRaceArray = [NSArray arrayWithObjects:@"USAT Card", @"Directions to Race", @"Medication", @"Keys", @"Phone & Charger", @"Money", @"Insurance Card", @"First Aid Kit", @"MP3 Player & Headphones", @"Sunscreen", @"Hair Ties", @"Timing Chip", nil];
+    NSArray *preRaceArray = [NSArray arrayWithObjects:@"Registration Confirmation", @"Directions to Race", @"Medication", @"Keys", @"Phone & Charger", @"Money", @"Insurance Card", @"First Aid Kit", @"MP3 Player & Headphones", @"Sunscreen", @"Hair Ties", @"Timing Chip", nil];
     NSDictionary *preRaceDict = [NSDictionary dictionaryWithObject:preRaceArray forKey:@"Items"];
     
     NSArray *swimArray = [NSArray arrayWithObjects:@"Swim Cap", @"Goggle DeFogger", @"Earplugs", @"Noseplug", @"Swim Stretch Cords", nil];
@@ -116,6 +116,34 @@
 
 #pragma mark - Table view delegate
 
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //if cell is selected, add checkmark
+    if ([indexPath isEqual:selectedIndexPath]){
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        [self.checkedCells addObject:selectedIndexPath];
+    }
+    else {
+       [cell setAccessoryType:UITableViewCellAccessoryNone];
+        [self.checkedCells removeObject:selectedIndexPath];
+    }
+
+    // Display text for each cell using data from section array
+    NSDictionary *dictionary = [sectionArray objectAtIndex:indexPath.section];
+    NSArray *array = [dictionary objectForKey:@"Items"];
+    NSString *cellValue = [array objectAtIndex:indexPath.row];
+    cell.textLabel.text = cellValue;
+    
+    return cell;
+}
+*/
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     
@@ -126,7 +154,7 @@
     if (cell==nil) {
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    //if array contains the index path, add a checkmark, if not, no checkmark
+    
     if([self.checkedCells containsObject:indexPath])
     {
         
@@ -136,6 +164,7 @@
     {
         [cell setAccessoryType:UITableViewCellAccessoryNone];
     }
+    
     
     // Display text for each cell using data from section array
     NSDictionary *dictionary = [sectionArray objectAtIndex:indexPath.section];
@@ -148,28 +177,35 @@
  
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // check the array to see if it contains the object path, if it doesn't, add index path, if it does, remove index path
-    if(![self.checkedCells containsObject:indexPath])
+  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+  if(![self.checkedCells containsObject:indexPath])
     {
     [self.checkedCells addObject:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else
     {
         [self.checkedCells removeObject:indexPath];
+         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    //add or remove a checkmark to the selected cell
+     
+//
+   
+    //code as of 4/4
     
-   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-
+    /*
+  self.selectedIndexPath = indexPath;
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
         [self.checkedCells addObject:selectedIndexPath];
-    }
-    else
-    {
+        //self.selectedIndexPath = nil;
+    } else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         [self.checkedCells removeObject:selectedIndexPath];
+        //self.selectedIndexPath = indexPath;
 }
+     */
 }
 @end
