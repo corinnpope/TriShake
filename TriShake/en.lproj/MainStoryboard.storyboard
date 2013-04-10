@@ -594,7 +594,7 @@
                             <constraint firstItem="H7Z-BD-raO" firstAttribute="trailing" secondItem="uPD-PI-099" secondAttribute="trailing" type="default" id="Exn-1i-t8T"/>
                             <constraint firstItem="yuY-Me-nMR" firstAttribute="centerX" secondItem="H7Z-BD-raO" secondAttribute="centerX" type="default" id="MX6-05-5L8"/>
                             <constraint firstItem="H7Z-BD-raO" firstAttribute="leading" secondItem="uPD-PI-099" secondAttribute="leading" type="default" id="a4I-ju-iqY"/>
-                            <constraint firstItem="H7Z-BD-raO" firstAttribute="top" secondItem="uPD-PI-099" secondAttribute="top" type="default" id="euU-bo-zHJ"/>
+                            <constraint firstItem="H7Z-BD-raO" firstAttribute="top" secondItem="uPD-PI-099" secondAttribute="top" type="default" id="xaf-JM-h1h"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Race Search" image="magnifying_glass.png" id="XAN-Ub-ZVd"/>
@@ -636,6 +636,75 @@
         <image name="star.png" width="26" height="26"/>
         <image name="twitter-bird-white-on-blue.png" width="40" height="40"/>
     </resources>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RaceFinderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceFinderViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="facebookButton:"/>
+                <relationship kind="action" name="findWorkout:"/>
+                <relationship kind="action" name="mailButton:"/>
+                <relationship kind="action" name="tweetButton:"/>
+                <relationship kind="outlet" name="facebookButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mailButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="tweetButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="workoutDescriptionLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="workoutDifficultyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="workoutDurationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="workoutTypeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="calculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/calculatorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="bikeSliderChanged:"/>
+                <relationship kind="action" name="changeTime:"/>
+                <relationship kind="action" name="infoButtonPressed:"/>
+                <relationship kind="action" name="runSliderChanged:"/>
+                <relationship kind="action" name="swimSliderChanged:"/>
+                <relationship kind="action" name="t1SliderChanged:"/>
+                <relationship kind="action" name="t2SliderChanged:"/>
+                <relationship kind="outlet" name="bikePaceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bikeSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="fullFinishTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="halfFinishTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="olyFinishTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="projectedFinishTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="runPaceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="runSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="swimPaceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="swimSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="t1PaceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="t1Slider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="t2PaceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="t2Slider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="checklistTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/checklistTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

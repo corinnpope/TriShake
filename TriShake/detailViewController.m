@@ -16,6 +16,8 @@
 
 @implementation DetailViewController
 
+@synthesize detailDescriptionLabel;
+
 -(void)viewDidAppear:(BOOL)animated
 {
     RSSItem* item = (RSSItem*)self.detailItem;

@@ -60,10 +60,7 @@
     [self.view addSubview:adView];
     adView.delegate=self;
     self.bannerIsVisible=NO;
-    
-    //customize view background
-    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"argyle.png"]];
-    
+
     [super viewDidLoad];
     
     
@@ -177,23 +174,13 @@
 
 
 # pragma Share/Social Buttons
-//share with a "share" screen
-//NSString* someText = self.textView.text;
-//NSArray* dataToShare = @[someText];  // ...or whatever pieces of data you want to share.
-//
-//UIActivityViewController* activityViewController =
-//[[UIActivityViewController alloc] initWithActivityItems:dataToShare
-//                                  applicationActivities:nil];
-//[self presentViewController:activityViewController animated:YES completion:^{}];
-
-
 - (IBAction)mailButton:(id)sender {
     MFMailComposeViewController *mailComposer;
     mailComposer = [[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate = self;
-    [mailComposer setSubject:@"My Workout from TriShake"];
+    [mailComposer setSubject:@"My Workout from TriAlly"];
     NSString *chosenWorkout = self.workoutDescriptionLabel.text;
-    [mailComposer setMessageBody:[NSString stringWithFormat: @"My workout for today: %@  #trishake", chosenWorkout] isHTML:NO];
+    [mailComposer setMessageBody:[NSString stringWithFormat: @"My workout for today: %@  #triAlly", chosenWorkout] isHTML:NO];
     [self presentViewController:mailComposer animated:YES completion:nil];
 }
 
@@ -202,14 +189,12 @@
 }
 
 - (IBAction)tweetButton:(id)sender {
-//    code for adding a link
-//    [tweetSheet addURL:[NSURL URLWithString:@"http://www.trishake.com"]];
 
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         NSString *chosenWorkout = self.workoutDescriptionLabel.text;
-        [tweetSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #trishake", chosenWorkout]];
+        [tweetSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #TriAlly", chosenWorkout]];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
     else {
@@ -231,7 +216,7 @@
         
         //set facebook message
         NSString *chosenWorkout = self.workoutDescriptionLabel.text;
-        [facebookSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #trishake", chosenWorkout]];
+        [facebookSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #TriAlly", chosenWorkout]];
         //dismiss facebook sheet
         [self presentViewController:facebookSheet animated:YES completion:nil];
     }

@@ -8,6 +8,7 @@
 
 #import "checklistTableViewController.h"
 
+
 @interface checklistTableViewController ()
 
 @end
@@ -30,6 +31,8 @@
 
 - (void)viewDidLoad
 {
+
+    
    self.checkedCells = [[NSMutableArray alloc]init];
     
     
@@ -51,7 +54,7 @@
     NSArray *bikeArray = [NSArray arrayWithObjects:@"Bar-end Plugs", @"Race Wheels", @"Aero-Bars", @"Rubber Bands", @"Water/Fuel", @"Multi-tool", @"Socks", @"Sunglasses", @"Gloves", @"Race Belt", @"Bike Jacket", @"Chamois Cream", nil];
     NSDictionary *bikeDict = [NSDictionary dictionaryWithObject:bikeArray forKey:@"Items"];
     
-    NSArray *runArray = [NSArray arrayWithObjects:@"Speed Laces", @"Fuel Belt", @"Hat/Visor", @"Knee Brace", @"Water/Fuel", @"Multi-tool", @"Socks", @"Sunglasses", nil];
+    NSArray *runArray = [NSArray arrayWithObjects:@"Speed Laces", @"Fuel Belt", @"Hat/Visor", @"Knee Brace", @"Water/Fuel", @"Socks", @"Sunglasses", nil];
     NSDictionary *runDict = [NSDictionary dictionaryWithObject:runArray forKey:@"Items"];
     
     NSArray *transitionArray = [NSArray arrayWithObjects:@"Towel", @"Transition Mat", @"Transition Area Marker", nil];
@@ -72,9 +75,10 @@
     
     //Set the title
     self.navigationItem.title = @"Race Checklist";
-    //self.tableView.allowsMultipleSelection = YES;
-
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -162,4 +166,7 @@
          cell.accessoryType = UITableViewCellAccessoryNone;
     }
 }
+
+
+
 @end

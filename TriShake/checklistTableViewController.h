@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface checklistTableViewController : UITableViewController{
+
+@interface checklistTableViewController : UITableViewController {
     NSMutableArray *sectionArray;
     NSMutableArray *checkedCells;
     NSIndexPath *selectedIndexPath;
+
 }
 
 @property (nonatomic, retain) NSMutableArray *checkedCells;

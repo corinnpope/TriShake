@@ -26,7 +26,6 @@
 }
 
 - (void) viewDidLoad {
-    
     //set up activity indicator for when page is loading
     activityIndicator = [[UIActivityIndicatorView alloc] init];
 	activityIndicator.hidesWhenStopped = YES;
@@ -35,6 +34,7 @@
     [super viewDidLoad];
     [self loadView];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated   {
     
@@ -58,6 +58,8 @@
     activityIndicator.hidden = TRUE;
 	[activityIndicator stopAnimating];
 }
+
+
 
 
 @end
