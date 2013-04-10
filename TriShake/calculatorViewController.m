@@ -36,6 +36,7 @@
 @synthesize swimSlider, bikeSlider, runSlider, t1Slider, t2Slider;
 @synthesize swimPaceLabel, bikePaceLabel, runPaceLabel, t1PaceLabel, t2PaceLabel;
 @synthesize projectedFinishTime, olyFinishTime, halfFinishTime, fullFinishTime;
+@synthesize infoButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +51,9 @@
 {
 	// Do any additional setup after loading the view.
 
+    
+    
+    
     //set default values for calculator so sliders have something to work with when button is pressed
 
     swimSlider.value=2.0;
@@ -211,6 +215,8 @@
     NSLog (@"t2 pace is: %f", t2Pace);
 }
 
+
+
 - (IBAction)changeTime:(id)sender {
     projectedSprintTime = (sprintRunPace + sprintBikePace + sprintSwimPace + t1Pace + t2Pace);
     projectedOlyTime = (olyRunPace + olyBikePace + olySwimPace + t1Pace + t2Pace);
@@ -234,5 +240,27 @@
     self.fullFinishTime.text = [hmsFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceReferenceDate:fullValue]];
     
 }
+
+#pragma info button
+- (IBAction)infoButtonPressed:(id)sender {
+    //UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(25, 25, 100, 50)]; //<- change to where you want it to show.
+    
+    //customView.alpha = 0.0;
+    //customView.layer.cornerRadius = 5;
+    //customView.layer.borderWidth = 1.5f;
+    //customView.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), YourColorValues);
+    //customView.layer.masksToBounds = YES;
+
+   UIAlertView *distanceInfo = [[UIAlertView alloc] initWithTitle:@"Race Distance Values" message:@"Sprint: 750m swim, 20K bike, 5K run.\n\n Olympic: 1500m swim, 40K bike, 10K run.\n\n Half-IM: 1900m swim, 90K bike, 13.1 mile run.\n\n IM: 3800m swim, 180K bike, 26.2 mile run." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [distanceInfo show];
+//    [self.view addSubview:customView];
+//    
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:0.4];
+//    [customView setAlpha:1.0];
+//    [UIView commitAnimations];
+//    [UIView setAnimationDuration:0.0];
+}
+
 
 @end

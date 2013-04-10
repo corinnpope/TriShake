@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface calculatorViewController : UIViewController {
+    UIButton *infoButton;
+    
     UISlider *swimSlider;
     UISlider *bikeSlider;
     UISlider *runSlider;
@@ -25,6 +27,8 @@
     UILabel *runPaceLabel;
     UILabel *t1PaceLabel;
     UILabel *t2PaceLabel;
+    
+    UIView *customView;
 }
 
 @property (strong, nonatomic) IBOutlet UISlider *swimSlider;
@@ -46,12 +50,17 @@
 @property (strong, nonatomic) IBOutlet UILabel *halfFinishTime;
 @property (strong, nonatomic) IBOutlet UILabel *fullFinishTime;
 
+@property (strong, nonatomic) IBOutlet UIButton *infoButton;
+
+
+
 - (IBAction)swimSliderChanged:(id)sender;
 - (IBAction)bikeSliderChanged:(id)sender;
 - (IBAction)runSliderChanged:(id)sender;
 - (IBAction)changeTime:(id)sender;
 - (IBAction)t1SliderChanged:(id)sender;
 - (IBAction)t2SliderChanged:(id)sender;
+- (IBAction)infoButtonPressed:(id)sender;
 
 
 - (void) displayProjectedRaceTime;

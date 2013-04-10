@@ -116,34 +116,6 @@
 
 #pragma mark - Table view delegate
 
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
-{
-
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    //if cell is selected, add checkmark
-    if ([indexPath isEqual:selectedIndexPath]){
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        [self.checkedCells addObject:selectedIndexPath];
-    }
-    else {
-       [cell setAccessoryType:UITableViewCellAccessoryNone];
-        [self.checkedCells removeObject:selectedIndexPath];
-    }
-
-    // Display text for each cell using data from section array
-    NSDictionary *dictionary = [sectionArray objectAtIndex:indexPath.section];
-    NSArray *array = [dictionary objectForKey:@"Items"];
-    NSString *cellValue = [array objectAtIndex:indexPath.row];
-    cell.textLabel.text = cellValue;
-    
-    return cell;
-}
-*/
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     
@@ -189,23 +161,5 @@
         [self.checkedCells removeObject:indexPath];
          cell.accessoryType = UITableViewCellAccessoryNone;
     }
-     
-//
-   
-    //code as of 4/4
-    
-    /*
-  self.selectedIndexPath = indexPath;
-    if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
-    {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        [self.checkedCells addObject:selectedIndexPath];
-        //self.selectedIndexPath = nil;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [self.checkedCells removeObject:selectedIndexPath];
-        //self.selectedIndexPath = indexPath;
-}
-     */
 }
 @end
