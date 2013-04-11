@@ -8,6 +8,7 @@
 
 #import "RaceFinderViewController.h"
 
+
 @interface RaceFinderViewController ()
 
 @end
@@ -15,6 +16,7 @@
 @implementation RaceFinderViewController
 
 @synthesize webView, activityIndicator;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,13 @@
     activityIndicator = [[UIActivityIndicatorView alloc] init];
 	activityIndicator.hidesWhenStopped = YES;
 	[self.activityIndicator startAnimating];
+    
+    
+    adView = [[ADBannerView alloc] initWithFrame: CGRectZero];
+    adView.frame = CGRectOffset(adView.frame, 0, -50);
+    [self.view addSubview:adView];
+    adView.delegate=self;
+    self.bannerIsVisible = NO;
     
     [super viewDidLoad];
     [self loadView];
@@ -59,7 +68,25 @@
 	[activityIndicator stopAnimating];
 }
 
+#pragma iAd Setup
 
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    if (!(self.bannerIsVisible))
+    {
+        [UIView beginAnimations:@"animateAdBanerOn" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, 50);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
+}
 
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    if (self.bannerIsVisible) {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, -50);
+        [UIView commitAnimations];
+        self.bannerIsVisible = NO;
+    }
+}
 
 @end

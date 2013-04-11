@@ -10,12 +10,17 @@
 #import <iAd/iAd.h>
 
 
-@interface RaceFinderViewController : UIViewController {
+
+@interface RaceFinderViewController : UIViewController  {
     IBOutlet UIWebView *webView;
     UIActivityIndicatorView *activityIndicator;
+    ADBannerView *adView;
+    BOOL bannerIsVisible;
 }
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, assign) BOOL bannerIsVisible;
+
 
 @end
