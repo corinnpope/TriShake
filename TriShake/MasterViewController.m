@@ -1,7 +1,8 @@
 //
 //  MasterViewController.m
-//  ARSSReader
+//  TriShake
 //
+//  Created by Corinn Pope on 2/21/13.
 //
 
 #import "MasterViewController.h"

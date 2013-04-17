@@ -1,8 +1,8 @@
 //
-//  MasterViewController.h
-//  ARSSReader
+//  MasterViewController.m
+//  TriShake
 //
-//  Created by Marin Todorov on 29/10/2012.
+//  Created by Corinn Pope on 2/21/13.
 //
 
 #import <UIKit/UIKit.h>

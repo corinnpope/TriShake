@@ -113,10 +113,10 @@
 		49300ACB16B705A100F45D24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49300ACD16B705A100F45D24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49300ACF16B705A100F45D24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49300AD316B705A100F45D24 /* TriShake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TriShake-Info.plist"; sourceTree = "<group>"; };
+		49300AD316B705A100F45D24 /* TriAlly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TriAlly-Info.plist"; sourceTree = "<group>"; };
 		49300AD516B705A100F45D24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49300AD716B705A100F45D24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49300AD916B705A100F45D24 /* TriShake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TriShake-Prefix.pch"; sourceTree = "<group>"; };
+		49300AD916B705A100F45D24 /* TriAlly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TriAlly-Prefix.pch"; sourceTree = "<group>"; };
 		49300ADA16B705A100F45D24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49300ADB16B705A100F45D24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49300AE416B705A200F45D24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -259,8 +259,8 @@
 		49300ABC16B705A100F45D24 = {
 			isa = PBXGroup;
 			children = (
-				49AE5A0216DFD47F008693A0 /* ARSS_files */,
-				49300AD116B705A100F45D24 /* TriShake */,
+				49AE5A0216DFD47F008693A0 /* Background Files */,
+				49300AD116B705A100F45D24 /* TriAlly */,
 				49300ACA16B705A100F45D24 /* Frameworks */,
 				49300AC816B705A100F45D24 /* Products */,
 			);
@@ -305,7 +305,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		49300AD116B705A100F45D24 /* TriShake */ = {
+		49300AD116B705A100F45D24 /* TriAlly */ = {
 			isa = PBXGroup;
 			children = (
 				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
@@ -318,9 +318,9 @@
 				494E0B3E16E4671B0032126A /* Resources Controllers */,
 				494E0B4016E4677A0032126A /* Calculator View Controllers */,
 				49AE5A1E16DFE80F008693A0 /* RSS View Controllers */,
-				49AE5A1916DFE2AC008693A0 /* RSS Feeder */,
 				49300AD216B705A100F45D24 /* Supporting Files */,
 			);
+			name = TriAlly;
 			path = TriShake;
 			sourceTree = "<group>";
 		};
@@ -334,12 +334,12 @@
 				493299AC17160276008FDCE6 /* Default-568h@2x.png */,
 				493299AD17160276008FDCE6 /* Default@2x.png */,
 				493299AE17160276008FDCE6 /* Default.png */,
-				49300AD316B705A100F45D24 /* TriShake-Info.plist */,
+				49300AD316B705A100F45D24 /* TriAlly-Info.plist */,
 				49CC286B170E12AD001FCF17 /* iTunesArtwork.png */,
 				49CC286C170E12AD001FCF17 /* iTunesArtwork@2x.png */,
 				49300AD416B705A100F45D24 /* InfoPlist.strings */,
 				49300AD716B705A100F45D24 /* main.m */,
-				49300AD916B705A100F45D24 /* TriShake-Prefix.pch */,
+				49300AD916B705A100F45D24 /* TriAlly-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -427,12 +427,14 @@
 			name = "Calculator View Controllers";
 			sourceTree = "<group>";
 		};
-		49AE5A0216DFD47F008693A0 /* ARSS_files */ = {
+		49AE5A0216DFD47F008693A0 /* Background Files */ = {
 			isa = PBXGroup;
 			children = (
+				49AE5A1916DFE2AC008693A0 /* RSS Feeder */,
 				49AE5A0416DFD47F008693A0 /* GTMNSString+HTML */,
 				49AE5A0716DFD47F008693A0 /* RaptureXML */,
 			);
+			name = "Background Files";
 			path = ARSS_files;
 			sourceTree = "<group>";
 		};
@@ -465,6 +467,7 @@
 				49AE5A1116DFD934008693A0 /* TableHeaderView.m */,
 			);
 			name = "RSS Feeder";
+			path = ../TriShake;
 			sourceTree = "<group>";
 		};
 		49AE5A1E16DFE80F008693A0 /* RSS View Controllers */ = {
@@ -492,9 +495,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49300AC616B705A100F45D24 /* TriShake */ = {
+		49300AC616B705A100F45D24 /* TriAlly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49300AEB16B705A200F45D24 /* Build configuration list for PBXNativeTarget "TriShake" */;
+			buildConfigurationList = 49300AEB16B705A200F45D24 /* Build configuration list for PBXNativeTarget "TriAlly" */;
 			buildPhases = (
 				49300AC316B705A100F45D24 /* Sources */,
 				49300AC416B705A100F45D24 /* Frameworks */,
@@ -504,7 +507,7 @@
 			);
 			dependencies = (
 			);
-			name = TriShake;
+			name = TriAlly;
 			productName = TriShake;
 			productReference = 49300AC716B705A100F45D24 /* TriAlly.app */;
 			productType = "com.apple.product-type.application";
@@ -518,7 +521,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Corinn Pope";
 			};
-			buildConfigurationList = 49300AC116B705A100F45D24 /* Build configuration list for PBXProject "TriShake" */;
+			buildConfigurationList = 49300AC116B705A100F45D24 /* Build configuration list for PBXProject "TriAlly" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -530,7 +533,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49300AC616B705A100F45D24 /* TriShake */,
+				49300AC616B705A100F45D24 /* TriAlly */,
 			);
 		};
 /* End PBXProject section */
@@ -658,7 +661,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Corinn Pope (86LW667KD9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -674,7 +677,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "285CE5E4-F974-483D-8F5E-2EE190DF9939";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
@@ -689,7 +692,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Corinn Pope (86LW667KD9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -698,7 +701,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "285CE5E4-F974-483D-8F5E-2EE190DF9939";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -708,13 +711,13 @@
 		49300AEC16B705A200F45D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Corinn Pope (86LW667KD9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
+				GCC_PREFIX_HEADER = "TriShake/TriAlly-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INFOPLIST_FILE = "TriShake/TriShake-Info.plist";
+				INFOPLIST_FILE = "TriShake/TriAlly-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GoogleAdMobAdsSdkiOS-6.4.0\"",
@@ -725,7 +728,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TriAlly;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "285CE5E4-F974-483D-8F5E-2EE190DF9939";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -735,13 +738,13 @@
 		49300AED16B705A200F45D24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Corinn Pope (86LW667KD9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
+				GCC_PREFIX_HEADER = "TriShake/TriAlly-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INFOPLIST_FILE = "TriShake/TriShake-Info.plist";
+				INFOPLIST_FILE = "TriShake/TriAlly-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GoogleAdMobAdsSdkiOS-6.4.0\"",
@@ -752,7 +755,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TriAlly;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "285CE5E4-F974-483D-8F5E-2EE190DF9939";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -762,7 +765,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49300AC116B705A100F45D24 /* Build configuration list for PBXProject "TriShake" */ = {
+		49300AC116B705A100F45D24 /* Build configuration list for PBXProject "TriAlly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49300AE916B705A200F45D24 /* Debug */,
@@ -771,7 +774,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49300AEB16B705A200F45D24 /* Build configuration list for PBXNativeTarget "TriShake" */ = {
+		49300AEB16B705A200F45D24 /* Build configuration list for PBXNativeTarget "TriAlly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49300AEC16B705A200F45D24 /* Debug */,
