@@ -2,7 +2,6 @@
 //  MasterViewController.m
 //  ARSSReader
 //
-//  Created by Marin Todorov on 29/10/2012.
 //
 
 #import "MasterViewController.h"
@@ -28,25 +27,7 @@
 
 - (void)viewDidLoad
 {
-  
-    //add method to check for internet connection when opening the RSS Feed
-    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
-    
-    if(internetStatus == NotReachable){
-        UIAlertView *errorView;
-        
-           errorView = [[UIAlertView alloc]
-                        initWithTitle: NSLocalizedString(@"Network error", @"Network error")
-                        message: NSLocalizedString(@"No internet connection found, this application requires an internet connection to gather the data required.", @"Network error")
-                        delegate: self
-                        cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
-        
-        [errorView show];
-    }
-    
-       
-    
+
     [super viewDidLoad];
     
     //configuration of triathlon newsfeed
@@ -68,16 +49,11 @@
     [self.tableView addSubview: refreshControl];
     
     //add the header
-    self.tableView.tableHeaderView = [[TableHeaderView alloc] initWithText:@"fetching rss feed"];
+    self.tableView.tableHeaderView = [[TableHeaderView alloc] initWithText:@"fetching feed"];
     
     [self refreshFeed];
 }
 
-- (void) alertViewCancel:(UIAlertView *)alertView {
-
-        UIViewController *controller = [[UIViewController alloc]init];
-        [self presentViewController:controller animated:YES completion:nil];
-}
 
 -(void) refreshInvoked:(id)sender forState:(UIControlState)state
 {
@@ -101,6 +77,8 @@
                      cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
         
         [errorView show];
+        [refreshControl endRefreshing];
+        self.tableView.tableHeaderView = [[TableHeaderView alloc] initWithText:@"No Internet"];
     
     }
     else {
@@ -122,7 +100,8 @@
                     });
                 }];
 
-    }}
+    }
+}
 
 #pragma mark - Table View
 

@@ -45,6 +45,7 @@
 		493945E2170B73BD00B8B390 /* bike_slider_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 493945E0170B73BD00B8B390 /* bike_slider_green.png */; };
 		493945EC170B77D900B8B390 /* transition_slider_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 493945E9170B77D700B8B390 /* transition_slider_blue.png */; };
 		493945FC170B7AB700B8B390 /* swim_slider_thumb_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 493945FB170B7AB600B8B390 /* swim_slider_thumb_new.png */; };
+		4943F958171F16F5007991A6 /* workoutList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4943F957171F16F5007991A6 /* workoutList.sqlite */; };
 		49448D1C170DE27E002C52B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D1B170DE27E002C52B5 /* QuartzCore.framework */; };
 		49448D1E170DE288002C52B5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D1D170DE288002C52B5 /* ImageIO.framework */; };
 		494E0B4916E46A090032126A /* magnifying_glass@2x.mailtoloc in Resources */ = {isa = PBXBuildFile; fileRef = 494E0B4116E46A080032126A /* magnifying_glass@2x.mailtoloc */; };
@@ -67,7 +68,6 @@
 		49946BE3171C835700665062 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49946BE2171C835700665062 /* Icon@2x.png */; };
 		49946BE6171C839100665062 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 49946BE4171C839100665062 /* Icon-Small.png */; };
 		49946BE7171C839100665062 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49946BE5171C839100665062 /* Icon-Small@2x.png */; };
-		49A48C00171102D300B3CE24 /* workoutList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49A48BFF171102D300B3CE24 /* workoutList.sqlite */; };
 		49A48C021711038200B3CE24 /* mail_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A48C011711038200B3CE24 /* mail_icon.png */; };
 		49A48C06171106AA00B3CE24 /* twitter-bird-white-on-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A48C03171106AA00B3CE24 /* twitter-bird-white-on-blue@2x.png */; };
 		49A48C07171106AA00B3CE24 /* facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A48C04171106AA00B3CE24 /* facebook_icon@2x.png */; };
@@ -152,6 +152,7 @@
 		493945E0170B73BD00B8B390 /* bike_slider_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike_slider_green.png; sourceTree = "<group>"; };
 		493945E9170B77D700B8B390 /* transition_slider_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transition_slider_blue.png; sourceTree = "<group>"; };
 		493945FB170B7AB600B8B390 /* swim_slider_thumb_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swim_slider_thumb_new.png; sourceTree = "<group>"; };
+		4943F957171F16F5007991A6 /* workoutList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = workoutList.sqlite; sourceTree = "<group>"; };
 		49448D1B170DE27E002C52B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49448D1D170DE288002C52B5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		494E0B4116E46A080032126A /* magnifying_glass@2x.mailtoloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "magnifying_glass@2x.mailtoloc"; sourceTree = "<group>"; };
@@ -175,7 +176,6 @@
 		49946BE2171C835700665062 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		49946BE4171C839100665062 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		49946BE5171C839100665062 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		49A48BFF171102D300B3CE24 /* workoutList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = workoutList.sqlite; sourceTree = "<group>"; };
 		49A48C011711038200B3CE24 /* mail_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mail_icon.png; path = ../mail_icon.png; sourceTree = "<group>"; };
 		49A48C03171106AA00B3CE24 /* twitter-bird-white-on-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-bird-white-on-blue@2x.png"; sourceTree = "<group>"; };
 		49A48C04171106AA00B3CE24 /* facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_icon@2x.png"; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 				49300AE316B705A200F45D24 /* MainStoryboard.storyboard */,
 				49300AF716B724AD00F45D24 /* images */,
 				49300ADA16B705A100F45D24 /* AppDelegate.h */,
-				49A48BFF171102D300B3CE24 /* workoutList.sqlite */,
+				4943F957171F16F5007991A6 /* workoutList.sqlite */,
 				49300ADB16B705A100F45D24 /* AppDelegate.m */,
 				494E0B3F16E4675F0032126A /* workout finder controllers */,
 				49B6F09316FB8ED400846C1C /* Race Finder View Controllers */,
@@ -574,7 +574,6 @@
 				49CC28A8170E1BD2001FCF17 /* run_slider_red@2x.png in Resources */,
 				49CC28A9170E1BD2001FCF17 /* bike_slider_green@2x.png in Resources */,
 				49CC28AB170FBC7E001FCF17 /* line.png in Resources */,
-				49A48C00171102D300B3CE24 /* workoutList.sqlite in Resources */,
 				49A48C021711038200B3CE24 /* mail_icon.png in Resources */,
 				49A48C06171106AA00B3CE24 /* twitter-bird-white-on-blue@2x.png in Resources */,
 				49A48C07171106AA00B3CE24 /* facebook_icon@2x.png in Resources */,
@@ -599,6 +598,7 @@
 				49946BE3171C835700665062 /* Icon@2x.png in Resources */,
 				49946BE6171C839100665062 /* Icon-Small.png in Resources */,
 				49946BE7171C839100665062 /* Icon-Small@2x.png in Resources */,
+				4943F958171F16F5007991A6 /* workoutList.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +658,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -673,6 +674,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -686,7 +689,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -694,6 +698,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -702,6 +708,8 @@
 		49300AEC16B705A200F45D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
@@ -717,6 +725,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TriAlly;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -725,6 +735,8 @@
 		49300AED16B705A200F45D24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TriShake/TriShake-Prefix.pch";
@@ -740,6 +752,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TriAlly;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

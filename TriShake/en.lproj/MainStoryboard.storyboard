@@ -19,7 +19,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="IM:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-Jw-Jhk">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="285" horizontalCompressionResistancePriority="81" verticalCompressionResistancePriority="126" text="Full:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-Jw-Jhk">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="GB3-Bk-eyJ"/>
                                 </constraints>
@@ -296,8 +296,8 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-U7-vTG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="HW0-SQ-D0Q"/>
-                                    <constraint firstAttribute="height" constant="32" type="user" id="a7m-SC-EML"/>
+                                    <constraint firstAttribute="width" constant="176" id="pkP-jN-aGO"/>
+                                    <constraint firstAttribute="height" constant="32" id="zRe-tw-47T"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                 <state key="normal" title="Find a Workout" backgroundImage="OrangeButton.png">
@@ -313,8 +313,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTf-s6-Whk">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" type="user" id="jLx-Lm-EVf"/>
-                                    <constraint firstAttribute="width" constant="20" id="rKx-VI-Sgi"/>
+                                    <constraint firstAttribute="width" constant="29" id="wvo-nY-00s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" image="twitter-bird-white-on-blue.png">
@@ -329,8 +328,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yij-rM-3fY">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="DRM-hL-vzZ"/>
-                                    <constraint firstAttribute="height" constant="22" type="user" id="t0r-6g-HbJ"/>
+                                    <constraint firstAttribute="width" constant="31" id="h0y-QY-mHp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" image="facebook.png">
@@ -345,8 +343,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ett-UU-JCs">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="0Hy-fP-ysE"/>
-                                    <constraint firstAttribute="height" constant="22" type="user" id="3q5-e6-B8U"/>
+                                    <constraint firstAttribute="width" constant="29" id="IvM-xM-bko"/>
+                                    <constraint firstAttribute="height" constant="27" id="fTF-eo-vw6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="mail_icon.png">
@@ -371,21 +369,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="59" id="7sy-g7-UZJ"/>
-                            <constraint firstItem="4ra-U7-vTG" firstAttribute="centerY" secondItem="Ett-UU-JCs" secondAttribute="centerY" type="user" id="Ebq-bA-x5F"/>
+                            <constraint firstItem="yij-rM-3fY" firstAttribute="leading" secondItem="Ett-UU-JCs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4Ke-l8-k3F"/>
+                            <constraint firstItem="Ett-UU-JCs" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KAy-Nd-OKF"/>
                             <constraint firstAttribute="trailing" secondItem="Hlv-Ce-auk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MWj-Wf-txo"/>
                             <constraint firstItem="Ett-UU-JCs" firstAttribute="leading" secondItem="4ra-U7-vTG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="O4y-uN-tHG"/>
-                            <constraint firstAttribute="trailing" secondItem="YTf-s6-Whk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OPP-1S-5oL"/>
+                            <constraint firstItem="YTf-s6-Whk" firstAttribute="centerY" secondItem="yij-rM-3fY" secondAttribute="centerY" type="default" id="Q4I-kY-X2M"/>
+                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="XrN-dR-mLa"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="YSw-ud-rUl"/>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="top" secondItem="k5Q-Qj-DDp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="e2f-xC-Y4e"/>
+                            <constraint firstItem="YTf-s6-Whk" firstAttribute="leading" secondItem="yij-rM-3fY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eOq-4e-vUk"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" type="user" id="hGV-JO-JCG"/>
-                            <constraint firstAttribute="bottom" secondItem="Ett-UU-JCs" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="hUa-s1-HZ4"/>
                             <constraint firstAttribute="bottom" secondItem="yij-rM-3fY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hjQ-H4-GGT"/>
                             <constraint firstItem="k5Q-Qj-DDp" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jaY-Er-Bxg"/>
                             <constraint firstItem="Hlv-Ce-auk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pPh-Tf-bzj"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pX8-dm-TVA"/>
                             <constraint firstItem="4ra-U7-vTG" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="pcD-Nj-MRb"/>
                             <constraint firstAttribute="bottom" secondItem="YTf-s6-Whk" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="s0S-gq-6S4"/>
+                            <constraint firstItem="yij-rM-3fY" firstAttribute="top" secondItem="Hlv-Ce-auk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yar-Am-f0R"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workouts" image="63-runner.png" id="owL-pv-xjD"/>
@@ -646,75 +646,6 @@
         <image name="star.png" width="26" height="26"/>
         <image name="twitter-bird-white-on-blue.png" width="40" height="40"/>
     </resources>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RaceFinderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceFinderViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="facebookButton:"/>
-                <relationship kind="action" name="findWorkout:"/>
-                <relationship kind="action" name="mailButton:"/>
-                <relationship kind="action" name="tweetButton:"/>
-                <relationship kind="outlet" name="facebookButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mailButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="tweetButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="workoutDescriptionLabel" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="workoutDifficultyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutDurationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="workoutTypeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="calculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/calculatorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="bikeSliderChanged:"/>
-                <relationship kind="action" name="changeTime:"/>
-                <relationship kind="action" name="infoButtonPressed:"/>
-                <relationship kind="action" name="runSliderChanged:"/>
-                <relationship kind="action" name="swimSliderChanged:"/>
-                <relationship kind="action" name="t1SliderChanged:"/>
-                <relationship kind="action" name="t2SliderChanged:"/>
-                <relationship kind="outlet" name="bikePaceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bikeSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="fullFinishTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="halfFinishTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="olyFinishTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="projectedFinishTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="runPaceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="runSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="swimPaceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="swimSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="t1PaceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="t1Slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="t2PaceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="t2Slider" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-        <class className="checklistTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/checklistTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,6 +7,8 @@
 //
 
 #import "RaceFinderViewController.h"
+#import "Reachability.h"
+
 
 
 @interface RaceFinderViewController ()
@@ -28,12 +30,28 @@
 }
 
 - (void) viewDidLoad {
+    
+    //add method to check for internet connection when opening the RSS Feed
+//    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+//    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+//    
+//    if(internetStatus == NotReachable){
+//        UIAlertView *errorView;
+//        
+//        errorView = [[UIAlertView alloc]
+//                     initWithTitle: NSLocalizedString(@"Network error", @"Network error")
+//                     message: NSLocalizedString(@"No internet connection found, this application requires an internet connection to gather the data required.", @"Network error")
+//                     delegate: self
+//                     cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
+//        
+//        [errorView show];
+//    }
+    
     //set up activity indicator for when page is loading
     activityIndicator = [[UIActivityIndicatorView alloc] init];
 	activityIndicator.hidesWhenStopped = YES;
-	[self.activityIndicator startAnimating];
     
-    
+    //set up ad view
     adView = [[ADBannerView alloc] initWithFrame: CGRectZero];
     adView.frame = CGRectOffset(adView.frame, 0, -50);
     [self.view addSubview:adView];
@@ -46,12 +64,29 @@
 
 
 - (void)viewWillAppear:(BOOL)animated   {
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
     
+    if(internetStatus == NotReachable){
+        UIAlertView *errorView;
+        
+        errorView = [[UIAlertView alloc]
+                     initWithTitle: NSLocalizedString(@"Network error", @"Network error")
+                     message: NSLocalizedString(@"No internet connection found, this application requires an internet connection to gather the data required.", @"Network error")
+                     delegate: self
+                     cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
+        
+        [errorView show];
+        [self webViewDidFinishLoad:(UIWebView *)webView];
+        
+    }
+    else {
     //set up web page load
     NSString *urlAddress = @"http://m.usatriathlon.org/events/sanctioned-event-calendar.aspx";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObject];
+}
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView

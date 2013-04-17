@@ -43,15 +43,6 @@
 
 - (void)viewDidLoad
 {
-    //set up iAd at bottom of frame
-//    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-//    adView.frame = CGRectOffset(adView.frame, 0, -50);
-//    [adView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-//    CGRect adFrame = adView.frame;
-//    //adFrame.origin.y = self.view.frame.size.height-adView.frame.size.height;
-//    adView.frame = adFrame;
-//    [self.view addSubview:adView];
-    
     
     //set up iAd at top of frame
     adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
@@ -93,8 +84,6 @@
         });
         
     });
-    
-    
 }
 
 - (void)viewDidUnload
@@ -194,7 +183,9 @@
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         NSString *chosenWorkout = self.workoutDescriptionLabel.text;
-        [tweetSheet setInitialText:[NSString stringWithFormat:@"My workout for today: %@  #TriAlly", chosenWorkout]];
+        //shorten workout to 140 characters for twitter
+        chosenWorkout = [chosenWorkout substringToIndex:MIN(114, [chosenWorkout length])];
+        [tweetSheet setInitialText:[NSString stringWithFormat:@"Today's workout: %@ #TriAlly", chosenWorkout]];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
     else {
@@ -252,15 +243,6 @@
     MyWorkoutList *workoutData = [[MyWorkoutList alloc] init];
     NSArray *workout = [workoutData getWorkoutListwithType:self.typeSQL withDifficulty:self.difficultySQL withLength:[self convertDurationToSQLValue:self.durationSQL]];
 
-    // MLIU 2013-02-18: handle 0 matching results
-//    if ([workout count] > 0) {
-//
-//        self.workoutDescriptionLabel.text = [workout objectAtIndex:0];
-//    }
-//    else {
-//        self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
-//    }
-
 //set up button to act as a next button when pressed again
     
     if ((i+1) > workout.count) {
@@ -268,13 +250,7 @@
     }
     self.workoutDescriptionLabel.text = [workout objectAtIndex:i];
     i++;
-//    else 
-//    self.workoutDescriptionLabel.text = NO_WORKOUTS_FOUND_MESSAGE;
-//     }
 }
-
-
-
 
 - (NSString *)convertDurationToSQLValue:(NSString *)input {
     // MLIU 2013-02-18: the picker says "## mins" but the database only has the "##" part
