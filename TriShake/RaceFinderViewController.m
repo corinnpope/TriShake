@@ -18,6 +18,7 @@
 @implementation RaceFinderViewController
 
 @synthesize webView, activityIndicator;
+@synthesize backButton, forwardButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,21 +32,6 @@
 
 - (void) viewDidLoad {
     
-    //add method to check for internet connection when opening the RSS Feed
-//    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-//    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
-//    
-//    if(internetStatus == NotReachable){
-//        UIAlertView *errorView;
-//        
-//        errorView = [[UIAlertView alloc]
-//                     initWithTitle: NSLocalizedString(@"Network error", @"Network error")
-//                     message: NSLocalizedString(@"No internet connection found, this application requires an internet connection to gather the data required.", @"Network error")
-//                     delegate: self
-//                     cancelButtonTitle: NSLocalizedString(@"Close", @"Network error") otherButtonTitles: nil];
-//        
-//        [errorView show];
-//    }
     
     //set up activity indicator for when page is loading
     activityIndicator = [[UIActivityIndicatorView alloc] init];
@@ -124,4 +110,16 @@
     }
 }
 
+- (IBAction)backButton:(id)sender {
+    [webView goBack];
+}
+
+- (IBAction)forwardButton:(id)sender {
+    [webView goForward];
+    
+}
+
+- (IBAction)refreshButton:(id)sender {
+    [webView reload];
+}
 @end

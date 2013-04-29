@@ -61,6 +61,8 @@
     runSlider.value = 8;
     t1Slider.value = 3.0;
     t2Slider.value = 3.0;
+    
+    
 
     
     [swimSlider sendActionsForControlEvents:UIControlEventValueChanged];
@@ -76,6 +78,29 @@
     [runSlider setThumbImage:[UIImage imageNamed:@"run_slider_thumb.png"] forState:UIControlStateNormal];
     [t1Slider setThumbImage:[UIImage imageNamed:@"t1_slider_thumb.png"] forState:UIControlStateNormal];
     [t2Slider setThumbImage:[UIImage imageNamed:@"t2_slider_thumb.png"] forState:UIControlStateNormal];
+    
+    
+    //make touch area for sliders larger
+    CGRect swimFrame = self.swimSlider.frame;
+    swimFrame.size.height = 142.0;
+    [self.swimSlider setFrame:swimFrame];
+    
+    CGRect bikeFrame = self.bikeSlider.frame;
+    bikeFrame.size.height = 142.0;
+    [self.bikeSlider setFrame:bikeFrame];
+    
+    CGRect runFrame = self.runSlider.frame;
+    runFrame.size.height = 142.0;
+    [self.runSlider setFrame:runFrame];
+    
+    CGRect t1Frame = self.t1Slider.frame;
+    t1Frame.size.height = 142.0;
+    [self.t1Slider setFrame:t1Frame];
+    
+    CGRect t2Frame = self.t2Slider.frame;
+    t2Frame.size.height = 142.0;
+    [self.t2Slider setFrame:t2Frame];
+
     
     
     UIImage *swimLeftTrackImage = [[UIImage imageNamed: @"swim_slider_purple.png"] stretchableImageWithLeftCapWidth: 9 topCapHeight: 0];
@@ -130,6 +155,10 @@
 }
 
 - (IBAction)bikeSliderChanged:(id)sender {
+    
+    
+    [bikeSlider setValue:((int)((bikeSlider.value + .05) / .1) * .1) animated:NO];
+    
     
     //convert mph to m/s for bike
     double bikeMS = self.bikeSlider.value * .44;
